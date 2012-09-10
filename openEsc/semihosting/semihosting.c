@@ -13,8 +13,8 @@
 #include <sys/stat.h>
 #include "semihosting.h"
 
-static char g_buf[16];
-static char g_buf_len = 0;
+static int g_buf[16];
+static int g_buf_len = 0;
 
 /**************************************************************************//**
  * @brief  Transmit a char on semihosting mode.
@@ -44,7 +44,6 @@ void SH_SendChar(int ch) {
  *****************************************************************************/
 void SH_SendString(const char *str)
 {
-	int j;
 	if (SH_DoCommand(0x04, (int)str, NULL) != 0) {
 		return;
 	}

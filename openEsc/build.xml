@@ -25,7 +25,7 @@
       <arg value="${project.name}.elf"/>
     </exec>
   </target>
-
+  
   <taskdef resource="cpptasks.tasks"/>
   <target name="compile">
     <mkdir dir="${project.bin}"/>

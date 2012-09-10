@@ -13,15 +13,41 @@
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings">
 				<externalSettings containerId="org.coocox.ExternalSettings" factoryId="org.eclipse.cdt.core.extension.container.factory">
 					<externalSetting>
-						<entry flags="" kind="includePath" name="Not configured!\arm-none-eabi\include"/>
+						<entry flags="" kind="includePath" name="C:\Program Files (x86)\arm-none-eabi-gcc-4_6\arm-none-eabi\include"/>
+						<entry flags="" kind="includePath" name="C:\Program Files (x86)\arm-none-eabi-gcc-4_6\lib\gcc\arm-none-eabi\4.6.2\include"/>
+						<entry flags="" kind="includePath" name="C:\Program Files (x86)\arm-none-eabi-gcc-4_6\lib\gcc\arm-none-eabi\4.6.2\include-fixed"/>
+						<entry flags="" kind="includePath" name="."/>
+						<entry flags="" kind="includePath" name="cmsis"/>
+						<entry flags="" kind="includePath" name="cmsis_boot"/>
+						<entry flags="" kind="includePath" name="semihosting"/>
+						<entry flags="" kind="includePath" name="stm_lib"/>
+						<entry flags="" kind="includePath" name="stm_lib/inc"/>
 						<entry flags="" kind="macro" name="__GNUC__" value=""/>
+						<entry flags="" kind="macro" name="STM32F10X_MD" value=""/>
+						<entry flags="" kind="macro" name="USE_STDPERIPH_DRIVER" value=""/>
+						<entry flags="" kind="macro" name="__ASSEMBLY__" value=""/>
+						<entry flags="" kind="macro" name="STM32F103C8" value=""/>
 					</externalSetting>
 				</externalSettings>
 			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
+			<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 			<storageModule moduleId="org.eclipse.cdt.core.pathentry">
 				<pathentry kind="src" path=""/>
-				<pathentry include="C:/gitRepo/openEsc/openEsc/Not configured!/arm-none-eabi/include" kind="inc" path="" system="true"/>
+				<pathentry include="C:/Program Files (x86)/arm-none-eabi-gcc-4_6/arm-none-eabi/include" kind="inc" path="" system="true"/>
+				<pathentry include="C:/Program Files (x86)/arm-none-eabi-gcc-4_6/lib/gcc/arm-none-eabi/4.6.2/include" kind="inc" path="" system="true"/>
+				<pathentry include="C:/Program Files (x86)/arm-none-eabi-gcc-4_6/lib/gcc/arm-none-eabi/4.6.2/include-fixed" kind="inc" path="" system="true"/>
+				<pathentry include="C:/gitRepo/openEsc/openEsc" kind="inc" path="" system="true"/>
+				<pathentry include="C:/gitRepo/openEsc/openEsc/cmsis" kind="inc" path="" system="true"/>
+				<pathentry include="C:/gitRepo/openEsc/openEsc/cmsis_boot" kind="inc" path="" system="true"/>
+				<pathentry include="C:/gitRepo/openEsc/openEsc/semihosting" kind="inc" path="" system="true"/>
+				<pathentry include="C:/gitRepo/openEsc/openEsc/stm_lib" kind="inc" path="" system="true"/>
+				<pathentry include="C:/gitRepo/openEsc/openEsc/stm_lib/inc" kind="inc" path="" system="true"/>
 				<pathentry kind="mac" name="__GNUC__" path="" value=""/>
+				<pathentry kind="mac" name="STM32F10X_MD" path="" value=""/>
+				<pathentry kind="mac" name="USE_STDPERIPH_DRIVER" path="" value=""/>
+				<pathentry kind="mac" name="__ASSEMBLY__" path="" value=""/>
+				<pathentry kind="mac" name="STM32F103C8" path="" value=""/>
 				<pathentry kind="out" path=""/>
 			</storageModule>
 		</cconfiguration>

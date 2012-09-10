@@ -18,10 +18,12 @@ SECTIONS
         *(.ARM.extab* .gnu.linkonce.armextab.*)
     } > rom
     
+    __exidx_start = .;
     .ARM.exidx :
     {
         *(.ARM.exidx* .gnu.linkonce.armexidx.*)
     } > rom
+    __exidx_end = .;
     
     . = ALIGN(4); 
     _etext = .;
@@ -53,5 +55,6 @@ SECTIONS
     } > ram
        
     . = ALIGN(4); 
+
     _end = . ; 
 } 
