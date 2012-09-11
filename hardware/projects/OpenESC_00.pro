@@ -1,8 +1,6 @@
-update=8/25/2012 10:31:10 PM
+update=9/11/2012 4:49:11 AM
 version=1
-last_client=pcbnew
-[general]
-version=1
+last_client=kicad
 [eeschema]
 version=1
 LibDir=../lib
@@ -101,3 +99,5 @@ LibName8=display
 LibName9=valves
 LibName10=led
 LibName11=dip_sockets
+[general]
+version=1
