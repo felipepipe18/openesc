@@ -1,0 +1,7946 @@
+PCBNEW-BOARD Version 1 date 9/11/2012 10:59:18 PM
+
+# Created by Pcbnew(2012-01-19 BZR 3256)-stable
+
+$GENERAL
+encoding utf-8
+LayerCount 4
+Ly 1FFF8007
+EnabledLayers 11FF8007
+Links 167
+NoConn 0
+Di 41095 39805 58406 55112
+Ndraw 14
+Ntrack 728
+Nzone 0
+BoardThickness 630
+Nmodule 67
+Nnets 56
+$EndGENERAL
+
+$SHEETDESCR
+Sheet A4 11700 8267
+Title ""
+Date "12 sep 2012"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndSHEETDESCR
+
+$SETUP
+InternalUnit 0.000100 INCH
+Layers 4
+Layer[0] Back signal
+Layer[1] Inner2 signal
+Layer[2] Inner3 signal
+Layer[15] Front signal
+TrackWidth 150
+TrackWidthList 80
+TrackWidthList 150
+TrackWidthList 250
+TrackClearence 80
+ZoneClearence 100
+TrackMinWidth 60
+DrawSegmWidth 150
+EdgeSegmWidth 150
+ViaSize 270
+ViaDrill 130
+ViaMinSize 260
+ViaMinDrill 13
+ViaSizeList 270 130
+MicroViaSize 150
+MicroViaDrill 100
+MicroViasAllowed 1
+MicroViaMinSize 100
+MicroViaMinDrill 50
+TextPcbWidth 120
+TextPcbSize 600 800
+EdgeModWidth 150
+TextModSize 600 600
+TextModWidth 120
+PadSize 600 600
+PadDrill 320
+Pad2MaskClearance 100
+Pad2PasteClearance -20
+GridOrigin 44016 54961
+AuxiliaryAxisOrg 44016 54961
+PcbPlotParams (pcbplotparams (layerselection 285179911) (usegerberextensions true) (excludeedgelayer false) (linewidth 10) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (pscolor true) (psnegative false) (psa4output false) (plotreference true) (plotvalue false) (plotothertext false) (plotinvisibletext false) (padsonsilk true) (subtractmaskfromsilk true) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory ../gerb/))
+$EndSETUP
+
+$EQUIPOT
+Na 0 ""
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 1 "+3.3V"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 2 "+5V"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 3 "+8V"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 4 "+BATT"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 5 "ANALOG_BATT_FBK"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 6 "ANALOG_I_SENSE"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 7 "ANALOG_PHA_FBK"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 8 "ANALOG_PHB_FBK"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 9 "ANALOG_PHC_FBK"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 10 "DIG_AH_SIG"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 11 "DIG_AL_SIG"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 12 "DIG_BH_SIG"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 13 "DIG_BL_SIG"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 14 "DIG_CH_SIG"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 15 "DIG_CL_SIG"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 16 "DIG_IN_PWM"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 17 "DIG_IN_UART_RX"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 18 "DIG_NOT_FLT"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 19 "DIG_OUT_UART_TX"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 20 "GND"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 21 "I_SUM"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 22 "LED_ERROR"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 23 "LED_STATUS"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 24 "N-000001"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 25 "N-000002"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 26 "N-000008"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 27 "N-000018"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 28 "N-000019"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 29 "N-000021"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 30 "N-000041"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 31 "N-000042"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 32 "N-000049"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 33 "N-000050"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 34 "N-000051"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 35 "N-000052"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 36 "N-000053"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 37 "N-000054"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 38 "N-000055"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 39 "N-000056"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 40 "N-000057"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 41 "N-000058"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 42 "N-000062"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 43 "N-000063"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 44 "N-000066"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 45 "N-000071"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 46 "N-000072"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 47 "NRST"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 48 "PHA"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 49 "PHB"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 50 "PHC"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 51 "PWM_IN"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 52 "SWCLK"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 53 "SWDIO"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 54 "USB_D+"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 55 "USB_D-"
+St ~
+$EndEQUIPOT
+$NCLASS
+Name "Default"
+Desc "This is the default net class."
+Clearance 80
+TrackWidth 80
+ViaDia 270
+ViaDrill 130
+uViaDia 150
+uViaDrill 100
+AddNet ""
+AddNet "+3.3V"
+AddNet "+5V"
+AddNet "+8V"
+AddNet "+BATT"
+AddNet "ANALOG_BATT_FBK"
+AddNet "ANALOG_I_SENSE"
+AddNet "ANALOG_PHA_FBK"
+AddNet "ANALOG_PHB_FBK"
+AddNet "ANALOG_PHC_FBK"
+AddNet "DIG_AH_SIG"
+AddNet "DIG_AL_SIG"
+AddNet "DIG_BH_SIG"
+AddNet "DIG_BL_SIG"
+AddNet "DIG_CH_SIG"
+AddNet "DIG_CL_SIG"
+AddNet "DIG_IN_PWM"
+AddNet "DIG_IN_UART_RX"
+AddNet "DIG_NOT_FLT"
+AddNet "DIG_OUT_UART_TX"
+AddNet "GND"
+AddNet "I_SUM"
+AddNet "LED_ERROR"
+AddNet "LED_STATUS"
+AddNet "N-000001"
+AddNet "N-000002"
+AddNet "N-000008"
+AddNet "N-000018"
+AddNet "N-000019"
+AddNet "N-000021"
+AddNet "N-000041"
+AddNet "N-000042"
+AddNet "N-000049"
+AddNet "N-000050"
+AddNet "N-000051"
+AddNet "N-000052"
+AddNet "N-000053"
+AddNet "N-000054"
+AddNet "N-000055"
+AddNet "N-000056"
+AddNet "N-000057"
+AddNet "N-000058"
+AddNet "N-000062"
+AddNet "N-000063"
+AddNet "N-000066"
+AddNet "N-000071"
+AddNet "N-000072"
+AddNet "NRST"
+AddNet "PHA"
+AddNet "PHB"
+AddNet "PHC"
+AddNet "PWM_IN"
+AddNet "SWCLK"
+AddNet "SWDIO"
+AddNet "USB_D+"
+AddNet "USB_D-"
+$EndNCLASS
+$NCLASS
+Name "MED"
+Desc ""
+Clearance 80
+TrackWidth 150
+ViaDia 270
+ViaDrill 130
+uViaDia 150
+uViaDrill 100
+$EndNCLASS
+$NCLASS
+Name "THICK"
+Desc ""
+Clearance 80
+TrackWidth 250
+ViaDia 270
+ViaDrill 130
+uViaDia 150
+uViaDrill 100
+$EndNCLASS
+$MODULE USB_MICRO_AB
+Po 46016 41561 0 0 504EF9D2 503158A3 ~~
+Li USB_MICRO_AB
+Sc 503158A3
+AR /50401850
+Op 0 0 0
+T0 -700 1650 315 315 0 79 M V 20 N "P3"
+T1 0 0 394 394 0 79 M I 20 N "CONN_5"
+DS -1575 -571 1575 -571 79 20
+$PAD
+Sh "1" R 157 531 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 2 "+5V"
+Po -512 1063
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "2" R 157 531 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 55 "USB_D-"
+Po -256 1063
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "3" R 157 531 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 54 "USB_D+"
+Po 0 1063
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "4" R 157 531 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po 256 1063
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "5" R 157 531 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 512 1063
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "" R 827 630 0 0 0
+Dr 0 0 0
+At HOLE N 00500001
+Ne 0 ""
+Po -1220 1004
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "" R 827 630 0 0 0
+Dr 0 0 0
+At HOLE N 00500001
+Ne 0 ""
+Po 1220 1004
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "" R 748 748 0 0 0
+Dr 0 0 0
+At HOLE N 00500001
+Ne 0 ""
+Po -472 0
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "" R 748 748 0 0 0
+Dr 0 0 0
+At HOLE N 00500001
+Ne 0 ""
+Po 472 0
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "" R 748 748 0 0 0
+Dr 0 0 0
+At HOLE N 00500001
+Ne 0 ""
+Po 1575 0
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "" R 748 748 0 0 0
+Dr 0 0 0
+At HOLE N 00500001
+Ne 0 ""
+Po -1575 0
+.LocalClearance 3
+$EndPAD
+$EndMODULE  USB_MICRO_AB
+$MODULE CONN_5_SM
+Po 51516 44611 1800 15 5042C3D5 5030DCAE ~~
+Li CONN_5_SM
+Sc 5030DCAE
+AR /502FFE65
+Op 0 0 0
+T0 150 -750 400 400 1800 80 N V 21 N "P2"
+T1 0 0 600 600 1800 120 N I 21 N "CONN_5"
+DS -1600 -400 -1600 400 79 21
+DS -2400 -400 2400 -400 79 21
+DS 2400 -400 2400 400 79 21
+DS 2400 400 -2400 400 79 21
+DS -2400 400 -2400 -400 79 21
+$PAD
+Sh "1" R 500 500 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "+3.3V"
+Po -2000 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 80
+$EndPAD
+$PAD
+Sh "2" R 500 500 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po -1000 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 80
+$EndPAD
+$PAD
+Sh "3" R 500 500 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 53 "SWDIO"
+Po 0 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 80
+$EndPAD
+$PAD
+Sh "4" R 500 500 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 52 "SWCLK"
+Po 1000 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 80
+$EndPAD
+$PAD
+Sh "5" R 500 500 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 47 "NRST"
+Po 2000 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 80
+$EndPAD
+$EndMODULE  CONN_5_SM
+$MODULE CONN_6_SM
+Po 47316 41661 1800 15 5042C2F5 5030DCB1 ~~
+Li CONN_6_SM
+Sc 5030DCB1
+AR /502FF199
+Op 0 0 0
+T0 2500 -700 400 400 1800 80 N V 21 N "P1"
+T1 0 0 600 600 1800 120 N I 21 N "CONN_6"
+DS -2100 -400 -2100 400 79 21
+DS -2900 -400 2900 -400 79 21
+DS 2900 -400 2900 400 79 21
+DS 2900 400 -2900 400 79 21
+DS -2900 400 -2900 -400 79 21
+$PAD
+Sh "1" R 500 500 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po -2500 0
+$EndPAD
+$PAD
+Sh "2" R 500 500 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1500 0
+$EndPAD
+$PAD
+Sh "3" R 500 500 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "+5V"
+Po -500 0
+$EndPAD
+$PAD
+Sh "4" R 500 500 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 17 "DIG_IN_UART_RX"
+Po 500 0
+$EndPAD
+$PAD
+Sh "5" R 500 500 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 19 "DIG_OUT_UART_TX"
+Po 1500 0
+$EndPAD
+$PAD
+Sh "6" R 500 500 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2500 0
+$EndPAD
+$EndMODULE  CONN_6_SM
+$MODULE CONN_3_SM
+Po 51916 41661 0 15 5032E018 5042C305 ~~
+Li CONN_3_SM
+Sc 5042C305
+AR /502FEF2D
+Op 0 0 0
+T0 266 763 400 400 0 80 N V 21 N "K1"
+T1 0 0 600 600 0 120 N I 21 N "PWM"
+DS -600 -400 -600 400 79 21
+DS -1300 -400 1400 -400 79 21
+DS 1400 -400 1400 400 79 21
+DS 1400 400 -1400 400 79 21
+DS -1400 400 -1400 -400 79 21
+DS -1400 -400 -1300 -400 79 21
+$PAD
+Sh "1" R 500 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 51 "PWM_IN"
+Po -1000 0
+$EndPAD
+$PAD
+Sh "2" R 500 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "3" R 500 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 1000 0
+$EndPAD
+$EndMODULE  CONN_3_SM
+$MODULE SOT23-5
+Po 46416 45711 0 15 503707D8 5030DD38 ~~
+Li SOT23-5
+Sc 5030DD38
+AR /50313F92
+Op 0 0 0
+At SMD 
+T0 1000 0 400 400 0 80 N V 21 N "U2"
+T1 0 0 250 250 0 50 N I 21 N "MCP1804T-3302I/OT"
+DS 600 -350 600 350 50 21
+DS 600 350 -600 350 50 21
+DS -600 350 -600 -350 50 21
+DS -600 -350 600 -350 50 21
+$PAD
+Sh "1" R 200 300 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po -375 500
+$EndPAD
+$PAD
+Sh "3" R 200 300 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 375 500
+$EndPAD
+$PAD
+Sh "5" R 200 300 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "+3.3V"
+Po -375 -500
+$EndPAD
+$PAD
+Sh "2" R 200 300 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 0 500
+$EndPAD
+$PAD
+Sh "4" R 200 300 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po 375 -500
+$EndPAD
+$SHAPE3D
+Na "smd/SOT23_5.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SOT23-5
+$MODULE SM0805
+Po 50596 46361 0 15 5042C4C1 5036E4ED ~~
+Li SM0805
+Sc 5036E4ED
+AR /5036E252
+Op 0 0 0
+At SMD 
+T0 570 -500 300 300 0 75 N V 21 N "C16"
+T1 0 0 250 250 0 50 N I 21 N "10uF_10V"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 44866 45961 1800 15 50370774 5036E4EF ~~
+Li SM0805
+Sc 5036E4EF
+AR /5036E2E7
+Op 0 0 0
+At SMD 
+T0 350 550 300 300 1800 75 N V 21 N "C17"
+T1 0 0 250 250 1800 50 N I 21 N "10uF_10V"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 45496 47661 900 15 503C2212 5036E4F1 ~~
+Li SM0805
+Sc 5036E4F1
+AR /5036DAAC
+Op 0 0 0
+At SMD 
+T0 -200 -580 300 300 1800 75 N V 21 N "L1"
+T1 0 0 250 250 900 50 N I 21 N "47uH"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 45 "N-000071"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 45236 50981 1800 15 5036E6EA 5030DCBD ~~
+Li SM0805
+Sc 5030DCBD
+AR /5036E1AD
+Op 0 0 0
+At SMD 
+T0 -906 0 300 300 1800 75 N V 21 N "C1"
+T1 0 0 250 250 1800 50 N I 21 N "2.2uF_50V"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 4 "+BATT"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SOD-523
+Po 45376 49181 0 15 50398A1F 5036E5C1 ~~
+Li SOD-523
+Sc 5036E5C1
+AR /5036DAD7
+Op 0 0 0
+T0 -660 30 300 300 0 75 N V 21 N "D7"
+T1 0 0 300 300 0 75 N I 21 N "PMEG6002EB,115"
+DS 98 -157 98 157 79 21
+DS 256 98 256 157 79 21
+DS 256 157 -256 157 79 21
+DS -256 157 -256 98 79 21
+DS -256 -98 -256 -157 79 21
+DS -256 -157 256 -157 79 21
+DS 256 -157 256 -98 79 21
+$PAD
+Sh "1" R 197 157 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po -256 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 197 157 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 45 "N-000071"
+Po 256 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$EndMODULE  SOD-523
+$MODULE SOD-523
+Po 53400 48400 2700 15 5037134A 5030DD23 ~~
+Li SOD-523
+Sc 5030DD23
+AR /502FE8F2
+Op 0 0 0
+T0 661 -16 300 300 2700 75 N V 21 N "D6"
+T1 0 0 300 300 2700 75 N I 21 N "PMEG6002EB,115"
+DS 98 -157 98 157 79 21
+DS 256 98 256 157 79 21
+DS 256 157 -256 157 79 21
+DS -256 157 -256 98 79 21
+DS -256 -98 -256 -157 79 21
+DS -256 -157 256 -157 79 21
+DS 256 -157 256 -98 79 21
+$PAD
+Sh "1" R 197 157 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po -256 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 197 157 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 42 "N-000062"
+Po 256 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$EndMODULE  SOD-523
+$MODULE SOD-523
+Po 50800 48400 2700 15 50371A9B 5030DD26 ~~
+Li SOD-523
+Sc 5030DD26
+AR /502FE8C5
+Op 0 0 0
+T0 661 -16 300 300 2700 75 N V 21 N "D5"
+T1 0 0 300 300 2700 75 N I 21 N "PMEG6002EB,115"
+DS 98 -157 98 157 79 21
+DS 256 98 256 157 79 21
+DS 256 157 -256 157 79 21
+DS -256 157 -256 98 79 21
+DS -256 -98 -256 -157 79 21
+DS -256 -157 256 -157 79 21
+DS 256 -157 256 -98 79 21
+$PAD
+Sh "1" R 197 157 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po -256 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 197 157 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 33 "N-000050"
+Po 256 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$EndMODULE  SOD-523
+$MODULE SOD-523
+Po 48200 48400 2700 15 50371342 5030DD29 ~~
+Li SOD-523
+Sc 5030DD29
+AR /502FE872
+Op 0 0 0
+T0 661 -16 300 300 2700 75 N V 21 N "D4"
+T1 0 0 300 300 2700 75 N I 21 N "PMEG6002EB,115"
+DS 98 -157 98 157 79 21
+DS 256 98 256 157 79 21
+DS 256 157 -256 157 79 21
+DS -256 157 -256 98 79 21
+DS -256 -98 -256 -157 79 21
+DS -256 -157 256 -157 79 21
+DS 256 -157 256 -98 79 21
+$PAD
+Sh "1" R 197 157 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po -256 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 197 157 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 43 "N-000063"
+Po 256 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$EndMODULE  SOD-523
+$MODULE SOD-523
+Po 45166 44911 2700 15 503C21F2 5030DD32 ~~
+Li SOD-523
+Sc 5030DD32
+AR /502FFD3C
+Op 0 0 0
+T0 -100 500 300 300 3600 75 N V 21 N "D1"
+T1 0 0 300 300 2700 75 N I 21 N "PMEG6002EB,115"
+DS 98 -157 98 157 79 21
+DS 256 98 256 157 79 21
+DS 256 157 -256 157 79 21
+DS -256 157 -256 98 79 21
+DS -256 -98 -256 -157 79 21
+DS -256 -157 256 -157 79 21
+DS 256 -157 256 -98 79 21
+$PAD
+Sh "1" R 197 157 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "+5V"
+Po -256 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 197 157 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po 256 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$EndMODULE  SOD-523
+$MODULE SO8N
+Po 46900 48300 1800 15 50371A95 5030DD17 ~~
+Li SO8N
+Cd Module CMS SOJ 8 pins large
+Kw CMS SOJ
+Sc 5030DD17
+AR /502FE553
+Op 0 0 0
+At SMD 
+T0 -466 1739 300 300 1800 75 N V 21 N "U5"
+T1 0 500 400 400 1800 50 N I 21 N "LM5109B"
+DS -1000 -900 1000 -900 50 21
+DS 1000 -900 1000 900 50 21
+DS 1000 900 -1000 900 50 21
+DS -1000 900 -1000 -900 50 21
+DS -1000 -300 -800 -300 50 21
+DS -800 -300 -800 200 50 21
+DS -800 200 -1000 200 50 21
+$PAD
+Sh "8" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 43 "N-000063"
+Po -750 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "7" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 41 "N-000058"
+Po -250 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "6" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 48 "PHA"
+Po 250 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "5" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 46 "N-000072"
+Po 750 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "4" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 750 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "3" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 11 "DIG_AL_SIG"
+Po 250 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "2" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 10 "DIG_AH_SIG"
+Po -250 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "1" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po -750 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so8.wrl"
+Sc 0.500000 0.380000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO8N
+$MODULE SO8N
+Po 49500 48300 1800 15 5042C4EE 5030DD1A ~~
+Li SO8N
+Cd Module CMS SOJ 8 pins large
+Kw CMS SOJ
+Sc 5030DD1A
+AR /502FE592
+Op 0 0 0
+At SMD 
+T0 284 1739 300 300 1800 75 N V 21 N "U6"
+T1 0 500 400 400 1800 50 N I 21 N "LM5109B"
+DS -1000 -900 1000 -900 50 21
+DS 1000 -900 1000 900 50 21
+DS 1000 900 -1000 900 50 21
+DS -1000 900 -1000 -900 50 21
+DS -1000 -300 -800 -300 50 21
+DS -800 -300 -800 200 50 21
+DS -800 200 -1000 200 50 21
+$PAD
+Sh "8" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 33 "N-000050"
+Po -750 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "7" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 38 "N-000055"
+Po -250 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "6" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 49 "PHB"
+Po 250 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "5" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 31 "N-000042"
+Po 750 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "4" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 750 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "3" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 13 "DIG_BL_SIG"
+Po 250 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "2" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 12 "DIG_BH_SIG"
+Po -250 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "1" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po -750 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so8.wrl"
+Sc 0.500000 0.380000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO8N
+$MODULE SO8N
+Po 52100 48300 1800 15 5042C4F1 5030DD1D ~~
+Li SO8N
+Cd Module CMS SOJ 8 pins large
+Kw CMS SOJ
+Sc 5030DD1D
+AR /502FE5D4
+Op 0 0 0
+At SMD 
+T0 -116 1689 300 300 1800 75 N V 21 N "U7"
+T1 0 500 400 400 1800 50 N I 21 N "LM5109B"
+DS -1000 -900 1000 -900 50 21
+DS 1000 -900 1000 900 50 21
+DS 1000 900 -1000 900 50 21
+DS -1000 900 -1000 -900 50 21
+DS -1000 -300 -800 -300 50 21
+DS -800 -300 -800 200 50 21
+DS -800 200 -1000 200 50 21
+$PAD
+Sh "8" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 42 "N-000062"
+Po -750 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "7" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 35 "N-000052"
+Po -250 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "6" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 50 "PHC"
+Po 250 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "5" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 30 "N-000041"
+Po 750 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "4" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 750 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "3" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 15 "DIG_CL_SIG"
+Po 250 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "2" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 14 "DIG_CH_SIG"
+Po -250 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "1" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po -750 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so8.wrl"
+Sc 0.500000 0.380000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO8N
+$MODULE SO8N
+Po 45200 49800 1800 0 50371A3F 5030DD20 ~~
+Li SO8N
+Cd Module CMS SOJ 8 pins large
+Kw CMS SOJ
+Sc 5030DD20
+AR /502FFB47
+Op 0 0 0
+At SMD 
+T0 -1316 39 300 300 1800 75 M V 20 N "U8"
+T1 0 -500 400 400 1800 50 M I 20 N "ACS711KLCTR-25AB-T"
+DS -1000 900 1000 900 50 20
+DS 1000 900 1000 -900 50 20
+DS 1000 -900 -1000 -900 50 20
+DS -1000 -900 -1000 900 50 20
+DS -1000 300 -800 300 50 20
+DS -800 300 -800 -200 50 20
+DS -800 -200 -1000 -200 50 20
+$PAD
+Sh "8" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 1 "+3.3V"
+Po -750 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "7" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 26 "N-000008"
+Po -250 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "6" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 18 "DIG_NOT_FLT"
+Po 250 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "5" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 750 1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "4" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 750 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "3" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 250 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "2" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 21 "I_SUM"
+Po -250 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "1" R 200 450 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 21 "I_SUM"
+Po -750 -1250
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so8.wrl"
+Sc 0.500000 0.380000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO8N
+$MODULE SOT23_6
+Po 45116 50001 2700 15 50398A1B 5030DD35 ~~
+Li SOT23_6
+Sc 5030DD35
+AR /50397FB8
+Op 0 0 0
+T0 260 -1000 300 300 3600 75 N V 21 N "U1"
+T1 158 -1024 197 197 2700 30 N I 21 N "V_REG_SWITCHING_LMR14203"
+DS -200 300 -500 100 50 21
+DS 500 300 -525 300 50 21
+DS -525 300 -525 -300 50 21
+DS -525 -300 500 -300 50 21
+DS 500 -300 500 300 50 21
+$PAD
+Sh "6" R 276 394 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 45 "N-000071"
+Po -375 -500
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "5" R 276 394 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 4 "+BATT"
+Po 0 -500
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "4" R 276 394 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 4 "+BATT"
+Po 375 -500
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "3" R 276 394 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 44 "N-000066"
+Po 375 500
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "2" R 276 394 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 0 500
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "1" R 276 394 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 29 "N-000021"
+Po -375 500
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$SHAPE3D
+Na "smd/SOT23_6.wrl"
+Sc 0.110000 0.110000 0.110000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 -180.000000
+$EndSHAPE3D
+$EndMODULE  SOT23_6
+$MODULE SM0603_DIODE
+Po 49316 42561 900 15 5042C35F 5030DD2C ~~
+Li SM0603_DIODE
+Sc 5030DD2C
+AR /50300529
+Op 0 0 0
+T0 -450 -1000 300 300 1800 75 N I 21 N "D3"
+T1 -250 650 300 300 1800 75 N V 21 N "ERR"
+DS 300 200 300 250 75 21
+DS 300 -200 300 -250 75 21
+DS 450 -200 -450 -200 75 21
+DS -450 200 450 200 75 21
+$PAD
+Sh "1" R 310 310 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 24 "N-000001"
+Po -300 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "2" R 310 310 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 300 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$EndMODULE  SM0603_DIODE
+$MODULE SM0603_DIODE
+Po 48616 42561 900 15 5042C37C 503AA721 ~~
+Li SM0603_DIODE
+Sc 503AA721
+AR /503004EC
+Op 0 0 0
+T0 0 -450 300 300 900 75 N I 21 N "D2"
+T1 -350 -750 300 300 1800 75 N V 21 N "STATUS"
+DS 300 200 300 250 75 21
+DS 300 -200 300 -250 75 21
+DS 450 -200 -450 -200 75 21
+DS -450 200 450 200 75 21
+$PAD
+Sh "1" R 310 310 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 25 "N-000002"
+Po -300 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$PAD
+Sh "2" R 310 310 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 300 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 50
+$EndPAD
+$EndMODULE  SM0603_DIODE
+$MODULE QFP-48
+Po 49466 44611 2700 0 5042C533 5030DCB4 ~~
+Li QFP-48
+Sc 5030DCB4
+AR /502F878F
+Op 0 0 0
+T0 750 2350 394 394 3600 79 M V 20 N "U4"
+T1 0 0 600 600 2700 120 M I 20 N "STM32F103XX-48"
+DS -1476 1378 -1378 1476 79 20
+DS -1476 1280 -1280 1476 79 20
+DS -1476 -1280 -1476 -1476 79 20
+DS -1476 -1476 -1280 -1476 79 20
+DS 1476 -1280 1476 -1476 79 20
+DS 1476 -1476 1280 -1476 79 20
+DS 1280 1476 1476 1476 79 20
+DS 1476 1476 1476 1280 79 20
+DS -1280 1476 -1476 1476 79 20
+DS -1476 1476 -1476 1280 79 20
+$PAD
+Sh "1" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 1 "+3.3V"
+Po -1673 1083
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po -1673 886
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "3" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po -1673 689
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "4" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po -1673 492
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "5" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 28 "N-000019"
+Po -1673 295
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "6" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 27 "N-000018"
+Po -1673 98
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "7" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 47 "NRST"
+Po -1673 -98
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "8" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po -1673 -295
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "9" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 1 "+3.3V"
+Po -1673 -492
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "10" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 7 "ANALOG_PHA_FBK"
+Po -1673 -689
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "11" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 8 "ANALOG_PHB_FBK"
+Po -1673 -886
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "12" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 9 "ANALOG_PHC_FBK"
+Po -1673 -1083
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "13" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 5 "ANALOG_BATT_FBK"
+Po -1083 -1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "14" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po -886 -1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "15" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po -689 -1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "16" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po -492 -1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "17" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 18 "DIG_NOT_FLT"
+Po -295 -1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "18" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 6 "ANALOG_I_SENSE"
+Po -98 -1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "19" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po 98 -1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "20" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po 295 -1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "21" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po 492 -1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "22" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po 689 -1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "23" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 886 -1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "24" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 1 "+3.3V"
+Po 1083 -1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "25" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po 1673 -1083
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "26" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 15 "DIG_CL_SIG"
+Po 1673 -886
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "27" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 13 "DIG_BL_SIG"
+Po 1673 -689
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "28" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 11 "DIG_AL_SIG"
+Po 1673 -492
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "29" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 14 "DIG_CH_SIG"
+Po 1673 -295
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "30" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 12 "DIG_BH_SIG"
+Po 1673 -98
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "31" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 10 "DIG_AH_SIG"
+Po 1673 98
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "32" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 55 "USB_D-"
+Po 1673 295
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "33" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 54 "USB_D+"
+Po 1673 492
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "34" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 53 "SWDIO"
+Po 1673 689
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "35" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 1673 886
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "36" O 551 118 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 1 "+3.3V"
+Po 1673 1083
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "37" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 52 "SWCLK"
+Po 1083 1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "38" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po 886 1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "39" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 16 "DIG_IN_PWM"
+Po 689 1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "40" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 22 "LED_ERROR"
+Po 492 1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "41" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 23 "LED_STATUS"
+Po 295 1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "42" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 19 "DIG_OUT_UART_TX"
+Po 98 1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "43" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 17 "DIG_IN_UART_RX"
+Po -98 1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "44" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po -295 1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "45" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po -492 1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "46" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po -689 1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "47" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po -886 1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "48" O 118 551 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 1 "+3.3V"
+Po -1083 1673
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "3Dmodels\\QFP-48.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  QFP-48
+$MODULE SC-100
+Po 47400 52200 0 15 5037118C 5030D90F ~~
+Li SC-100
+Sc 5030D90F
+AR /502FCF62
+Op 0 0 0
+T0 0 -1000 300 300 0 75 N V 21 N "Q1"
+T1 0 0 600 600 0 120 N I 21 N "PSMN010-25YLC,115"
+DS 1083 -787 1083 1575 150 21
+DS -1083 -787 -1083 1575 150 21
+$PAD
+Sh "5" R 1969 1614 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 4 "+BATT"
+Po 0 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "1" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 48 "PHA"
+Po -748 1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 48 "PHA"
+Po -256 1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "3" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 48 "PHA"
+Po 256 1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "4" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 40 "N-000057"
+Po 748 1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "3Dmodels\\LFPAK-Power-SO8.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SC-100
+$MODULE SC-100
+Po 47400 52500 0 0 503AB3C5 5030D90D ~~
+Li SC-100
+Sc 5030D90D
+AR /502FD35C
+Op 0 0 0
+T0 766 1061 300 300 0 75 M V 20 N "Q2"
+T1 0 0 600 600 0 120 M I 20 N "PSMN010-25YLC,115"
+DS 1083 787 1083 -1575 150 20
+DS -1083 787 -1083 -1575 150 20
+$PAD
+Sh "5" R 1969 1614 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 48 "PHA"
+Po 0 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "1" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 21 "I_SUM"
+Po -748 -1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 21 "I_SUM"
+Po -256 -1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "3" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 21 "I_SUM"
+Po 256 -1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "4" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 39 "N-000056"
+Po 748 -1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "3Dmodels\\LFPAK-Power-SO8.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SC-100
+$MODULE SC-100
+Po 50000 52200 0 15 5037118C 5030D911 ~~
+Li SC-100
+Sc 5030D911
+AR /502FD362
+Op 0 0 0
+T0 0 -1000 300 300 0 75 N V 21 N "Q3"
+T1 0 0 600 600 0 120 N I 21 N "PSMN010-25YLC,115"
+DS 1083 -787 1083 1575 150 21
+DS -1083 -787 -1083 1575 150 21
+$PAD
+Sh "5" R 1969 1614 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 4 "+BATT"
+Po 0 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "1" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 49 "PHB"
+Po -748 1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 49 "PHB"
+Po -256 1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "3" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 49 "PHB"
+Po 256 1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "4" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 37 "N-000054"
+Po 748 1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "3Dmodels\\LFPAK-Power-SO8.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SC-100
+$MODULE SC-100
+Po 50000 52500 0 0 503AB3C0 5030D913 ~~
+Li SC-100
+Sc 5030D913
+AR /502FD376
+Op 0 0 0
+T0 766 1061 300 300 0 75 M V 20 N "Q4"
+T1 0 0 600 600 0 120 M I 20 N "PSMN010-25YLC,115"
+DS 1083 787 1083 -1575 150 20
+DS -1083 787 -1083 -1575 150 20
+$PAD
+Sh "5" R 1969 1614 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 49 "PHB"
+Po 0 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "1" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 21 "I_SUM"
+Po -748 -1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 21 "I_SUM"
+Po -256 -1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "3" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 21 "I_SUM"
+Po 256 -1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "4" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 36 "N-000053"
+Po 748 -1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "3Dmodels\\LFPAK-Power-SO8.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SC-100
+$MODULE SC-100
+Po 52600 52200 0 15 5037118C 5030D915 ~~
+Li SC-100
+Sc 5030D915
+AR /502FD366
+Op 0 0 0
+T0 0 -1000 300 300 0 75 N V 21 N "Q5"
+T1 0 0 600 600 0 120 N I 21 N "PSMN010-25YLC,115"
+DS 1083 -787 1083 1575 150 21
+DS -1083 -787 -1083 1575 150 21
+$PAD
+Sh "5" R 1969 1614 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 4 "+BATT"
+Po 0 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "1" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 50 "PHC"
+Po -748 1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 50 "PHC"
+Po -256 1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "3" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 50 "PHC"
+Po 256 1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "4" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 32 "N-000049"
+Po 748 1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "3Dmodels\\LFPAK-Power-SO8.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SC-100
+$MODULE SC-100
+Po 52600 52500 0 0 503AB3B9 5030D917 ~~
+Li SC-100
+Sc 5030D917
+AR /502FD36E
+Op 0 0 0
+T0 816 1061 300 300 0 75 M V 20 N "Q6"
+T1 0 0 600 600 0 120 M I 20 N "PSMN010-25YLC,115"
+DS 1083 787 1083 -1575 150 20
+DS -1083 787 -1083 -1575 150 20
+$PAD
+Sh "5" R 1969 1614 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 50 "PHC"
+Po 0 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "1" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 21 "I_SUM"
+Po -748 -1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 21 "I_SUM"
+Po -256 -1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "3" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 21 "I_SUM"
+Po 256 -1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "4" R 197 413 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 34 "N-000051"
+Po 748 -1398
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "3Dmodels\\LFPAK-Power-SO8.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SC-100
+$MODULE SM0402
+Po 50800 47300 900 15 503C2224 503136C8 ~~
+Li SM0402
+Sc 503136C8
+AR /5031363A
+Op 0 0 0
+At SMD 
+T0 -561 -134 300 300 1800 75 N V 21 N "C13"
+T1 0 0 300 300 900 75 N I 21 N "1uF_16V"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 45466 47861 2700 0 503C2156 50313476 ~~
+Li SM0402
+Sc 50313476
+AR /503125A9
+Op 0 0 0
+At SMD 
+T0 -500 -150 300 300 3600 75 M V 20 N "R23"
+T1 0 0 300 300 2700 75 M I 20 N "1.0k"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 6 "ANALOG_I_SENSE"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 26 "N-000008"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 46016 47861 900 0 503C214F 5030DCF6 ~~
+Li SM0402
+Sc 5030DCF6
+AR /502FFBA5
+Op 0 0 0
+At SMD 
+T0 0 650 300 300 1800 75 M V 20 N "R16"
+T1 0 0 300 300 900 75 M I 20 N "1.0k"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00440001
+Ne 1 "+3.3V"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00440001
+Ne 18 "DIG_NOT_FLT"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 44816 47711 1800 0 503C2152 50313474 ~~
+Li SM0402
+Sc 50313474
+AR /50312577
+Op 0 0 0
+At SMD 
+T0 100 400 300 300 1800 75 M V 20 N "C11"
+T1 0 0 300 300 1800 75 M I 20 N "1000pF_10V"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 6 "ANALOG_I_SENSE"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 44456 46701 900 15 503C2205 5036E4F4 ~~
+Li SM0402
+Sc 5036E4F4
+AR /5036DFEC
+Op 0 0 0
+At SMD 
+T0 -760 10 300 300 900 75 N V 21 N "R25"
+T1 0 0 300 300 900 75 N I 21 N "1.0k"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 44 "N-000066"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 44896 47041 900 15 503C2200 5036E4F2 ~~
+Li SM0402
+Sc 5036E4F2
+AR /5036DFDD
+Op 0 0 0
+At SMD 
+T0 480 220 300 300 1800 75 N V 21 N "R24"
+T1 0 0 300 300 900 75 N I 21 N "10.0k"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 44 "N-000066"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 48316 44311 0 15 5042C24A 5030DCDE ~~
+Li SM0402
+Sc 5030DCDE
+AR /502FD10A
+Op 0 0 0
+At SMD 
+T0 -350 -350 300 300 0 75 N V 21 N "C2"
+T1 0 0 300 300 0 75 N I 21 N "1000pF_10V"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 16 "DIG_IN_PWM"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 49316 43411 2700 15 5042C44F 5030DCF9 ~~
+Li SM0402
+Sc 5030DCF9
+AR /5030052F
+Op 0 0 0
+At SMD 
+T0 -150 -600 300 300 3600 75 N V 21 N "R15"
+T1 0 0 300 300 2700 75 N I 21 N "1.0k"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 24 "N-000001"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 22 "LED_ERROR"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 48916 43411 2700 15 5042C464 5030DD14 ~~
+Li SM0402
+Sc 5030DD14
+AR /50300521
+Op 0 0 0
+At SMD 
+T0 -100 650 300 300 3600 75 N V 21 N "R13"
+T1 0 0 300 300 2700 75 N I 21 N "1.0k"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 25 "N-000002"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 23 "LED_STATUS"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 52600 43250 0 0 503C21B4 5030DD02 ~~
+Li SM0402
+Sc 5030DD02
+AR /50302213
+Op 0 0 0
+At SMD 
+T0 -584 11 300 300 0 75 M V 20 N "R9"
+T1 0 0 300 300 0 75 M I 20 N "1.0k"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 5 "ANALOG_BATT_FBK"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 52600 43700 1800 0 503C21AE 5030DCFF ~~
+Li SM0402
+Sc 5030DCFF
+AR /50300035
+Op 0 0 0
+At SMD 
+T0 584 -11 300 300 1800 75 M V 20 N "R8"
+T1 0 0 300 300 1800 75 M I 20 N "10.0k"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 4 "+BATT"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 5 "ANALOG_BATT_FBK"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 52600 42350 0 0 503C21A9 5030DD08 ~~
+Li SM0402
+Sc 5030DD08
+AR /50302210
+Op 0 0 0
+At SMD 
+T0 -584 61 300 300 0 75 M V 20 N "R7"
+T1 0 0 300 300 0 75 M I 20 N "1.0k"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 9 "ANALOG_PHC_FBK"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 52600 42800 1800 0 503C21A7 5030DCE1 ~~
+Li SM0402
+Sc 5030DCE1
+AR /50300066
+Op 0 0 0
+At SMD 
+T0 584 -11 300 300 1800 75 M V 20 N "R6"
+T1 0 0 300 300 1800 75 M I 20 N "10.0k"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 50 "PHC"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 9 "ANALOG_PHC_FBK"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 52600 41450 0 0 503C2186 5030DCB7 ~~
+Li SM0402
+Sc 5030DCB7
+AR /5030220B
+Op 0 0 0
+At SMD 
+T0 -634 11 300 300 0 75 M V 20 N "R5"
+T1 0 0 300 300 0 75 M I 20 N "1.0k"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 8 "ANALOG_PHB_FBK"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 52600 41900 1800 0 503C217E 5030DCBA ~~
+Li SM0402
+Sc 5030DCBA
+AR /5030004D
+Op 0 0 0
+At SMD 
+T0 584 -11 300 300 1800 75 M V 20 N "R4"
+T1 0 0 300 300 1800 75 M I 20 N "10.0k"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 49 "PHB"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 8 "ANALOG_PHB_FBK"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 51416 41311 0 0 5042C55E 5030DCFC ~~
+Li SM0402
+Sc 5030DCFC
+AR /503021FE
+Op 0 0 0
+At SMD 
+T0 -600 50 300 300 0 75 M V 20 N "R3"
+T1 0 0 300 300 0 75 M I 20 N "1.0k"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 7 "ANALOG_PHA_FBK"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 51416 41761 1800 0 5042C560 5030DCC0 ~~
+Li SM0402
+Sc 5030DCC0
+AR /5030006B
+Op 0 0 0
+At SMD 
+T0 100 -450 300 300 1800 75 M V 20 N "R2"
+T1 0 0 300 300 1800 75 M I 20 N "10.0k"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 48 "PHA"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 7 "ANALOG_PHA_FBK"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 48316 44711 0 15 5042C24C 5030DCC3 ~~
+Li SM0402
+Sc 5030DCC3
+AR /502F8943
+Op 0 0 0
+At SMD 
+T0 -200 400 300 300 0 75 N V 21 N "R1"
+T1 0 0 300 300 0 75 N I 21 N "100"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 16 "DIG_IN_PWM"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 51 "PWM_IN"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 53400 47300 900 15 503C222D 503136CA ~~
+Li SM0402
+Sc 503136CA
+AR /5031367B
+Op 0 0 0
+At SMD 
+T0 -561 -134 300 300 1800 75 N V 21 N "C14"
+T1 0 0 300 300 900 75 N I 21 N "1uF_16V"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 48200 47300 900 15 503C2227 503136C6 ~~
+Li SM0402
+Sc 503136C6
+AR /50313601
+Op 0 0 0
+At SMD 
+T0 -561 -134 300 300 1800 75 N V 21 N "C12"
+T1 0 0 300 300 900 75 N I 21 N "1uF_16V"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "+8V"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 53400 50100 900 15 503C2277 5030DCE4 ~~
+Li SM0402
+Sc 5030DCE4
+AR /502FD527
+Op 0 0 0
+At SMD 
+T0 -261 -384 300 300 900 75 N V 21 N "R22"
+T1 0 0 300 300 900 75 N I 21 N "33"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 34 "N-000051"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 30 "N-000041"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 53366 54211 2700 15 50440AE1 5030DCE7 ~~
+Li SM0402
+Sc 5030DCE7
+AR /502FD521
+Op 0 0 0
+At SMD 
+T0 -100 -450 300 300 2700 75 N V 21 N "R21"
+T1 0 0 300 300 2700 75 N I 21 N "33"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 32 "N-000049"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 35 "N-000052"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 50800 50100 900 15 503C227D 5030DCEA ~~
+Li SM0402
+Sc 5030DCEA
+AR /502FD51B
+Op 0 0 0
+At SMD 
+T0 -261 -384 300 300 900 75 N V 21 N "R20"
+T1 0 0 300 300 900 75 N I 21 N "33"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 36 "N-000053"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 31 "N-000042"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 50766 54211 2700 15 50440AEE 5030DCED ~~
+Li SM0402
+Sc 5030DCED
+AR /502FD516
+Op 0 0 0
+At SMD 
+T0 100 -450 300 300 2700 75 N V 21 N "R19"
+T1 0 0 300 300 2700 75 N I 21 N "33"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 37 "N-000054"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 38 "N-000055"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 48200 50100 900 15 503C2284 5030DCF0 ~~
+Li SM0402
+Sc 5030DCF0
+AR /502FD50D
+Op 0 0 0
+At SMD 
+T0 -261 -384 300 300 900 75 N V 21 N "R18"
+T1 0 0 300 300 900 75 N I 21 N "33"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "N-000056"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 46 "N-000072"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 48166 54211 2700 15 50440AF1 5030DCF3 ~~
+Li SM0402
+Sc 5030DCF3
+AR /502FD4FA
+Op 0 0 0
+At SMD 
+T0 100 -450 300 300 2700 75 N V 21 N "R17"
+T1 0 0 300 300 2700 75 N I 21 N "33"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 40 "N-000057"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00888000
+Ne 41 "N-000058"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 51466 46111 0 0 5042C568 5030DCCF ~~
+Li SM0402
+Sc 5030DCCF
+AR /502F8FF0
+Op 0 0 0
+At SMD 
+T0 -150 450 300 300 0 75 M V 20 N "C7"
+T1 0 0 300 300 0 75 M I 20 N "1uF_16V"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 1 "+3.3V"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 52616 44611 900 0 503C11E8 5030DCD2 ~~
+Li SM0402
+Sc 5030DCD2
+AR /502F8FEA
+Op 0 0 0
+At SMD 
+T0 0 380 300 300 900 75 M V 20 N "C6"
+T1 0 0 300 300 900 75 M I 20 N "1uF_16V"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00440001
+Ne 1 "+3.3V"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 47066 43811 2700 0 5042C538 5030DCD5 ~~
+Li SM0402
+Sc 5030DCD5
+AR /502F8FE6
+Op 0 0 0
+At SMD 
+T0 -500 0 300 300 3600 75 M V 20 N "C5"
+T1 0 0 300 300 2700 75 M I 20 N "1uF_16V"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 1 "+3.3V"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 47716 46561 2700 0 5042C56C 5030DCD8 ~~
+Li SM0402
+Sc 5030DCD8
+AR /502F8FD2
+Op 0 0 0
+At SMD 
+T0 0 500 300 300 3600 75 M V 20 N "C4"
+T1 0 0 300 300 2700 75 M I 20 N "1uF_16V"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 1 "+3.3V"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 2700
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 46216 44711 0 15 503C11E8 5030DCDB ~~
+Li SM0402
+Sc 5030DCDB
+AR /502F8919
+Op 0 0 0
+At SMD 
+T0 0 -380 300 300 0 75 N V 21 N "C3"
+T1 0 0 300 300 0 75 N I 21 N "1uF_16V"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "+3.3V"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "GND"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 46466 43611 1800 0 5042C53B 5042AE1A ~~
+Li SM0402
+Sc 5042AE1A
+AR /5040195F
+Op 0 0 0
+At SMD 
+T0 100 -450 300 300 1800 75 M V 20 N "R10"
+T1 0 0 300 300 1800 75 M I 20 N "1.5k"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 1 "+3.3V"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 54 "USB_D+"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 47000 50300 1800 15 503C2287 5030DCCC ~~
+Li SM0402
+Sc 5030DCCC
+AR /502FE61E
+Op 0 0 0
+At SMD 
+T0 34 -461 300 300 1800 75 N V 21 N "C8"
+T1 0 0 300 300 1800 75 N I 21 N "1uF_16V"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 43 "N-000063"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 48 "PHA"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 49600 50300 1800 15 503C2289 5030DCC9 ~~
+Li SM0402
+Sc 5030DCC9
+AR /502FE679
+Op 0 0 0
+At SMD 
+T0 -16 -461 300 300 1800 75 N V 21 N "C9"
+T1 0 0 300 300 1800 75 N I 21 N "1uF_16V"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 33 "N-000050"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 49 "PHB"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 52200 50300 1800 15 503C2291 5030DCC6 ~~
+Li SM0402
+Sc 5030DCC6
+AR /502FE689
+Op 0 0 0
+At SMD 
+T0 -16 -461 300 300 1800 75 N V 21 N "C10"
+T1 0 0 300 300 1800 75 N I 21 N "1uF_16V"
+DS -280 180 280 180 75 21
+DS -280 -180 280 -180 75 21
+$PAD
+Sh "1" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 42 "N-000062"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 50 "PHC"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 48716 41411 900 0 5042C555 50418C9B ~~
+Li SM0402
+Sc 50418C9B
+AR /504025BA
+Op 0 0 0
+At SMD 
+T0 -550 -200 300 300 1800 75 M V 20 N "C18"
+T1 0 0 300 300 900 75 M I 20 N "8pF_50V"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 900
+Dr 0 0 0
+At SMD N 00440001
+Ne 28 "N-000019"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE SM0402
+Po 50566 41811 1800 0 50418CC0 50418C9D ~~
+Li SM0402
+Sc 50418C9D
+AR /50418AC7
+Op 0 0 0
+At SMD 
+T0 149 -449 300 300 1800 75 M V 20 N "C19"
+T1 -51 351 300 300 1800 75 M I 20 N "8pF_50V"
+DS -280 -180 280 -180 75 20
+DS -280 180 280 180 75 20
+$PAD
+Sh "1" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po -200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$PAD
+Sh "2" R 200 250 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 27 "N-000018"
+Po 200 0
+.SolderMask 10
+.SolderPaste -10
+.LocalClearance 10
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$MODULE CRYSTAL_CX2520_SERIES
+Po 49916 41811 1800 0 5042C547 50418C9E ~~
+Li CRYSTAL_CX2520_SERIES
+Sc 50418C9E
+AR /504189C6
+Op 0 0 0
+T0 600 -450 315 315 1800 79 M V 20 N "X1"
+T1 315 276 315 315 1800 79 M I 20 N "XTAL"
+DS 906 276 906 236 79 20
+DS 276 -197 394 -197 79 20
+DS -236 276 -236 236 79 20
+DS 276 709 394 709 79 20
+$PAD
+Sh "1" R 472 394 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 27 "N-000018"
+Po 0 0
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "4" R 472 394 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 0 ""
+Po 0 512
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "3" R 472 394 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 28 "N-000019"
+Po 669 512
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "2" R 472 394 0 0 1800
+Dr 0 0 0
+At SMD N 00440001
+Ne 20 "GND"
+Po 669 0
+.LocalClearance 3
+$EndPAD
+$EndMODULE  CRYSTAL_CX2520_SERIES
+$MODULE SM0402
+Po 45336 48641 0 15 4E43A43D 503142DB ~~
+Li SM0402
+Sc 503142DB
+AR /5036DF90
+Op 0 0 0
+At SMD 
+T0 0 300 120 120 0 30 N V 21 N "C15"
+T1 0 -250 120 120 0 30 N I 21 N "1uF_16V"
+DS -100 -150 -300 -150 50 21
+DS -300 -150 -300 150 50 21
+DS -300 150 -100 150 50 21
+DS 100 -150 300 -150 50 21
+DS 300 -150 300 150 50 21
+DS 300 150 100 150 50 21
+$PAD
+Sh "1" R 157 236 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 29 "N-000021"
+Po -177 0
+$EndPAD
+$PAD
+Sh "2" R 157 236 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 45 "N-000071"
+Po 177 0
+$EndPAD
+$SHAPE3D
+Na "smd\\chip_cms.wrl"
+Sc 0.050000 0.050000 0.050000
+Of 0.000000 0.000000 0.002000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0402
+$TEXTPCB
+Te "NRST"
+Po 49566 44061 300 300 75 0
+De 21 1 0 Normal C
+$EndTEXTPCB
+$TEXTPCB
+Te "SWD"
+Po 51516 43711 300 300 75 900
+De 21 1 0 Normal C
+$EndTEXTPCB
+$TEXTPCB
+Te "SCK"
+Po 50516 43761 300 300 75 900
+De 21 1 0 Normal C
+$EndTEXTPCB
+$TEXTPCB
+Te "OpenESC v0.1"
+Po 45916 43661 300 300 75 0
+De 21 1 0 Normal C
+$EndTEXTPCB
+$TEXTPCB
+Te "5V"
+Po 47866 42411 300 300 75 900
+De 21 1 0 Normal C
+$EndTEXTPCB
+$TEXTPCB
+Te "RX"
+Po 46866 42411 300 300 75 900
+De 21 1 0 Normal C
+$EndTEXTPCB
+$TEXTPCB
+Te "TX"
+Po 45816 42411 300 300 75 900
+De 21 1 0 Normal C
+$EndTEXTPCB
+$TEXTPCB
+Te "+BAT"
+Po 45000 52638 400 400 80 0
+De 21 1 0 Normal C
+$EndTEXTPCB
+$TEXTPCB
+Te "-BAT"
+Po 45000 52638 400 400 100 0
+De 20 1 0 Normal C
+$EndTEXTPCB
+$TEXTPCB
+Te "PWM"
+Po 50766 42361 400 400 80 0
+De 21 1 0 Normal C
+$EndTEXTPCB
+$DRAWSEGMENT
+Po 0 44016 40961 44016 54961 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 54016 40961 44016 40961 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 54016 54961 54016 40961 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 44016 54961 54016 54961 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$TRACK
+Po 0 44470 46864 44456 46878 150 -1
+De 15 0 0 0 0
+Po 0 48493 44711 48493 44684 70 -1
+De 15 0 0 0 0
+Po 0 52616 44811 52616 45111 80 -1
+De 0 0 1 0 400000
+Po 0 53066 45111 53516 44611 80 -1
+De 15 0 1 0 800000
+Po 0 53016 45161 53066 45111 80 -1
+De 15 0 1 0 0
+Po 3 52616 45161 52616 45161 270 -1
+De 15 1 1 0 0
+Po 0 52616 45111 52616 45161 80 -1
+De 0 0 1 0 0
+Po 0 47793 43384 48239 42938 80 -1
+De 0 0 1 0 0
+Po 0 50066 43461 50016 43411 80 -1
+De 0 0 1 0 0
+Po 0 49958 43353 49958 42938 80 -1
+De 0 0 1 0 800000
+Po 0 49958 43353 50016 43411 80 -1
+De 0 0 1 0 0
+Po 3 50066 43461 50066 43461 270 -1
+De 15 1 1 0 0
+Po 0 47366 46061 47416 46111 80 -1
+De 0 0 1 0 0
+Po 0 45950 48127 45950 48550 80 -1
+De 0 0 1 0 800000
+Po 0 47793 46284 48383 46284 80 -1
+De 0 0 1 0 800000
+Po 0 46041 45211 46041 44736 150 -1
+De 15 0 1 0 400000
+Po 0 51139 45984 51266 46111 80 -1
+De 0 0 1 0 800000
+Po 0 47793 43388 47616 43211 80 -1
+De 0 0 1 0 0
+Po 0 48239 42938 48383 42938 80 -1
+De 0 0 1 0 800000
+Po 0 50683 45694 50666 45711 80 -1
+De 0 0 1 0 0
+Po 0 51139 45694 51139 45984 80 -1
+De 0 0 1 0 400000
+Po 0 46041 44736 46016 44711 150 -1
+De 15 0 1 0 800000
+Po 0 47149 43528 47066 43611 80 -1
+De 0 0 1 0 800000
+Po 0 47666 46361 47416 46111 80 -1
+De 0 0 1 0 0
+Po 3 47366 46061 47366 46061 270 -1
+De 15 1 1 0 0
+Po 0 47793 43528 47793 43388 80 -1
+De 0 0 1 0 400000
+Po 0 51139 45694 50683 45694 80 -1
+De 0 0 1 0 400000
+Po 3 50666 45711 50666 45711 270 -1
+De 15 1 1 0 0
+Po 3 45716 44711 45716 44711 270 -1
+De 15 1 1 0 0
+Po 0 46016 44711 45716 44711 150 -1
+De 15 0 1 0 400000
+Po 0 45766 47811 45766 46911 80 -1
+De 0 0 1 0 0
+Po 0 46016 48061 45766 47811 80 -1
+De 0 0 1 0 400000
+Po 0 47793 43528 47793 43384 80 -1
+De 0 0 1 0 400000
+Po 0 47666 46361 47716 46361 80 -1
+De 0 0 1 0 800000
+Po 0 47716 46361 47793 46284 80 -1
+De 0 0 1 0 400000
+Po 0 47793 43528 47149 43528 80 -1
+De 0 0 1 0 400000
+Po 3 45666 46811 45666 46811 270 -1
+De 15 1 1 0 0
+Po 0 46016 48061 45950 48127 80 -1
+De 0 0 1 0 400000
+Po 0 45766 46911 45666 46811 80 -1
+De 0 0 1 0 0
+Po 3 47616 43211 47616 43211 270 -1
+De 15 1 1 0 0
+Po 0 47066 43611 46666 43611 80 -1
+De 0 0 1 0 C00000
+Po 0 52616 45161 53016 45161 80 -1
+De 15 0 1 0 0
+Po 0 44460 44655 44316 44511 80 -1
+De 15 0 2 0 0
+Po 0 45166 44655 44460 44655 80 -1
+De 15 0 2 0 400000
+Po 0 44316 41361 44466 41211 80 -1
+De 15 0 2 0 0
+Po 0 44316 43261 44566 43261 80 -1
+De 15 0 2 0 0
+Po 0 46866 41211 47366 41211 80 -1
+De 15 0 2 0 0
+Po 0 47366 41211 47816 41661 80 -1
+De 15 0 2 0 800000
+Po 0 44316 44511 44316 43261 80 -1
+De 15 0 2 0 0
+Po 0 44316 43261 44316 41361 80 -1
+De 15 0 2 0 0
+Po 0 45504 43123 45504 42624 80 -1
+De 0 0 2 0 800000
+Po 0 44566 43261 45366 43261 80 -1
+De 0 0 2 0 0
+Po 0 45366 43261 45504 43123 80 -1
+De 0 0 2 0 0
+Po 0 44466 41211 46866 41211 80 -1
+De 15 0 2 0 0
+Po 3 44566 43261 44566 43261 270 -1
+De 15 1 2 0 0
+Po 0 45241 45961 45241 45242 150 -1
+De 15 0 3 0 400000
+Po 0 53400 47477 53400 48144 150 -1
+De 15 0 3 0 800000
+Po 0 46766 45236 46766 45461 150 -1
+De 15 0 3 0 0
+Po 0 46791 45211 46766 45236 150 -1
+De 15 0 3 0 400000
+Po 0 46766 45511 46616 45661 150 -1
+De 15 0 3 0 0
+Po 0 50800 47477 50800 48144 150 -1
+De 15 0 3 0 800000
+Po 0 47650 47375 47752 47477 150 -1
+De 15 0 3 0 0
+Po 0 46616 45661 46266 45661 150 -1
+De 15 0 3 0 0
+Po 0 48200 47477 48200 48144 150 -1
+De 15 0 3 0 800000
+Po 0 50352 47477 50800 47477 150 -1
+De 15 0 3 0 0
+Po 0 46066 45861 46066 46186 150 -1
+De 15 0 3 0 0
+Po 0 50250 47050 50250 47375 150 -1
+De 15 0 3 0 400000
+Po 0 52850 47050 52856 47056 150 -1
+De 15 0 3 0 400000
+Po 0 47752 47477 48200 47477 150 -1
+De 15 0 3 0 0
+Po 0 50221 46361 50250 46390 150 -1
+De 15 0 3 0 400000
+Po 0 45241 45242 45166 45167 150 -1
+De 15 0 3 0 800000
+Po 0 46766 45461 46766 45511 150 -1
+De 15 0 3 0 0
+Po 0 47650 47050 47650 47375 150 -1
+De 15 0 3 0 400000
+Po 0 52856 47056 52856 47361 150 -1
+De 15 0 3 0 0
+Po 0 50250 46390 50250 47050 150 -1
+De 15 0 3 0 800000
+Po 0 45491 46211 45241 45961 150 -1
+De 15 0 3 0 800000
+Po 0 44941 47286 45496 47286 150 -1
+De 15 0 3 0 800000
+Po 0 44896 47241 44941 47286 150 -1
+De 15 0 3 0 400000
+Po 0 46266 45661 46066 45861 150 -1
+De 15 0 3 0 0
+Po 0 46041 46211 45491 46211 150 -1
+De 15 0 3 0 400000
+Po 0 46066 46186 46041 46211 150 -1
+De 15 0 3 0 800000
+Po 0 52856 47361 52972 47477 150 -1
+De 15 0 3 0 0
+Po 0 50250 47375 50352 47477 150 -1
+De 15 0 3 0 0
+Po 0 52972 47477 53400 47477 150 -1
+De 15 0 3 0 0
+Po 3 51266 53661 51266 53661 200 -1
+De 15 1 4 0 0
+Po 0 52800 43700 52800 43677 80 -1
+De 0 0 4 0 400000
+Po 0 51266 53661 51266 53361 80 -1
+De 2 0 4 0 0
+Po 0 51266 53361 51516 53111 80 -1
+De 2 0 4 0 0
+Po 0 53716 52461 53716 49011 80 -1
+De 2 0 4 0 0
+Po 0 51516 53111 53066 53111 80 -1
+De 2 0 4 0 0
+Po 0 52600 52200 52589 52211 80 -1
+De 15 0 4 0 400000
+Po 0 53205 43700 52800 43700 80 -1
+De 0 0 4 0 800000
+Po 0 53716 43961 53466 43961 80 -1
+De 2 0 4 0 0
+Po 0 53716 45561 53716 43961 80 -1
+De 2 0 4 0 0
+Po 0 53205 43700 53216 43711 80 -1
+De 0 0 4 0 0
+Po 0 45616 50376 45616 50001 150 -1
+De 15 0 4 0 C00000
+Po 0 52589 52211 51316 52211 80 -1
+De 15 0 4 0 0
+Po 0 45611 50981 45611 50381 150 -1
+De 15 0 4 0 400000
+Po 0 51316 53611 51266 53661 80 -1
+De 15 0 4 0 0
+Po 0 45611 50381 45616 50376 150 -1
+De 15 0 4 0 800000
+Po 0 53716 49011 53716 45561 80 -1
+De 2 0 4 0 0
+Po 0 51316 52211 51316 53611 80 -1
+De 15 0 4 0 0
+Po 0 53066 53111 53716 52461 80 -1
+De 2 0 4 0 0
+Po 3 53216 43711 53216 43711 270 -1
+De 15 1 4 0 0
+Po 0 53466 43961 53216 43711 80 -1
+De 2 0 4 0 0
+Po 0 51139 43528 52228 43528 80 -1
+De 0 0 5 0 400000
+Po 0 52400 43250 52333 43317 80 -1
+De 0 0 5 0 400000
+Po 0 52400 43250 52400 43700 150 -1
+De 0 0 5 0 C00000
+Po 0 52228 43528 52400 43700 80 -1
+De 0 0 5 0 800000
+Po 0 45966 46561 45966 46711 80 -1
+De 0 0 6 0 0
+Po 0 47416 47961 51866 47961 80 -1
+De 0 0 6 0 0
+Po 0 45766 46361 45966 46561 80 -1
+De 0 0 6 0 0
+Po 0 45966 46711 47216 47961 80 -1
+De 0 0 6 0 0
+Po 0 45266 46561 45466 46361 80 -1
+De 0 0 6 0 0
+Po 0 45066 47661 45466 47661 80 -1
+De 0 0 6 0 800000
+Po 0 45016 47711 45066 47661 80 -1
+De 0 0 6 0 400000
+Po 0 45016 46811 45016 46961 80 -1
+De 0 0 6 0 0
+Po 0 45266 46561 45016 46811 80 -1
+De 0 0 6 0 0
+Po 0 45016 47711 45016 46961 80 -1
+De 0 0 6 0 400000
+Po 0 47216 47961 47416 47961 80 -1
+De 0 0 6 0 0
+Po 0 45466 46361 45766 46361 80 -1
+De 0 0 6 0 0
+Po 0 52216 45611 51966 45361 80 -1
+De 0 0 6 0 0
+Po 0 51518 44513 51139 44513 80 -1
+De 0 0 6 0 800000
+Po 0 47366 47961 47416 47961 80 -1
+De 0 0 6 0 0
+Po 0 52216 46961 52216 46661 80 -1
+De 0 0 6 0 0
+Po 0 51716 44711 51518 44513 80 -1
+De 0 0 6 0 0
+Po 0 52216 46661 52216 45611 80 -1
+De 0 0 6 0 0
+Po 0 51966 45361 51966 44961 80 -1
+De 0 0 6 0 0
+Po 0 52216 47761 52216 46961 80 -1
+De 0 0 6 0 0
+Po 0 51766 44761 51716 44711 80 -1
+De 0 0 6 0 0
+Po 0 51866 47961 52016 47961 80 -1
+De 0 0 6 0 0
+Po 0 52016 47961 52216 47761 80 -1
+De 0 0 6 0 0
+Po 0 51966 44961 51766 44761 80 -1
+De 0 0 6 0 0
+Po 0 51066 42111 50366 42111 80 -1
+De 0 0 7 0 0
+Po 0 51216 41961 51066 42111 80 -1
+De 0 0 7 0 0
+Po 0 50216 42261 50166 42311 80 -1
+De 0 0 7 0 0
+Po 0 50166 42927 50155 42938 80 -1
+De 0 0 7 0 800000
+Po 0 51216 41761 51216 41961 80 -1
+De 0 0 7 0 400000
+Po 0 50366 42111 50216 42261 80 -1
+De 0 0 7 0 0
+Po 0 50166 42311 50166 42927 80 -1
+De 0 0 7 0 0
+Po 0 51216 41311 51216 41761 80 -1
+De 0 0 7 0 C00000
+Po 0 52400 41450 52400 41900 150 -1
+De 0 0 8 0 C00000
+Po 0 50516 42461 51716 42461 80 -1
+De 0 0 8 0 0
+Po 0 50352 42625 50516 42461 80 -1
+De 0 0 8 0 0
+Po 0 50352 42938 50352 42625 80 -1
+De 0 0 8 0 400000
+Po 0 51716 42461 52277 41900 80 -1
+De 0 0 8 0 0
+Po 0 52277 41900 52400 41900 80 -1
+De 0 0 8 0 800000
+Po 0 52262 42938 50549 42938 80 -1
+De 0 0 9 0 800000
+Po 0 52400 42350 52400 42800 150 -1
+De 0 0 9 0 C00000
+Po 0 52400 42800 52262 42938 80 -1
+De 0 0 9 0 400000
+Po 0 48316 45761 49216 45761 80 -1
+De 15 0 10 0 0
+Po 0 47150 46927 48316 45761 80 -1
+De 15 0 10 0 0
+Po 0 47150 47050 47150 46927 80 -1
+De 15 0 10 0 400000
+Po 0 49368 45913 49368 46284 80 -1
+De 0 0 10 0 800000
+Po 0 49216 45761 49368 45913 80 -1
+De 0 0 10 0 0
+Po 3 49216 45761 49216 45761 270 -1
+De 15 1 10 0 0
+Po 0 47150 46900 47150 47050 70 -1
+De 15 0 10 0 800000
+Po 3 50066 45711 50066 45711 270 -1
+De 15 1 11 0 0
+Po 0 49958 45819 50066 45711 80 -1
+De 0 0 11 0 0
+Po 0 49958 46284 49958 45869 80 -1
+De 0 0 11 0 400000
+Po 0 46650 46927 46966 46611 70 -1
+De 15 0 11 0 0
+Po 0 49366 45461 49666 45761 80 -1
+De 15 0 11 0 0
+Po 0 46966 46611 47216 46611 70 -1
+De 15 0 11 0 0
+Po 0 48066 45761 48166 45661 80 -1
+De 15 0 11 0 0
+Po 0 49958 45869 49958 45819 80 -1
+De 0 0 11 0 0
+Po 0 47616 46211 48066 45761 80 -1
+De 15 0 11 0 0
+Po 0 48166 45661 48366 45461 80 -1
+De 15 0 11 0 0
+Po 0 48366 45461 49366 45461 80 -1
+De 15 0 11 0 0
+Po 0 46650 46927 46650 47050 70 -1
+De 15 0 11 0 800000
+Po 0 47216 46611 47616 46211 70 -1
+De 15 0 11 0 0
+Po 0 50016 45761 49666 45761 80 -1
+De 15 0 11 0 0
+Po 0 50066 45711 50016 45761 80 -1
+De 15 0 11 0 0
+Po 0 49750 47050 49750 46895 80 -1
+De 15 0 12 0 400000
+Po 0 49564 46609 49564 46284 80 -1
+De 0 0 12 0 800000
+Po 0 49564 46659 49564 46609 80 -1
+De 0 0 12 0 0
+Po 0 49666 46761 49564 46659 80 -1
+De 0 0 12 0 0
+Po 3 49666 46761 49666 46761 270 -1
+De 15 1 12 0 0
+Po 0 49666 46811 49666 46761 80 -1
+De 15 0 12 0 0
+Po 0 49750 46895 49666 46811 80 -1
+De 15 0 12 0 0
+Po 0 49261 47061 49416 47061 80 -1
+De 15 0 13 0 0
+Po 0 50155 46822 50155 46284 80 -1
+De 0 0 13 0 800000
+Po 0 49966 47011 50155 46822 80 -1
+De 0 0 13 0 0
+Po 0 49250 47050 49261 47061 80 -1
+De 15 0 13 0 400000
+Po 0 49416 47061 49916 47061 80 -1
+De 0 0 13 0 0
+Po 0 49916 47061 49966 47011 80 -1
+De 0 0 13 0 0
+Po 3 49416 47061 49416 47061 270 -1
+De 15 1 13 0 0
+Po 0 49816 45411 50366 45411 80 -1
+De 15 0 14 0 0
+Po 0 49766 45461 49816 45411 80 -1
+De 15 0 14 0 0
+Po 3 49766 45461 49766 45461 270 -1
+De 15 1 14 0 0
+Po 0 49766 45556 49766 45461 80 -1
+De 0 0 14 0 0
+Po 0 49761 46284 49761 45561 80 -1
+De 0 0 14 0 400000
+Po 0 49761 45561 49761 45556 80 -1
+De 0 0 14 0 0
+Po 0 49761 45561 49766 45556 80 -1
+De 0 0 14 0 0
+Po 0 50366 45411 51216 45411 80 -1
+De 15 0 14 0 0
+Po 0 51216 45411 51616 45811 80 -1
+De 15 0 14 0 0
+Po 0 52216 46011 52216 46916 70 -1
+De 15 0 14 0 0
+Po 0 51616 45811 52016 45811 70 -1
+De 15 0 14 0 0
+Po 0 52016 45811 52216 46011 70 -1
+De 15 0 14 0 0
+Po 0 52216 46916 52350 47050 70 -1
+De 15 0 14 0 800000
+Po 0 50366 45411 50366 45411 80 -1
+De 15 0 14 0 0
+Po 0 50806 46521 50616 46711 80 -1
+De 0 0 15 0 0
+Po 0 51716 46781 51716 46621 80 -1
+De 15 0 15 0 0
+Po 0 51850 47050 51850 46915 80 -1
+De 15 0 15 0 400000
+Po 0 50416 46711 50352 46647 80 -1
+De 0 0 15 0 0
+Po 0 50352 46647 50352 46284 80 -1
+De 0 0 15 0 800000
+Po 0 51850 46915 51716 46781 80 -1
+De 15 0 15 0 0
+Po 0 51716 46621 51616 46521 80 -1
+De 0 0 15 0 0
+Po 0 50616 46711 50416 46711 80 -1
+De 0 0 15 0 0
+Po 3 51716 46621 51716 46621 270 -1
+De 15 1 15 0 0
+Po 0 51616 46521 50806 46521 80 -1
+De 0 0 15 0 0
+Po 0 47793 45300 48627 45300 80 -1
+De 0 0 16 0 400000
+Po 0 48116 44961 48116 44711 80 -1
+De 15 0 16 0 800000
+Po 0 48316 45161 48116 44961 80 -1
+De 15 0 16 0 0
+Po 0 48766 45161 48316 45161 80 -1
+De 15 0 16 0 0
+Po 3 48766 45161 48766 45161 270 -1
+De 15 1 16 0 0
+Po 0 48627 45300 48766 45161 80 -1
+De 0 0 16 0 0
+Po 0 48116 44311 48116 44711 80 -1
+De 15 0 16 0 C00000
+Po 3 47266 44461 47266 44461 270 -1
+De 15 1 17 0 0
+Po 0 47266 44461 47266 42111 80 -1
+De 15 0 17 0 0
+Po 0 47793 44513 47318 44513 80 -1
+De 0 0 17 0 400000
+Po 0 47318 44513 47266 44461 80 -1
+De 0 0 17 0 0
+Po 0 47266 42111 46816 41661 80 -1
+De 15 0 17 0 800000
+Po 0 52416 45561 52166 45311 80 -1
+De 0 0 18 0 0
+Po 0 47216 48261 52216 48261 80 -1
+De 0 0 18 0 0
+Po 0 46216 47661 46316 47561 80 -1
+De 0 0 18 0 0
+Po 0 51571 44316 51139 44316 80 -1
+De 0 0 18 0 800000
+Po 0 46289 47684 46266 47661 80 -1
+De 0 0 18 0 0
+Po 0 45216 48961 46116 48961 80 -1
+De 0 0 18 0 0
+Po 0 46116 48961 46366 48711 80 -1
+De 0 0 18 0 0
+Po 0 51916 44661 51571 44316 80 -1
+De 0 0 18 0 0
+Po 0 52416 47061 52416 45561 80 -1
+De 0 0 18 0 0
+Po 0 52166 45311 52166 44911 80 -1
+De 0 0 18 0 0
+Po 0 46016 47661 46266 47661 80 -1
+De 0 0 18 0 400000
+Po 0 52416 48061 52416 47061 80 -1
+De 0 0 18 0 0
+Po 0 46316 47561 46516 47561 80 -1
+De 0 0 18 0 0
+Po 0 52166 44911 51916 44661 80 -1
+De 0 0 18 0 0
+Po 0 46516 47561 47216 48261 80 -1
+De 0 0 18 0 0
+Po 0 45216 48961 44950 48695 80 -1
+De 0 0 18 0 0
+Po 0 44950 48695 44950 48550 80 -1
+De 0 0 18 0 800000
+Po 0 52216 48261 52416 48061 80 -1
+De 0 0 18 0 0
+Po 0 46366 48711 46366 47761 80 -1
+De 0 0 18 0 0
+Po 0 46016 47661 46216 47661 80 -1
+De 0 0 18 0 400000
+Po 0 46289 47684 46366 47761 80 -1
+De 0 0 18 0 0
+Po 0 46716 42111 46266 42111 80 -1
+De 15 0 19 0 0
+Po 0 46966 42361 46716 42111 80 -1
+De 15 0 19 0 0
+Po 0 47793 44709 47468 44709 80 -1
+De 0 0 19 0 400000
+Po 0 46266 42111 45816 41661 80 -1
+De 15 0 19 0 800000
+Po 0 46966 44561 46966 42361 80 -1
+De 15 0 19 0 0
+Po 0 47216 44811 46966 44561 80 -1
+De 15 0 19 0 0
+Po 3 47216 44811 47216 44811 270 -1
+De 15 1 19 0 0
+Po 0 47366 44811 47216 44811 80 -1
+De 0 0 19 0 0
+Po 0 47468 44709 47366 44811 80 -1
+De 0 0 19 0 0
+Po 0 49761 42938 49766 42933 80 -1
+De 0 0 20 0 400000
+Po 3 49766 42361 49766 42361 270 -1
+De 15 1 20 0 0
+Po 0 49766 42933 49766 42361 80 -1
+De 0 0 20 0 0
+Po 0 52800 43250 52811 43261 80 -1
+De 0 0 20 0 400000
+Po 3 53066 43261 53066 43261 270 -1
+De 15 1 20 0 0
+Po 0 52811 43261 53066 43261 80 -1
+De 0 0 20 0 0
+Po 0 52616 44411 52516 44311 80 -1
+De 0 0 20 0 400000
+Po 3 52216 44311 52216 44311 270 -1
+De 15 1 20 0 0
+Po 0 52216 44311 52516 44611 80 -1
+De 15 0 20 0 800000
+Po 0 52516 44311 52216 44311 80 -1
+De 0 0 20 0 0
+Po 0 50971 46361 50971 46756 80 -1
+De 15 0 20 0 400000
+Po 0 50800 46927 50800 47100 80 -1
+De 15 0 20 0 800000
+Po 0 50800 46927 50866 46861 80 -1
+De 15 0 20 0 0
+Po 0 49316 42261 49516 42061 80 -1
+De 15 0 20 0 400000
+Po 0 53127 41450 52916 41661 80 -1
+De 15 0 20 0 800000
+Po 0 53400 46777 53416 46761 80 -1
+De 15 0 20 0 0
+Po 0 48211 44316 48266 44261 80 -1
+De 0 0 20 0 0
+Po 0 44861 50866 45066 50661 150 -1
+De 15 0 20 0 0
+Po 0 51616 41311 51766 41161 80 -1
+De 0 0 20 0 400000
+Po 3 50866 46861 50866 46861 270 -1
+De 15 1 20 0 0
+Po 0 51161 46861 51266 46861 80 -1
+De 15 0 20 0 0
+Po 3 51916 46111 51916 46111 270 -1
+De 15 1 20 0 0
+Po 0 51666 46111 51916 46111 80 -1
+De 0 0 20 0 400000
+Po 0 48750 47050 48700 47100 80 -1
+De 15 0 20 0 400000
+Po 0 48580 46284 48580 46647 80 -1
+De 0 0 20 0 400000
+Po 0 48466 46761 48166 46761 80 -1
+De 0 0 20 0 0
+Po 0 53055 42350 53066 42361 80 -1
+De 0 0 20 0 0
+Po 0 46150 46877 46416 46611 80 -1
+De 15 0 20 0 0
+Po 0 48700 47100 48200 47100 80 -1
+De 15 0 20 0 800000
+Po 0 48516 43761 48366 43611 80 -1
+De 15 0 20 0 0
+Po 0 45056 50001 45066 50011 150 -1
+De 15 0 20 0 0
+Po 3 48366 43611 48366 43611 270 -1
+De 15 1 20 0 0
+Po 0 45120 49181 45120 49957 150 -1
+De 15 0 20 0 400000
+Po 0 48200 46845 48166 46811 80 -1
+De 15 0 20 0 0
+Po 0 48166 46811 48166 46761 80 -1
+De 15 0 20 0 0
+Po 3 48166 46761 48166 46761 270 -1
+De 15 1 20 0 0
+Po 0 48200 46845 48200 47100 80 -1
+De 15 0 20 0 800000
+Po 0 46150 47050 46150 46877 80 -1
+De 15 0 20 0 400000
+Po 3 46416 46611 46416 46611 270 -1
+De 15 1 20 0 0
+Po 0 46416 46611 46416 46211 80 -1
+De 15 0 20 0 800000
+Po 0 47502 43725 47216 44011 80 -1
+De 0 0 20 0 0
+Po 0 53450 41450 53127 41450 80 -1
+De 15 0 20 0 0
+Po 0 48516 46711 48580 46647 80 -1
+De 0 0 20 0 0
+Po 3 44616 45111 44616 45111 270 -1
+De 15 1 20 0 0
+Po 0 49516 42011 49816 41711 80 -1
+De 15 0 20 0 0
+Po 0 47716 46761 48166 46761 80 -1
+De 0 0 20 0 400000
+Po 0 45066 50661 45066 50011 150 -1
+De 15 0 20 0 0
+Po 3 53416 46761 53416 46761 270 -1
+De 15 1 20 0 0
+Po 3 53066 42361 53066 42361 270 -1
+De 15 1 20 0 0
+Po 0 44456 46501 44491 46466 150 -1
+De 15 0 20 0 400000
+Po 3 53450 41450 53450 41450 270 -1
+De 15 1 20 0 0
+Po 0 44861 50866 44861 50981 150 -1
+De 15 0 20 0 800000
+Po 0 48916 41811 49247 41811 80 -1
+De 0 0 20 0 800000
+Po 0 49516 42061 49516 42011 80 -1
+De 15 0 20 0 0
+Po 0 46416 44711 46416 45161 150 -1
+De 15 0 20 0 400000
+Po 3 48966 42161 48966 42161 270 -1
+De 15 1 20 0 0
+Po 0 48716 41611 48916 41811 80 -1
+De 0 0 20 0 400000
+Po 3 46416 45161 46416 45161 270 -1
+De 15 1 20 0 0
+Po 0 52800 41450 53450 41450 80 -1
+De 0 0 20 0 400000
+Po 0 44491 46466 44491 45961 150 -1
+De 15 0 20 0 800000
+Po 0 51666 45611 51666 46111 80 -1
+De 0 0 20 0 800000
+Po 0 44616 50001 45056 50001 150 -1
+De 15 0 20 0 400000
+Po 0 47716 46761 47777 46700 80 -1
+De 0 0 20 0 400000
+Po 0 48252 43725 47793 43725 80 -1
+De 0 0 20 0 800000
+Po 0 48266 43711 48366 43611 80 -1
+De 0 0 20 0 0
+Po 0 50416 41261 50366 41261 80 -1
+De 0 0 20 0 0
+Po 0 44491 45236 44616 45111 150 -1
+De 15 0 20 0 0
+Po 0 46528 43099 46516 43111 80 -1
+De 0 0 20 0 0
+Po 0 53161 41161 53450 41450 80 -1
+De 0 0 20 0 0
+Po 0 53400 47100 53400 46777 80 -1
+De 15 0 20 0 400000
+Po 3 45066 50011 45066 50011 270 -1
+De 15 1 20 0 0
+Po 0 47216 44011 47066 44011 80 -1
+De 0 0 20 0 800000
+Po 0 50366 41261 50516 41261 80 -1
+De 0 0 20 0 0
+Po 0 50666 41711 50666 41411 80 -1
+De 0 0 20 0 0
+Po 0 50666 41711 50766 41811 80 -1
+De 0 0 20 0 800000
+Po 0 45120 49957 45066 50011 150 -1
+De 15 0 20 0 0
+Po 3 50416 41261 50416 41261 270 -1
+De 15 1 20 0 0
+Po 0 49816 41711 49816 41661 80 -1
+De 15 0 20 0 800000
+Po 0 47793 43725 47502 43725 80 -1
+De 0 0 20 0 400000
+Po 0 50866 46861 51161 46861 80 -1
+De 15 0 20 0 0
+Po 0 50666 41411 50516 41261 80 -1
+De 0 0 20 0 0
+Po 0 47793 44316 48211 44316 80 -1
+De 0 0 20 0 400000
+Po 0 49066 42261 48966 42161 80 -1
+De 15 0 20 0 0
+Po 0 51552 45497 51666 45611 80 -1
+De 0 0 20 0 0
+Po 0 52800 42350 53055 42350 80 -1
+De 0 0 20 0 400000
+Po 0 44450 51050 44450 48550 80 -1
+De 0 0 20 0 C00000
+Po 0 51139 45497 51552 45497 80 -1
+De 0 0 20 0 400000
+Po 0 51350 46945 51350 47050 80 -1
+De 15 0 20 0 800000
+Po 0 51266 46861 51350 46945 80 -1
+De 15 0 20 0 0
+Po 0 44456 45996 44491 45961 150 -1
+De 15 0 20 0 800000
+Po 0 48516 46711 48466 46761 80 -1
+De 0 0 20 0 0
+Po 0 50971 46756 50866 46861 80 -1
+De 15 0 20 0 0
+Po 0 48516 43761 48516 44311 80 -1
+De 15 0 20 0 800000
+Po 3 46516 43111 46516 43111 270 -1
+De 15 1 20 0 0
+Po 0 48966 42092 49247 41811 80 -1
+De 0 0 20 0 800000
+Po 0 48266 44261 48266 43711 80 -1
+De 0 0 20 0 0
+Po 0 50800 47100 50796 47096 150 -1
+De 15 0 20 0 400000
+Po 0 51766 41161 53161 41161 80 -1
+De 0 0 20 0 0
+Po 0 44491 45961 44491 45236 150 -1
+De 15 0 20 0 400000
+Po 0 48366 43611 48252 43725 80 -1
+De 0 0 20 0 0
+Po 0 48866 42261 48966 42161 80 -1
+De 15 0 20 0 0
+Po 0 48966 42092 48966 42161 80 -1
+De 0 0 20 0 0
+Po 0 48616 42261 48866 42261 80 -1
+De 15 0 20 0 400000
+Po 0 46528 42624 46528 43099 80 -1
+De 0 0 20 0 400000
+Po 0 49316 42261 49066 42261 80 -1
+De 15 0 20 0 400000
+Po 0 48766 44761 49316 44211 80 -1
+De 0 0 22 0 0
+Po 0 48766 44761 48424 45103 80 -1
+De 0 0 22 0 0
+Po 0 47793 45103 48424 45103 80 -1
+De 0 0 22 0 400000
+Po 0 49316 43811 49316 43611 80 -1
+De 15 0 22 0 800000
+Po 3 49316 43811 49316 43811 270 -1
+De 15 1 22 0 0
+Po 0 49316 44211 49316 43811 80 -1
+De 0 0 22 0 0
+Po 0 48466 44361 48816 44011 80 -1
+De 0 0 23 0 0
+Po 0 47793 44906 48271 44906 80 -1
+De 0 0 23 0 400000
+Po 0 48466 44711 48271 44906 80 -1
+De 0 0 23 0 0
+Po 0 48466 44461 48466 44711 80 -1
+De 0 0 23 0 0
+Po 0 48466 44361 48466 44461 80 -1
+De 0 0 23 0 0
+Po 0 48816 43711 48916 43611 80 -1
+De 15 0 23 0 800000
+Po 0 48816 44011 48816 43711 80 -1
+De 15 0 23 0 0
+Po 3 48816 44011 48816 44011 270 -1
+De 15 1 23 0 0
+Po 0 49316 42861 49316 43211 80 -1
+De 15 0 24 0 C00000
+Po 0 48916 43211 48616 42911 80 -1
+De 15 0 25 0 400000
+Po 0 48616 42911 48616 42861 80 -1
+De 15 0 25 0 800000
+Po 0 45450 48550 45466 48534 150 -1
+De 0 0 26 0 400000
+Po 0 45416 48111 44616 48111 150 -1
+De 0 0 26 0 0
+Po 0 45466 48534 45466 48061 150 -1
+De 0 0 26 0 800000
+Po 0 45466 48061 45416 48111 150 -1
+De 0 0 26 0 400000
+Po 0 49916 41811 49616 42111 80 -1
+De 0 0 27 0 400000
+Po 0 49366 42361 49366 42936 80 -1
+De 0 0 27 0 0
+Po 0 49366 42936 49368 42938 80 -1
+De 0 0 27 0 800000
+Po 0 50366 41811 49916 41811 80 -1
+De 0 0 27 0 C00000
+Po 0 49616 42111 49366 42361 80 -1
+De 0 0 27 0 0
+Po 0 48804 41299 48716 41211 80 -1
+De 0 0 28 0 800000
+Po 0 48366 42161 48666 42461 80 -1
+De 0 0 28 0 0
+Po 0 48366 41361 48366 42161 80 -1
+De 0 0 28 0 0
+Po 0 49116 42461 49171 42516 80 -1
+De 0 0 28 0 0
+Po 0 48666 42461 49116 42461 80 -1
+De 0 0 28 0 0
+Po 0 48516 41211 48366 41361 80 -1
+De 0 0 28 0 0
+Po 0 48716 41211 48516 41211 80 -1
+De 0 0 28 0 400000
+Po 0 49247 41299 48804 41299 80 -1
+De 0 0 28 0 400000
+Po 0 49171 42516 49171 42938 80 -1
+De 0 0 28 0 800000
+Po 0 45159 48641 45036 48641 150 -1
+De 15 0 29 0 400000
+Po 0 45036 48641 44616 49061 150 -1
+De 15 0 29 0 0
+Po 0 44616 49061 44616 49626 150 -1
+De 15 0 29 0 800000
+Po 0 51350 48650 51600 48400 80 -1
+De 15 0 30 0 0
+Po 0 53700 48500 53700 49623 80 -1
+De 15 0 30 0 0
+Po 0 53600 48400 53700 48500 80 -1
+De 15 0 30 0 0
+Po 0 53677 49623 53400 49900 80 -1
+De 15 0 30 0 800000
+Po 0 53700 49623 53677 49623 80 -1
+De 15 0 30 0 0
+Po 0 51350 49550 51350 48650 80 -1
+De 15 0 30 0 400000
+Po 0 51600 48400 53600 48400 80 -1
+De 15 0 30 0 0
+Po 0 50803 49897 50800 49900 80 -1
+De 15 0 31 0 800000
+Po 0 48753 48647 48753 49547 80 -1
+De 15 0 31 0 0
+Po 0 49000 48400 51000 48400 80 -1
+De 15 0 31 0 0
+Po 0 51000 48400 51100 48500 80 -1
+De 15 0 31 0 0
+Po 0 50803 49297 50803 49897 80 -1
+De 15 0 31 0 0
+Po 0 51100 48500 51100 49000 80 -1
+De 15 0 31 0 0
+Po 0 50803 49297 50800 49300 80 -1
+De 15 0 31 0 0
+Po 0 48753 49547 48750 49550 80 -1
+De 15 0 31 0 800000
+Po 0 48750 48650 48753 48647 80 -1
+De 15 0 31 0 0
+Po 0 51100 49000 50803 49297 80 -1
+De 15 0 31 0 0
+Po 0 48753 48647 49000 48400 80 -1
+De 15 0 31 0 0
+Po 0 53366 53616 53348 53598 80 -1
+De 15 0 32 0 800000
+Po 0 53366 54011 53366 53616 80 -1
+De 15 0 32 0 400000
+Po 0 50250 49550 50250 49206 80 -1
+De 15 0 33 0 400000
+Po 0 50250 49850 49800 50300 150 -1
+De 15 0 33 0 800000
+Po 0 50250 49550 50250 49850 150 -1
+De 15 0 33 0 400000
+Po 0 50250 49206 50800 48656 80 -1
+De 15 0 33 0 800000
+Po 0 53400 50300 53400 50600 80 -1
+De 15 0 34 0 400000
+Po 3 53400 50600 53400 50600 270 -1
+De 15 1 34 0 0
+Po 0 53348 50652 53400 50600 80 -1
+De 0 0 34 0 0
+Po 0 53348 51102 53348 50652 80 -1
+De 0 0 34 0 400000
+Po 0 53400 50600 53348 50652 80 -1
+De 0 0 34 0 0
+Po 0 53700 54577 53700 50300 80 -1
+De 1 0 35 0 0
+Po 0 52350 49050 52350 49550 80 -1
+De 15 0 35 0 800000
+Po 3 52400 49000 52400 49000 270 -1
+De 15 1 35 0 0
+Po 0 53366 54411 53616 54661 80 -1
+De 15 0 35 0 400000
+Po 0 52350 49050 52400 49000 80 -1
+De 15 0 35 0 0
+Po 3 53616 54661 53616 54661 270 -1
+De 15 1 35 0 0
+Po 0 52400 49000 53700 50300 80 -1
+De 1 0 35 0 0
+Po 0 53616 54661 53700 54577 80 -1
+De 1 0 35 0 0
+Po 0 50748 50652 50748 51102 80 -1
+De 0 0 36 0 800000
+Po 0 50800 50600 50748 50652 80 -1
+De 0 0 36 0 0
+Po 3 50800 50600 50800 50600 270 -1
+De 15 1 36 0 0
+Po 0 50800 50300 50800 50600 150 -1
+De 15 0 36 0 400000
+Po 0 50766 53616 50748 53598 80 -1
+De 15 0 37 0 800000
+Po 0 50766 54011 50766 53616 80 -1
+De 15 0 37 0 400000
+Po 0 49800 49500 49750 49550 80 -1
+De 15 0 38 0 800000
+Po 0 49800 49200 49800 49500 80 -1
+De 15 0 38 0 0
+Po 0 49900 49100 49800 49200 80 -1
+De 15 0 38 0 0
+Po 3 49900 49100 49900 49100 270 -1
+De 15 1 38 0 0
+Po 3 50766 54661 50766 54661 270 -1
+De 15 1 38 0 0
+Po 0 50666 52234 51100 51800 80 -1
+De 1 0 38 0 0
+Po 0 51100 51800 51100 50300 80 -1
+De 1 0 38 0 0
+Po 0 50766 54411 50766 54661 80 -1
+De 15 0 38 0 400000
+Po 0 50766 54661 50666 54561 80 -1
+De 1 0 38 0 0
+Po 0 51100 50300 49900 49100 80 -1
+De 1 0 38 0 0
+Po 0 50666 54266 50666 54261 80 -1
+De 1 0 38 0 0
+Po 0 50666 54261 50666 52234 80 -1
+De 1 0 38 0 0
+Po 0 50666 54561 50666 54261 80 -1
+De 1 0 38 0 0
+Po 0 48148 50652 48148 51102 80 -1
+De 0 0 39 0 800000
+Po 0 48200 50600 48148 50652 80 -1
+De 0 0 39 0 0
+Po 3 48200 50600 48200 50600 270 -1
+De 15 1 39 0 0
+Po 0 48200 50300 48200 50600 150 -1
+De 15 0 39 0 400000
+Po 0 48166 54011 48166 53616 80 -1
+De 15 0 40 0 400000
+Po 0 48166 53616 48148 53598 80 -1
+De 15 0 40 0 800000
+Po 0 48500 51500 48500 50300 80 -1
+De 1 0 41 0 0
+Po 0 48500 50300 47300 49100 80 -1
+De 1 0 41 0 0
+Po 0 47150 49250 47150 49550 80 -1
+De 15 0 41 0 800000
+Po 0 48166 54411 48166 54661 80 -1
+De 15 0 41 0 400000
+Po 0 47153 49247 47150 49250 80 -1
+De 15 0 41 0 0
+Po 3 47300 49100 47300 49100 270 -1
+De 15 1 41 0 0
+Po 3 48166 54661 48166 54661 270 -1
+De 15 1 41 0 0
+Po 0 48166 54661 48500 54327 80 -1
+De 1 0 41 0 0
+Po 0 48500 54327 48500 51500 80 -1
+De 1 0 41 0 0
+Po 0 47300 49100 47153 49247 80 -1
+De 15 0 41 0 0
+Po 0 52850 49550 52850 49850 150 -1
+De 15 0 42 0 400000
+Po 0 52856 49200 52856 49544 80 -1
+De 15 0 42 0 0
+Po 0 52856 49200 53400 48656 80 -1
+De 15 0 42 0 800000
+Po 0 52856 49544 52850 49550 80 -1
+De 15 0 42 0 800000
+Po 0 52850 49206 52856 49200 80 -1
+De 15 0 42 0 0
+Po 0 52850 49850 52400 50300 150 -1
+De 15 0 42 0 800000
+Po 0 47650 49550 47650 49850 150 -1
+De 15 0 43 0 400000
+Po 0 47650 49850 47200 50300 150 -1
+De 15 0 43 0 800000
+Po 0 47650 49206 48200 48656 80 -1
+De 15 0 43 0 800000
+Po 0 47650 49550 47650 49206 80 -1
+De 15 0 43 0 400000
+Po 0 44836 46901 44456 46901 150 -1
+De 15 0 44 0 800000
+Po 0 44381 50376 44266 50261 80 -1
+De 15 0 44 0 0
+Po 0 44266 49111 44456 48921 80 -1
+De 15 0 44 0 0
+Po 0 44266 50261 44266 49111 80 -1
+De 15 0 44 0 0
+Po 0 44381 50376 44616 50376 80 -1
+De 15 0 44 0 800000
+Po 0 44896 46841 44836 46901 150 -1
+De 15 0 44 0 400000
+Po 0 44456 46901 44456 48921 80 -1
+De 15 0 44 0 400000
+Po 0 45513 48641 45513 48518 150 -1
+De 15 0 45 0 400000
+Po 0 45513 48518 45496 48501 150 -1
+De 15 0 45 0 0
+Po 0 45496 48501 45496 48036 150 -1
+De 15 0 45 0 800000
+Po 0 45616 49197 45632 49181 150 -1
+De 15 0 45 0 800000
+Po 0 45632 48645 45632 49181 150 -1
+De 15 0 45 0 800000
+Po 0 45636 48641 45496 48501 150 -1
+De 15 0 45 0 0
+Po 0 45636 48641 45632 48645 150 -1
+De 15 0 45 0 0
+Po 0 45616 49626 45616 49197 150 -1
+De 15 0 45 0 400000
+Po 0 48200 49300 48200 49900 80 -1
+De 15 0 46 0 800000
+Po 0 48400 48400 48500 48500 80 -1
+De 15 0 46 0 0
+Po 0 46153 48697 46150 48700 80 -1
+De 15 0 46 0 0
+Po 0 46153 48697 46450 48400 80 -1
+De 15 0 46 0 0
+Po 0 46450 48400 48400 48400 80 -1
+De 15 0 46 0 0
+Po 0 46150 48700 46150 49550 80 -1
+De 15 0 46 0 800000
+Po 0 48500 49000 48203 49297 80 -1
+De 15 0 46 0 0
+Po 0 48500 48500 48500 49000 80 -1
+De 15 0 46 0 0
+Po 0 48203 49297 48200 49300 80 -1
+De 15 0 46 0 0
+Po 0 49816 44311 49616 44111 80 -1
+De 0 0 47 0 0
+Po 0 49564 43559 49564 42938 80 -1
+De 0 0 47 0 800000
+Po 0 49616 43611 49564 43559 80 -1
+De 0 0 47 0 0
+Po 0 49616 44111 49616 43611 80 -1
+De 0 0 47 0 0
+Po 0 49516 44611 49816 44311 80 -1
+De 15 0 47 0 400000
+Po 0 49564 44059 49564 43959 80 -1
+De 0 0 47 0 0
+Po 0 49816 44311 49564 44059 80 -1
+De 0 0 47 0 0
+Po 3 49816 44311 49816 44311 270 -1
+De 15 1 47 0 0
+Po 0 49516 44611 49566 44661 80 -1
+De 15 0 47 0 400000
+Po 0 47466 54561 47766 54561 80 -1
+De 15 0 48 0 0
+Po 3 46566 54561 46566 54561 270 -1
+De 15 1 48 0 0
+Po 0 47166 54261 46866 54261 80 -1
+De 15 0 48 0 0
+Po 3 47166 54561 47166 54561 270 -1
+De 15 1 48 0 0
+Po 3 46566 54261 46566 54261 270 -1
+De 15 1 48 0 0
+Po 0 46652 53598 46652 53925 80 -1
+De 15 0 48 0 400000
+Po 3 46866 54561 46866 54561 270 -1
+De 15 1 48 0 0
+Po 3 47766 54561 47766 54561 270 -1
+De 15 1 48 0 0
+Po 0 46566 54261 46566 54561 80 -1
+De 15 0 48 0 0
+Po 0 47166 54561 47466 54561 80 -1
+De 0 0 48 0 0
+Po 3 46866 54261 46866 54261 270 -1
+De 15 1 48 0 0
+Po 0 46866 54561 47166 54561 80 -1
+De 15 0 48 0 0
+Po 0 46866 54261 46566 54261 80 -1
+De 0 0 48 0 0
+Po 3 47766 53961 47766 53961 270 -1
+De 15 1 48 0 0
+Po 0 46566 54561 46866 54561 80 -1
+De 0 0 48 0 0
+Po 0 47766 53961 47766 54261 80 -1
+De 0 0 48 0 0
+Po 3 47766 54261 47766 54261 270 -1
+De 15 1 48 0 0
+Po 0 47766 54261 47466 54261 80 -1
+De 15 0 48 0 0
+Po 3 47466 54261 47466 54261 270 -1
+De 15 1 48 0 0
+Po 0 47466 54261 47166 54261 80 -1
+De 0 0 48 0 0
+Po 0 46616 53961 46566 53961 80 -1
+De 15 0 48 0 0
+Po 0 47466 53961 47766 53961 80 -1
+De 15 0 48 0 0
+Po 3 46566 53961 46566 53961 270 -1
+De 15 1 48 0 0
+Po 0 46566 53961 46866 53961 80 -1
+De 0 0 48 0 0
+Po 3 46866 53961 46866 53961 270 -1
+De 15 1 48 0 0
+Po 0 46866 53961 47166 53961 80 -1
+De 15 0 48 0 0
+Po 3 47166 53961 47166 53961 270 -1
+De 15 1 48 0 0
+Po 0 47166 53961 47466 53961 80 -1
+De 0 0 48 0 0
+Po 3 47466 53961 47466 53961 270 -1
+De 15 1 48 0 0
+Po 3 47166 54261 47166 54261 270 -1
+De 15 1 48 0 0
+Po 0 47717 54055 47717 50117 80 -1
+De 1 0 48 0 0
+Po 0 51616 41761 51666 41811 80 -1
+De 0 0 48 0 400000
+Po 0 46650 49550 46650 48700 70 -1
+De 15 0 48 0 400000
+Po 3 47466 54561 47466 54561 270 -1
+De 15 1 48 0 0
+Po 0 51666 42161 51666 41811 80 -1
+De 0 0 48 0 0
+Po 0 47150 49550 46650 49050 80 -1
+De 1 0 48 0 0
+Po 0 53216 44866 53300 44950 80 -1
+De 1 0 48 0 0
+Po 0 46800 50277 46800 50300 80 -1
+De 15 0 48 0 800000
+Po 0 51666 42161 51666 42561 80 -1
+De 1 0 48 0 0
+Po 0 47717 50117 47150 49550 80 -1
+De 1 0 48 0 0
+Po 0 50850 48100 49700 48100 70 -1
+De 1 0 48 0 0
+Po 3 46650 48700 46650 48700 270 -1
+De 15 1 48 0 0
+Po 3 51666 42161 51666 42161 180 130
+De 15 1 48 0 0
+Po 0 46652 53925 46616 53961 80 -1
+De 15 0 48 0 0
+Po 0 53300 44950 53300 45650 70 -1
+De 1 0 48 0 0
+Po 0 49700 48100 49550 48100 70 -1
+De 1 0 48 0 0
+Po 0 49400 48250 47400 48250 70 -1
+De 1 0 48 0 0
+Po 0 53216 44111 53216 44866 80 -1
+De 1 0 48 0 0
+Po 0 51666 42561 53216 44111 80 -1
+De 1 0 48 0 0
+Po 0 46650 49550 46650 50150 150 -1
+De 15 0 48 0 400000
+Po 0 46650 50150 46800 50300 150 -1
+De 15 0 48 0 800000
+Po 0 46650 49050 46650 48700 80 -1
+De 1 0 48 0 0
+Po 0 50950 48000 50850 48100 70 -1
+De 1 0 48 0 0
+Po 0 51050 47900 50950 48000 70 -1
+De 1 0 48 0 0
+Po 0 53200 45750 51850 47100 70 -1
+De 1 0 48 0 0
+Po 0 53300 45650 53200 45750 70 -1
+De 1 0 48 0 0
+Po 0 47100 48250 47400 48250 70 -1
+De 1 0 48 0 0
+Po 0 51850 47100 51050 47900 70 -1
+De 1 0 48 0 0
+Po 0 47100 48250 46650 48700 70 -1
+De 1 0 48 0 0
+Po 0 49550 48100 49400 48250 70 -1
+De 1 0 48 0 0
+Po 3 49466 54561 49466 54561 270 -1
+De 15 1 49 0 0
+Po 3 49166 54561 49166 54561 270 -1
+De 15 1 49 0 0
+Po 0 49166 54561 49466 54561 80 -1
+De 0 0 49 0 0
+Po 3 49466 54261 49466 54261 270 -1
+De 15 1 49 0 0
+Po 0 49166 54261 49166 54561 80 -1
+De 15 0 49 0 0
+Po 3 49166 54261 49166 54261 270 -1
+De 15 1 49 0 0
+Po 0 49466 54261 49166 54261 80 -1
+De 0 0 49 0 0
+Po 0 50066 54261 49766 54261 80 -1
+De 0 0 49 0 0
+Po 0 49466 54561 49766 54561 80 -1
+De 15 0 49 0 0
+Po 3 49766 54561 49766 54561 270 -1
+De 15 1 49 0 0
+Po 0 49766 54561 50066 54561 80 -1
+De 0 0 49 0 0
+Po 3 50066 54561 50066 54561 270 -1
+De 15 1 49 0 0
+Po 0 50066 54561 50366 54561 80 -1
+De 15 0 49 0 0
+Po 3 50366 54561 50366 54561 270 -1
+De 15 1 49 0 0
+Po 0 49252 53598 49252 53875 80 -1
+De 15 0 49 0 400000
+Po 0 50276 50176 49750 49650 80 -1
+De 1 0 49 0 0
+Po 3 50066 53961 50066 53961 270 -1
+De 15 1 49 0 0
+Po 0 49252 53875 49166 53961 80 -1
+De 15 0 49 0 0
+Po 3 49166 53961 49166 53961 270 -1
+De 15 1 49 0 0
+Po 0 49166 53961 49466 53961 80 -1
+De 0 0 49 0 0
+Po 3 49466 53961 49466 53961 270 -1
+De 15 1 49 0 0
+Po 0 49466 53961 49766 53961 80 -1
+De 15 0 49 0 0
+Po 3 49766 53961 49766 53961 270 -1
+De 15 1 49 0 0
+Po 0 49766 53961 50066 53961 80 -1
+De 0 0 49 0 0
+Po 3 49766 54261 49766 54261 270 -1
+De 15 1 49 0 0
+Po 0 50066 53961 50366 53961 80 -1
+De 15 0 49 0 0
+Po 3 50366 53961 50366 53961 270 -1
+De 15 1 49 0 0
+Po 0 50366 53961 50366 54261 80 -1
+De 0 0 49 0 0
+Po 3 50366 54261 50366 54261 270 -1
+De 15 1 49 0 0
+Po 0 50366 54261 50066 54261 80 -1
+De 15 0 49 0 0
+Po 3 50066 54261 50066 54261 270 -1
+De 15 1 49 0 0
+Po 0 53600 42500 53450 42650 70 -1
+De 1 0 49 0 0
+Po 0 49250 48700 49650 48300 70 -1
+De 1 0 49 0 0
+Po 0 53500 43100 53500 44950 70 -1
+De 1 0 49 0 0
+Po 0 49250 50150 49400 50300 150 -1
+De 15 0 49 0 800000
+Po 0 49750 49650 49250 49150 80 -1
+De 1 0 49 0 0
+Po 0 52950 46300 52950 46300 70 -1
+De 1 0 49 0 0
+Po 0 50276 54055 50276 50176 80 -1
+De 1 0 49 0 0
+Po 0 49250 49550 49250 49695 80 -1
+De 15 0 49 0 400000
+Po 3 49250 48700 49250 48700 270 -1
+De 15 1 49 0 0
+Po 0 49950 48300 49800 48300 70 -1
+De 1 0 49 0 0
+Po 0 53400 42800 53400 43000 70 -1
+De 1 0 49 0 0
+Po 0 53400 43000 53500 43100 70 -1
+De 1 0 49 0 0
+Po 0 51200 48050 50950 48300 70 -1
+De 1 0 49 0 0
+Po 0 49650 48300 49800 48300 70 -1
+De 1 0 49 0 0
+Po 0 53450 42650 53400 42700 70 -1
+De 1 0 49 0 0
+Po 3 53600 41900 53600 41900 270 -1
+De 15 1 49 0 0
+Po 0 52800 41900 53600 41900 80 -1
+De 0 0 49 0 400000
+Po 0 52950 46300 52672 46578 70 -1
+De 1 0 49 0 0
+Po 0 49766 54261 49466 54261 80 -1
+De 15 0 49 0 0
+Po 0 53250 46000 52950 46300 70 -1
+De 1 0 49 0 0
+Po 0 53500 43100 53500 43100 70 -1
+De 1 0 49 0 0
+Po 0 53500 44950 53500 45750 70 -1
+De 1 0 49 0 0
+Po 0 53600 42300 53600 42500 70 -1
+De 1 0 49 0 0
+Po 0 53400 42700 53400 42800 70 -1
+De 1 0 49 0 0
+Po 0 50950 48300 49950 48300 70 -1
+De 1 0 49 0 0
+Po 0 53500 45750 53250 46000 70 -1
+De 1 0 49 0 0
+Po 0 51700 47550 52672 46578 70 -1
+De 1 0 49 0 0
+Po 0 52672 46578 52672 46578 70 -1
+De 1 0 49 0 0
+Po 0 49250 49150 49250 48700 80 -1
+De 1 0 49 0 0
+Po 0 49250 49550 49250 48700 70 -1
+De 15 0 49 0 400000
+Po 0 51700 47550 51200 48050 70 -1
+De 1 0 49 0 0
+Po 0 49250 49550 49250 50150 150 -1
+De 15 0 49 0 400000
+Po 0 53600 41900 53600 42300 70 -1
+De 1 0 49 0 0
+Po 3 52066 54561 52066 54561 270 -1
+De 15 1 50 0 0
+Po 3 51766 53961 51766 53961 270 -1
+De 15 1 50 0 0
+Po 0 51766 53961 52066 53961 80 -1
+De 0 0 50 0 0
+Po 0 52066 53961 52366 53961 80 -1
+De 15 0 50 0 0
+Po 3 51766 54561 51766 54561 270 -1
+De 15 1 50 0 0
+Po 0 51852 53875 51766 53961 80 -1
+De 15 0 50 0 0
+Po 3 52666 53961 52666 53961 270 -1
+De 15 1 50 0 0
+Po 3 52966 54561 52966 54561 270 -1
+De 15 1 50 0 0
+Po 0 51850 49050 51850 48700 80 -1
+De 1 0 50 0 0
+Po 0 51850 49550 51850 50150 150 -1
+De 15 0 50 0 400000
+Po 0 53700 45850 53600 45950 70 -1
+De 1 0 50 0 0
+Po 0 51850 49550 51850 48700 70 -1
+De 15 0 50 0 400000
+Po 3 51766 54261 51766 54261 270 -1
+De 15 1 50 0 0
+Po 0 52066 54261 51766 54261 80 -1
+De 0 0 50 0 0
+Po 3 52066 54261 52066 54261 270 -1
+De 15 1 50 0 0
+Po 0 52366 54261 52066 54261 80 -1
+De 15 0 50 0 0
+Po 3 52366 54261 52366 54261 270 -1
+De 15 1 50 0 0
+Po 0 52666 54261 52366 54261 80 -1
+De 0 0 50 0 0
+Po 3 52666 54261 52666 54261 270 -1
+De 15 1 50 0 0
+Po 0 52966 54261 52666 54261 80 -1
+De 15 0 50 0 0
+Po 3 52966 54261 52966 54261 270 -1
+De 15 1 50 0 0
+Po 0 52966 53961 52966 54261 80 -1
+De 0 0 50 0 0
+Po 3 52966 53961 52966 53961 270 -1
+De 15 1 50 0 0
+Po 0 52666 53961 52966 53961 80 -1
+De 15 0 50 0 0
+Po 0 52366 53961 52666 53961 80 -1
+De 0 0 50 0 0
+Po 0 52366 54561 52666 54561 80 -1
+De 0 0 50 0 0
+Po 3 52366 54561 52366 54561 270 -1
+De 15 1 50 0 0
+Po 0 52066 54561 52366 54561 80 -1
+De 15 0 50 0 0
+Po 0 51766 54561 52066 54561 80 -1
+De 0 0 50 0 0
+Po 0 53700 42800 53700 43250 70 -1
+De 1 0 50 0 0
+Po 0 51766 54261 51766 54561 80 -1
+De 15 0 50 0 0
+Po 3 52066 53961 52066 53961 270 -1
+De 15 1 50 0 0
+Po 3 52666 54561 52666 54561 270 -1
+De 15 1 50 0 0
+Po 0 51852 53598 51852 53875 80 -1
+De 15 0 50 0 400000
+Po 3 52366 53961 52366 53961 270 -1
+De 15 1 50 0 0
+Po 0 52666 54561 52966 54561 80 -1
+De 15 0 50 0 0
+Po 0 52550 47000 52150 47400 70 -1
+De 1 0 50 0 0
+Po 0 52874 54055 52874 50074 80 -1
+De 1 0 50 0 0
+Po 0 51850 47700 52150 47400 70 -1
+De 1 0 50 0 0
+Po 0 52874 50074 52350 49550 80 -1
+De 1 0 50 0 0
+Po 3 53700 42800 53700 42800 270 -1
+De 15 1 50 0 0
+Po 0 51850 47700 51850 48700 70 -1
+De 1 0 50 0 0
+Po 0 53700 43250 53700 45850 70 -1
+De 1 0 50 0 0
+Po 0 53600 45950 52550 47000 70 -1
+De 1 0 50 0 0
+Po 3 51850 48700 51850 48700 270 -1
+De 15 1 50 0 0
+Po 0 51850 50150 52000 50300 150 -1
+De 15 0 50 0 800000
+Po 0 52800 42800 53700 42800 80 -1
+De 0 0 50 0 400000
+Po 0 52350 49550 51850 49050 80 -1
+De 1 0 50 0 0
+Po 0 49266 44111 48766 44611 80 -1
+De 15 0 51 0 0
+Po 0 48616 44611 48516 44711 80 -1
+De 15 0 51 0 800000
+Po 0 49766 43961 49766 42734 70 -1
+De 15 0 51 0 0
+Po 0 50916 41661 49766 42734 70 -1
+De 15 0 51 0 400000
+Po 0 48766 44611 48616 44611 80 -1
+De 15 0 51 0 0
+Po 0 49616 44111 49266 44111 80 -1
+De 15 0 51 0 0
+Po 0 49616 44111 49766 43961 70 -1
+De 15 0 51 0 0
+Po 0 48466 45461 48866 45461 80 -1
+De 0 0 52 0 0
+Po 0 50266 44861 50166 44861 80 -1
+De 15 0 52 0 0
+Po 0 48233 45694 47793 45694 80 -1
+De 0 0 52 0 800000
+Po 0 50166 44861 49466 44861 80 -1
+De 0 0 52 0 0
+Po 3 50166 44861 50166 44861 270 -1
+De 15 1 52 0 0
+Po 0 50516 44611 50266 44861 80 -1
+De 15 0 52 0 400000
+Po 0 48233 45694 48466 45461 80 -1
+De 0 0 52 0 0
+Po 0 49466 44861 49416 44911 80 -1
+De 0 0 52 0 0
+Po 0 48866 45461 49416 44911 80 -1
+De 0 0 52 0 0
+Po 0 48777 46000 48777 46284 80 -1
+De 0 0 53 0 800000
+Po 0 48777 46000 48777 45750 80 -1
+De 0 0 53 0 0
+Po 0 49616 45161 50516 45161 80 -1
+De 0 0 53 0 0
+Po 0 50516 45161 50566 45111 80 -1
+De 0 0 53 0 0
+Po 3 50566 45111 50566 45111 270 -1
+De 15 1 53 0 0
+Po 0 50566 45111 51016 45111 80 -1
+De 15 0 53 0 0
+Po 0 49416 45161 49616 45161 80 -1
+De 0 0 53 0 0
+Po 0 48916 45661 49416 45161 80 -1
+De 0 0 53 0 0
+Po 0 48866 45661 48916 45661 80 -1
+De 0 0 53 0 0
+Po 0 48777 45750 48866 45661 80 -1
+De 0 0 53 0 0
+Po 0 51516 44611 51016 45111 80 -1
+De 15 0 53 0 400000
+Po 0 46366 43711 46366 43961 80 -1
+De 0 0 54 0 0
+Po 0 46266 43611 46016 43361 80 -1
+De 0 0 54 0 400000
+Po 0 48974 46803 48974 46284 80 -1
+De 0 0 54 0 800000
+Po 0 48716 47061 48974 46803 80 -1
+De 0 0 54 0 0
+Po 0 46366 44061 46916 44611 80 -1
+De 0 0 54 0 0
+Po 0 46266 43611 46366 43711 80 -1
+De 0 0 54 0 400000
+Po 0 46016 43361 46016 42624 80 -1
+De 0 0 54 0 800000
+Po 0 47416 47061 48716 47061 80 -1
+De 0 0 54 0 0
+Po 0 46366 43961 46366 44061 80 -1
+De 0 0 54 0 0
+Po 0 46916 46561 47416 47061 80 -1
+De 0 0 54 0 0
+Po 0 46916 44611 46916 46561 80 -1
+De 0 0 54 0 0
+Po 0 48766 47261 49171 46856 80 -1
+De 0 0 55 0 0
+Po 0 45760 43705 46716 44661 80 -1
+De 0 0 55 0 0
+Po 0 46716 44661 46716 46611 80 -1
+De 0 0 55 0 0
+Po 0 46716 46611 47316 47211 80 -1
+De 0 0 55 0 0
+Po 0 47316 47211 47366 47261 80 -1
+De 0 0 55 0 0
+Po 0 47366 47261 48766 47261 80 -1
+De 0 0 55 0 0
+Po 0 45760 42624 45760 43705 80 -1
+De 0 0 55 0 400000
+Po 0 49171 46856 49171 46284 80 -1
+De 0 0 55 0 800000
+$EndTRACK
+$ZONE
+$EndZONE
+$CZONE_OUTLINE
+ZInfo 50312954 21 "I_SUM"
+ZLayer 0
+ZAux 7 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 0 16 F 200 200
+ZSmoothing 2 0
+ZCorner 53100 51400 0
+ZCorner 53100 48400 0
+ZCorner 46400 48400 0
+ZCorner 46400 48800 0
+ZCorner 46100 49100 0
+ZCorner 45300 49100 0
+ZCorner 45300 51400 1
+$POLYSCORNERS
+53050 51350 0 0
+52684 51350 0 0
+52684 49057 0 0
+52684 48944 0 0
+52641 48840 0 0
+52561 48760 0 0
+52457 48716 0 0
+52344 48716 0 0
+52240 48759 0 0
+52160 48839 0 0
+52116 48943 0 0
+52116 49056 0 0
+52159 49160 0 0
+52239 49240 0 0
+52343 49284 0 0
+52456 49284 0 0
+52560 49241 0 0
+52640 49161 0 0
+52684 49057 0 0
+52684 51350 0 0
+50989 51350 0 0
+50995 51337 0 0
+50995 51278 0 0
+50995 50866 0 0
+50977 50823 0 0
+51040 50761 0 0
+51084 50657 0 0
+51084 50544 0 0
+51041 50440 0 0
+50961 50360 0 0
+50857 50316 0 0
+50744 50316 0 0
+50640 50359 0 0
+50560 50439 0 0
+50516 50543 0 0
+50516 50656 0 0
+50558 50757 0 0
+50558 50777 0 0
+50523 50812 0 0
+50501 50867 0 0
+50501 50926 0 0
+50501 51338 0 0
+50506 51350 0 0
+50184 51350 0 0
+50184 49157 0 0
+50184 49044 0 0
+50141 48940 0 0
+50061 48860 0 0
+49957 48816 0 0
+49844 48816 0 0
+49740 48859 0 0
+49660 48939 0 0
+49616 49043 0 0
+49616 49156 0 0
+49659 49260 0 0
+49739 49340 0 0
+49843 49384 0 0
+49956 49384 0 0
+50060 49341 0 0
+50140 49261 0 0
+50184 49157 0 0
+50184 51350 0 0
+48389 51350 0 0
+48395 51337 0 0
+48395 51278 0 0
+48395 50866 0 0
+48377 50823 0 0
+48440 50761 0 0
+48484 50657 0 0
+48484 50544 0 0
+48441 50440 0 0
+48361 50360 0 0
+48257 50316 0 0
+48144 50316 0 0
+48040 50359 0 0
+47960 50439 0 0
+47916 50543 0 0
+47916 50656 0 0
+47958 50757 0 0
+47958 50777 0 0
+47923 50812 0 0
+47901 50867 0 0
+47901 50926 0 0
+47901 51338 0 0
+47906 51350 0 0
+47584 51350 0 0
+47584 49157 0 0
+47584 49044 0 0
+47541 48940 0 0
+47461 48860 0 0
+47357 48816 0 0
+47244 48816 0 0
+47140 48859 0 0
+47060 48939 0 0
+47016 49043 0 0
+47016 49156 0 0
+47059 49260 0 0
+47139 49340 0 0
+47243 49384 0 0
+47356 49384 0 0
+47460 49341 0 0
+47540 49261 0 0
+47584 49157 0 0
+47584 51350 0 0
+45350 51350 0 0
+45350 50068 0 0
+45350 49955 0 0
+45350 49151 0 0
+46116 49151 0 0
+46121 49150 0 0
+46189 49137 0 0
+46250 49095 0 0
+46447 48898 0 0
+46489 48940 0 0
+46593 48984 0 0
+46706 48984 0 0
+46810 48941 0 0
+46890 48861 0 0
+46934 48757 0 0
+46934 48644 0 0
+46891 48540 0 0
+46811 48460 0 0
+46787 48450 0 0
+47210 48450 0 0
+47215 48450 0 0
+47216 48451 0 0
+49109 48451 0 0
+49090 48459 0 0
+49010 48539 0 0
+48966 48643 0 0
+48966 48756 0 0
+49009 48860 0 0
+49089 48940 0 0
+49193 48984 0 0
+49306 48984 0 0
+49410 48941 0 0
+49490 48861 0 0
+49534 48757 0 0
+49534 48644 0 0
+49491 48540 0 0
+49411 48460 0 0
+49389 48451 0 0
+51709 48451 0 0
+51690 48459 0 0
+51610 48539 0 0
+51566 48643 0 0
+51566 48756 0 0
+51609 48860 0 0
+51689 48940 0 0
+51793 48984 0 0
+51906 48984 0 0
+52010 48941 0 0
+52090 48861 0 0
+52134 48757 0 0
+52134 48644 0 0
+52091 48540 0 0
+52011 48460 0 0
+51989 48451 0 0
+52216 48451 0 0
+52221 48450 0 0
+53050 48450 0 0
+53050 51350 1 0
+$endPOLYSCORNERS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 503129FA 50 "PHC"
+ZLayer 0
+ZAux 6 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 1 16 F 200 200
+ZSmoothing 2 0
+ZCorner 53100 54800 0
+ZCorner 53100 53300 0
+ZCorner 53600 53300 0
+ZCorner 53600 51700 0
+ZCorner 51600 51700 0
+ZCorner 51600 54800 1
+$POLYSCORNERS
+53550 53250 0 0
+53050 53250 0 0
+53050 54736 0 0
+51650 54736 0 0
+51650 51750 0 0
+53550 51750 0 0
+53550 53250 1 0
+$endPOLYSCORNERS
+$FILLSEGMENTS
+51650 51750 53550 51750
+51650 51830 53550 51830
+51650 51910 53550 51910
+51650 51990 53550 51990
+51650 52070 53550 52070
+51650 52150 53550 52150
+51650 52230 53550 52230
+51650 52310 53550 52310
+51650 52390 53550 52390
+51650 52470 53550 52470
+51650 52550 53550 52550
+51650 52630 53550 52630
+51650 52710 53550 52710
+51650 52790 53550 52790
+51650 52870 53550 52870
+51650 52950 53550 52950
+51650 53030 53550 53030
+51650 53110 53550 53110
+51650 53190 53550 53190
+51650 53270 53050 53270
+51650 53350 53050 53350
+51650 53430 53050 53430
+51650 53510 53050 53510
+51650 53590 53050 53590
+51650 53670 53050 53670
+51650 53750 53050 53750
+51650 53830 53050 53830
+51650 53910 53050 53910
+51650 53990 53050 53990
+51650 54070 53050 54070
+51650 54150 53050 54150
+51650 54230 53050 54230
+51650 54310 53050 54310
+51650 54390 53050 54390
+51650 54470 53050 54470
+51650 54550 53050 54550
+51650 54630 53050 54630
+51650 54710 53050 54710
+$endFILLSEGMENTS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 50312B11 50 "PHC"
+ZLayer 15
+ZAux 4 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 1 16 F 200 200
+ZSmoothing 2 0
+ZCorner 53100 54800 0
+ZCorner 53100 53300 0
+ZCorner 51600 53300 0
+ZCorner 51600 54800 1
+$POLYSCORNERS
+53050 54736 0 0
+51650 54736 0 0
+51650 53350 0 0
+53050 53350 0 0
+53050 54736 1 0
+$endPOLYSCORNERS
+$FILLSEGMENTS
+51650 53350 53050 53350
+51650 53430 53050 53430
+51650 53510 53050 53510
+51650 53590 53050 53590
+51650 53670 53050 53670
+51650 53750 53050 53750
+51650 53830 53050 53830
+51650 53910 53050 53910
+51650 53990 53050 53990
+51650 54070 53050 54070
+51650 54150 53050 54150
+51650 54230 53050 54230
+51650 54310 53050 54310
+51650 54390 53050 54390
+51650 54470 53050 54470
+51650 54550 53050 54550
+51650 54630 53050 54630
+51650 54710 53050 54710
+$endFILLSEGMENTS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 503129C9 49 "PHB"
+ZLayer 0
+ZAux 6 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 1 16 F 200 200
+ZSmoothing 2 0
+ZCorner 50500 54800 0
+ZCorner 50500 53300 0
+ZCorner 51000 53300 0
+ZCorner 51000 51700 0
+ZCorner 49000 51700 0
+ZCorner 49000 54800 1
+$POLYSCORNERS
+50950 53250 0 0
+50450 53250 0 0
+50450 54736 0 0
+49050 54736 0 0
+49050 51750 0 0
+50950 51750 0 0
+50950 53250 1 0
+$endPOLYSCORNERS
+$FILLSEGMENTS
+49050 51750 50950 51750
+49050 51830 50950 51830
+49050 51910 50950 51910
+49050 51990 50950 51990
+49050 52070 50950 52070
+49050 52150 50950 52150
+49050 52230 50950 52230
+49050 52310 50950 52310
+49050 52390 50950 52390
+49050 52470 50950 52470
+49050 52550 50950 52550
+49050 52630 50950 52630
+49050 52710 50950 52710
+49050 52790 50950 52790
+49050 52870 50950 52870
+49050 52950 50950 52950
+49050 53030 50950 53030
+49050 53110 50950 53110
+49050 53190 50950 53190
+49050 53270 50450 53270
+49050 53350 50450 53350
+49050 53430 50450 53430
+49050 53510 50450 53510
+49050 53590 50450 53590
+49050 53670 50450 53670
+49050 53750 50450 53750
+49050 53830 50450 53830
+49050 53910 50450 53910
+49050 53990 50450 53990
+49050 54070 50450 54070
+49050 54150 50450 54150
+49050 54230 50450 54230
+49050 54310 50450 54310
+49050 54390 50450 54390
+49050 54470 50450 54470
+49050 54550 50450 54550
+49050 54630 50450 54630
+49050 54710 50450 54710
+$endFILLSEGMENTS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 50312AF7 49 "PHB"
+ZLayer 15
+ZAux 4 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 1 16 F 200 200
+ZSmoothing 2 0
+ZCorner 50500 54800 0
+ZCorner 50500 53300 0
+ZCorner 49000 53300 0
+ZCorner 49000 54800 1
+$POLYSCORNERS
+50450 54736 0 0
+49050 54736 0 0
+49050 53350 0 0
+50450 53350 0 0
+50450 54736 1 0
+$endPOLYSCORNERS
+$FILLSEGMENTS
+49050 53350 50450 53350
+49050 53430 50450 53430
+49050 53510 50450 53510
+49050 53590 50450 53590
+49050 53670 50450 53670
+49050 53750 50450 53750
+49050 53830 50450 53830
+49050 53910 50450 53910
+49050 53990 50450 53990
+49050 54070 50450 54070
+49050 54150 50450 54150
+49050 54230 50450 54230
+49050 54310 50450 54310
+49050 54390 50450 54390
+49050 54470 50450 54470
+49050 54550 50450 54550
+49050 54630 50450 54630
+49050 54710 50450 54710
+$endFILLSEGMENTS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 5031299D 48 "PHA"
+ZLayer 0
+ZAux 6 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 1 16 F 200 200
+ZSmoothing 2 0
+ZCorner 47900 54800 0
+ZCorner 47900 53300 0
+ZCorner 48400 53300 0
+ZCorner 48400 51700 0
+ZCorner 46400 51700 0
+ZCorner 46400 54800 1
+$POLYSCORNERS
+48350 53250 0 0
+47850 53250 0 0
+47850 54736 0 0
+46450 54736 0 0
+46450 51750 0 0
+48350 51750 0 0
+48350 53250 1 0
+$endPOLYSCORNERS
+$FILLSEGMENTS
+46450 51750 48350 51750
+46450 51830 48350 51830
+46450 51910 48350 51910
+46450 51990 48350 51990
+46450 52070 48350 52070
+46450 52150 48350 52150
+46450 52230 48350 52230
+46450 52310 48350 52310
+46450 52390 48350 52390
+46450 52470 48350 52470
+46450 52550 48350 52550
+46450 52630 48350 52630
+46450 52710 48350 52710
+46450 52790 48350 52790
+46450 52870 48350 52870
+46450 52950 48350 52950
+46450 53030 48350 53030
+46450 53110 48350 53110
+46450 53190 48350 53190
+46450 53270 47850 53270
+46450 53350 47850 53350
+46450 53430 47850 53430
+46450 53510 47850 53510
+46450 53590 47850 53590
+46450 53670 47850 53670
+46450 53750 47850 53750
+46450 53830 47850 53830
+46450 53910 47850 53910
+46450 53990 47850 53990
+46450 54070 47850 54070
+46450 54150 47850 54150
+46450 54230 47850 54230
+46450 54310 47850 54310
+46450 54390 47850 54390
+46450 54470 47850 54470
+46450 54550 47850 54550
+46450 54630 47850 54630
+46450 54710 47850 54710
+$endFILLSEGMENTS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 50312A23 48 "PHA"
+ZLayer 15
+ZAux 4 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 1 16 F 200 200
+ZSmoothing 2 0
+ZCorner 47900 54800 0
+ZCorner 47900 53300 0
+ZCorner 46400 53300 0
+ZCorner 46400 54800 1
+$POLYSCORNERS
+47850 54736 0 0
+46450 54736 0 0
+46450 53350 0 0
+47850 53350 0 0
+47850 54736 1 0
+$endPOLYSCORNERS
+$FILLSEGMENTS
+46450 53350 47850 53350
+46450 53430 47850 53430
+46450 53510 47850 53510
+46450 53590 47850 53590
+46450 53670 47850 53670
+46450 53750 47850 53750
+46450 53830 47850 53830
+46450 53910 47850 53910
+46450 53990 47850 53990
+46450 54070 47850 54070
+46450 54150 47850 54150
+46450 54230 47850 54230
+46450 54310 47850 54310
+46450 54390 47850 54390
+46450 54470 47850 54470
+46450 54550 47850 54550
+46450 54630 47850 54630
+46450 54710 47850 54710
+$endFILLSEGMENTS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 50312E1A 20 "GND"
+ZLayer 0
+ZAux 8 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 0 16 F 200 200
+ZSmoothing 2 0
+ZCorner 44173 54804 0
+ZCorner 46100 54800 0
+ZCorner 46103 51575 0
+ZCorner 45118 51575 0
+ZCorner 45118 49292 0
+ZCorner 44725 49292 0
+ZCorner 44725 47559 0
+ZCorner 44174 47559 1
+$POLYSCORNERS
+46053 51625 0 0
+46050 54736 0 0
+44241 54736 0 0
+44241 47609 0 0
+44675 47609 0 0
+44675 47886 0 0
+44616 47886 0 0
+44530 47903 0 0
+44457 47952 0 0
+44408 48025 0 0
+44391 48111 0 0
+44408 48197 0 0
+44457 48270 0 0
+44530 48319 0 0
+44616 48336 0 0
+44675 48336 0 0
+44675 49342 0 0
+45068 49342 0 0
+45068 51625 0 0
+46053 51625 1 0
+$endPOLYSCORNERS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 50312D44 4 "+BATT"
+ZLayer 15
+ZAux 10 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 1 16 F 200 200
+ZSmoothing 2 0
+ZCorner 46100 54800 0
+ZCorner 46100 53000 0
+ZCorner 53600 53000 0
+ZCorner 53600 51400 0
+ZCorner 45900 51400 0
+ZCorner 45900 50788 0
+ZCorner 45400 50788 0
+ZCorner 45400 51400 0
+ZCorner 44200 51400 0
+ZCorner 44200 54800 1
+$POLYSCORNERS
+53550 52950 0 0
+46050 52950 0 0
+46050 54736 0 0
+44250 54736 0 0
+44250 51450 0 0
+45450 51450 0 0
+45450 50838 0 0
+45850 50838 0 0
+45850 51450 0 0
+53550 51450 0 0
+53550 52950 1 0
+$endPOLYSCORNERS
+$FILLSEGMENTS
+45450 50838 45850 50838
+45450 50918 45850 50918
+45450 50998 45850 50998
+45450 51078 45850 51078
+45450 51158 45850 51158
+45450 51238 45850 51238
+45450 51318 45850 51318
+45450 51398 45850 51398
+44250 51478 53550 51478
+44250 51558 53550 51558
+44250 51638 53550 51638
+44250 51718 53550 51718
+44250 51798 53550 51798
+44250 51878 53550 51878
+44250 51958 53550 51958
+44250 52038 53550 52038
+44250 52118 53550 52118
+44250 52198 53550 52198
+44250 52278 53550 52278
+44250 52358 53550 52358
+44250 52438 53550 52438
+44250 52518 53550 52518
+44250 52598 53550 52598
+44250 52678 53550 52678
+44250 52758 53550 52758
+44250 52838 53550 52838
+44250 52918 53550 52918
+44250 52998 46050 52998
+44250 53078 46050 53078
+44250 53158 46050 53158
+44250 53238 46050 53238
+44250 53318 46050 53318
+44250 53398 46050 53398
+44250 53478 46050 53478
+44250 53558 46050 53558
+44250 53638 46050 53638
+44250 53718 46050 53718
+44250 53798 46050 53798
+44250 53878 46050 53878
+44250 53958 46050 53958
+44250 54038 46050 54038
+44250 54118 46050 54118
+44250 54198 46050 54198
+44250 54278 46050 54278
+44250 54358 46050 54358
+44250 54438 46050 54438
+44250 54518 46050 54518
+44250 54598 46050 54598
+44250 54678 46050 54678
+$endFILLSEGMENTS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 503147A5 20 "GND"
+ZLayer 2
+ZAux 6 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 0 16 F 200 200
+ZSmoothing 2 0
+ZCorner 53700 53150 0
+ZCorner 53700 41150 0
+ZCorner 44300 41150 0
+ZCorner 44300 51300 0
+ZCorner 46000 51300 0
+ZCorner 46000 53150 1
+$POLYSCORNERS
+53650 43771 0 0
+53544 43771 0 0
+53500 43726 0 0
+53500 43655 0 0
+53457 43551 0 0
+53377 43471 0 0
+53273 43427 0 0
+53160 43427 0 0
+53056 43470 0 0
+52976 43550 0 0
+52932 43654 0 0
+52932 43767 0 0
+52975 43871 0 0
+53055 43951 0 0
+53159 43995 0 0
+53231 43995 0 0
+53331 44095 0 0
+53332 44095 0 0
+53393 44137 0 0
+53466 44151 0 0
+53526 44151 0 0
+53526 45561 0 0
+53526 49011 0 0
+53526 50345 0 0
+53457 50316 0 0
+53344 50316 0 0
+53240 50359 0 0
+53160 50439 0 0
+53116 50543 0 0
+53116 50656 0 0
+53159 50760 0 0
+53239 50840 0 0
+53343 50884 0 0
+53456 50884 0 0
+53526 50855 0 0
+53526 52382 0 0
+52987 52921 0 0
+52900 52921 0 0
+52900 45218 0 0
+52900 45105 0 0
+52857 45001 0 0
+52777 44921 0 0
+52673 44877 0 0
+52560 44877 0 0
+52456 44920 0 0
+52376 45000 0 0
+52332 45104 0 0
+52332 45217 0 0
+52375 45321 0 0
+52455 45401 0 0
+52559 45445 0 0
+52672 45445 0 0
+52776 45402 0 0
+52856 45322 0 0
+52900 45218 0 0
+52900 52921 0 0
+52684 52921 0 0
+52684 49057 0 0
+52684 48944 0 0
+52641 48840 0 0
+52561 48760 0 0
+52457 48716 0 0
+52344 48716 0 0
+52240 48759 0 0
+52160 48839 0 0
+52134 48900 0 0
+52134 48757 0 0
+52134 48644 0 0
+52091 48540 0 0
+52011 48460 0 0
+52000 48455 0 0
+52000 46678 0 0
+52000 46565 0 0
+51957 46461 0 0
+51905 46409 0 0
+51905 42209 0 0
+51905 42114 0 0
+51869 42026 0 0
+51802 41959 0 0
+51714 41922 0 0
+51619 41922 0 0
+51531 41958 0 0
+51464 42025 0 0
+51427 42113 0 0
+51427 42208 0 0
+51463 42296 0 0
+51530 42363 0 0
+51618 42400 0 0
+51713 42400 0 0
+51801 42364 0 0
+51868 42297 0 0
+51905 42209 0 0
+51905 46409 0 0
+51877 46381 0 0
+51773 46337 0 0
+51660 46337 0 0
+51556 46380 0 0
+51476 46460 0 0
+51432 46564 0 0
+51432 46677 0 0
+51475 46781 0 0
+51555 46861 0 0
+51659 46905 0 0
+51772 46905 0 0
+51876 46862 0 0
+51956 46782 0 0
+52000 46678 0 0
+52000 48455 0 0
+51907 48416 0 0
+51794 48416 0 0
+51690 48459 0 0
+51610 48539 0 0
+51566 48643 0 0
+51566 48756 0 0
+51609 48860 0 0
+51689 48940 0 0
+51793 48984 0 0
+51906 48984 0 0
+52010 48941 0 0
+52090 48861 0 0
+52134 48757 0 0
+52134 48900 0 0
+52116 48943 0 0
+52116 49056 0 0
+52159 49160 0 0
+52239 49240 0 0
+52343 49284 0 0
+52456 49284 0 0
+52560 49241 0 0
+52640 49161 0 0
+52684 49057 0 0
+52684 52921 0 0
+51516 52921 0 0
+51443 52935 0 0
+51381 52977 0 0
+51258 53100 0 0
+51084 53100 0 0
+51084 50657 0 0
+51084 50544 0 0
+51041 50440 0 0
+50961 50360 0 0
+50950 50355 0 0
+50950 45768 0 0
+50950 45655 0 0
+50907 45551 0 0
+50850 45494 0 0
+50850 45168 0 0
+50850 45055 0 0
+50807 44951 0 0
+50727 44871 0 0
+50623 44827 0 0
+50510 44827 0 0
+50450 44851 0 0
+50450 44805 0 0
+50407 44701 0 0
+50350 44644 0 0
+50350 43518 0 0
+50350 43405 0 0
+50307 43301 0 0
+50227 43221 0 0
+50123 43177 0 0
+50010 43177 0 0
+49906 43220 0 0
+49826 43300 0 0
+49782 43404 0 0
+49782 43517 0 0
+49825 43621 0 0
+49905 43701 0 0
+50009 43745 0 0
+50122 43745 0 0
+50226 43702 0 0
+50306 43622 0 0
+50350 43518 0 0
+50350 44644 0 0
+50327 44621 0 0
+50223 44577 0 0
+50110 44577 0 0
+50100 44581 0 0
+50100 44368 0 0
+50100 44255 0 0
+50057 44151 0 0
+49977 44071 0 0
+49873 44027 0 0
+49760 44027 0 0
+49656 44070 0 0
+49600 44126 0 0
+49600 43868 0 0
+49600 43755 0 0
+49557 43651 0 0
+49477 43571 0 0
+49373 43527 0 0
+49260 43527 0 0
+49156 43570 0 0
+49076 43650 0 0
+49032 43754 0 0
+49032 43826 0 0
+48977 43771 0 0
+48873 43727 0 0
+48760 43727 0 0
+48656 43770 0 0
+48576 43850 0 0
+48532 43954 0 0
+48532 44067 0 0
+48575 44171 0 0
+48655 44251 0 0
+48759 44295 0 0
+48872 44295 0 0
+48976 44252 0 0
+49056 44172 0 0
+49100 44068 0 0
+49100 43996 0 0
+49155 44051 0 0
+49259 44095 0 0
+49372 44095 0 0
+49476 44052 0 0
+49556 43972 0 0
+49600 43868 0 0
+49600 44126 0 0
+49576 44150 0 0
+49532 44254 0 0
+49532 44367 0 0
+49575 44471 0 0
+49655 44551 0 0
+49759 44595 0 0
+49872 44595 0 0
+49976 44552 0 0
+50056 44472 0 0
+50100 44368 0 0
+50100 44581 0 0
+50006 44620 0 0
+49926 44700 0 0
+49882 44804 0 0
+49882 44917 0 0
+49925 45021 0 0
+50005 45101 0 0
+50109 45145 0 0
+50222 45145 0 0
+50282 45120 0 0
+50282 45167 0 0
+50325 45271 0 0
+50405 45351 0 0
+50509 45395 0 0
+50622 45395 0 0
+50726 45352 0 0
+50806 45272 0 0
+50850 45168 0 0
+50850 45494 0 0
+50827 45471 0 0
+50723 45427 0 0
+50610 45427 0 0
+50506 45470 0 0
+50426 45550 0 0
+50382 45654 0 0
+50382 45767 0 0
+50425 45871 0 0
+50505 45951 0 0
+50609 45995 0 0
+50722 45995 0 0
+50826 45952 0 0
+50906 45872 0 0
+50950 45768 0 0
+50950 50355 0 0
+50857 50316 0 0
+50744 50316 0 0
+50640 50359 0 0
+50560 50439 0 0
+50516 50543 0 0
+50516 50656 0 0
+50559 50760 0 0
+50639 50840 0 0
+50743 50884 0 0
+50856 50884 0 0
+50960 50841 0 0
+51040 50761 0 0
+51084 50657 0 0
+51084 53100 0 0
+50350 53100 0 0
+50350 45768 0 0
+50350 45655 0 0
+50307 45551 0 0
+50227 45471 0 0
+50123 45427 0 0
+50050 45427 0 0
+50050 45405 0 0
+50007 45301 0 0
+49927 45221 0 0
+49823 45177 0 0
+49710 45177 0 0
+49606 45220 0 0
+49526 45300 0 0
+49482 45404 0 0
+49482 45517 0 0
+49525 45621 0 0
+49605 45701 0 0
+49709 45745 0 0
+49782 45745 0 0
+49782 45767 0 0
+49825 45871 0 0
+49905 45951 0 0
+50009 45995 0 0
+50122 45995 0 0
+50226 45952 0 0
+50306 45872 0 0
+50350 45768 0 0
+50350 53100 0 0
+50184 53100 0 0
+50184 49157 0 0
+50184 49044 0 0
+50141 48940 0 0
+50061 48860 0 0
+49957 48816 0 0
+49950 48816 0 0
+49950 46818 0 0
+49950 46705 0 0
+49907 46601 0 0
+49827 46521 0 0
+49723 46477 0 0
+49610 46477 0 0
+49506 46520 0 0
+49500 46526 0 0
+49500 45818 0 0
+49500 45705 0 0
+49457 45601 0 0
+49377 45521 0 0
+49273 45477 0 0
+49160 45477 0 0
+49056 45520 0 0
+49050 45526 0 0
+49050 45218 0 0
+49050 45105 0 0
+49007 45001 0 0
+48927 44921 0 0
+48823 44877 0 0
+48710 44877 0 0
+48606 44920 0 0
+48526 45000 0 0
+48482 45104 0 0
+48482 45217 0 0
+48525 45321 0 0
+48605 45401 0 0
+48709 45445 0 0
+48822 45445 0 0
+48926 45402 0 0
+49006 45322 0 0
+49050 45218 0 0
+49050 45526 0 0
+48976 45600 0 0
+48932 45704 0 0
+48932 45817 0 0
+48975 45921 0 0
+49055 46001 0 0
+49159 46045 0 0
+49272 46045 0 0
+49376 46002 0 0
+49456 45922 0 0
+49500 45818 0 0
+49500 46526 0 0
+49426 46600 0 0
+49382 46704 0 0
+49382 46777 0 0
+49360 46777 0 0
+49256 46820 0 0
+49176 46900 0 0
+49132 47004 0 0
+49132 47117 0 0
+49175 47221 0 0
+49255 47301 0 0
+49359 47345 0 0
+49472 47345 0 0
+49576 47302 0 0
+49656 47222 0 0
+49700 47118 0 0
+49700 47045 0 0
+49722 47045 0 0
+49826 47002 0 0
+49906 46922 0 0
+49950 46818 0 0
+49950 48816 0 0
+49844 48816 0 0
+49740 48859 0 0
+49660 48939 0 0
+49616 49043 0 0
+49616 49156 0 0
+49659 49260 0 0
+49739 49340 0 0
+49843 49384 0 0
+49956 49384 0 0
+50060 49341 0 0
+50140 49261 0 0
+50184 49157 0 0
+50184 53100 0 0
+49534 53100 0 0
+49534 48757 0 0
+49534 48644 0 0
+49491 48540 0 0
+49411 48460 0 0
+49307 48416 0 0
+49194 48416 0 0
+49090 48459 0 0
+49010 48539 0 0
+48966 48643 0 0
+48966 48756 0 0
+49009 48860 0 0
+49089 48940 0 0
+49193 48984 0 0
+49306 48984 0 0
+49410 48941 0 0
+49490 48861 0 0
+49534 48757 0 0
+49534 53100 0 0
+48484 53100 0 0
+48484 50657 0 0
+48484 50544 0 0
+48441 50440 0 0
+48361 50360 0 0
+48257 50316 0 0
+48144 50316 0 0
+48040 50359 0 0
+47960 50439 0 0
+47916 50543 0 0
+47916 50656 0 0
+47959 50760 0 0
+48039 50840 0 0
+48143 50884 0 0
+48256 50884 0 0
+48360 50841 0 0
+48440 50761 0 0
+48484 50657 0 0
+48484 53100 0 0
+47900 53100 0 0
+47900 43268 0 0
+47900 43155 0 0
+47857 43051 0 0
+47777 42971 0 0
+47673 42927 0 0
+47560 42927 0 0
+47456 42970 0 0
+47376 43050 0 0
+47332 43154 0 0
+47332 43267 0 0
+47375 43371 0 0
+47455 43451 0 0
+47559 43495 0 0
+47672 43495 0 0
+47776 43452 0 0
+47856 43372 0 0
+47900 43268 0 0
+47900 53100 0 0
+47650 53100 0 0
+47650 46118 0 0
+47650 46005 0 0
+47607 45901 0 0
+47550 45844 0 0
+47550 44518 0 0
+47550 44405 0 0
+47507 44301 0 0
+47427 44221 0 0
+47323 44177 0 0
+47210 44177 0 0
+47106 44220 0 0
+47026 44300 0 0
+46982 44404 0 0
+46982 44517 0 0
+47019 44606 0 0
+46976 44650 0 0
+46932 44754 0 0
+46932 44867 0 0
+46975 44971 0 0
+47055 45051 0 0
+47159 45095 0 0
+47272 45095 0 0
+47376 45052 0 0
+47456 44972 0 0
+47500 44868 0 0
+47500 44755 0 0
+47462 44665 0 0
+47506 44622 0 0
+47550 44518 0 0
+47550 45844 0 0
+47527 45821 0 0
+47423 45777 0 0
+47310 45777 0 0
+47206 45820 0 0
+47126 45900 0 0
+47082 46004 0 0
+47082 46117 0 0
+47125 46221 0 0
+47205 46301 0 0
+47309 46345 0 0
+47422 46345 0 0
+47526 46302 0 0
+47606 46222 0 0
+47650 46118 0 0
+47650 53100 0 0
+47584 53100 0 0
+47584 49157 0 0
+47584 49044 0 0
+47541 48940 0 0
+47461 48860 0 0
+47357 48816 0 0
+47244 48816 0 0
+47140 48859 0 0
+47060 48939 0 0
+47016 49043 0 0
+47016 49156 0 0
+47059 49260 0 0
+47139 49340 0 0
+47243 49384 0 0
+47356 49384 0 0
+47460 49341 0 0
+47540 49261 0 0
+47584 49157 0 0
+47584 53100 0 0
+46934 53100 0 0
+46934 48757 0 0
+46934 48644 0 0
+46891 48540 0 0
+46811 48460 0 0
+46707 48416 0 0
+46594 48416 0 0
+46490 48459 0 0
+46410 48539 0 0
+46366 48643 0 0
+46366 48756 0 0
+46409 48860 0 0
+46489 48940 0 0
+46593 48984 0 0
+46706 48984 0 0
+46810 48941 0 0
+46890 48861 0 0
+46934 48757 0 0
+46934 53100 0 0
+46050 53100 0 0
+46050 51250 0 0
+46000 51250 0 0
+46000 44768 0 0
+46000 44655 0 0
+45957 44551 0 0
+45877 44471 0 0
+45773 44427 0 0
+45660 44427 0 0
+45556 44470 0 0
+45476 44550 0 0
+45432 44654 0 0
+45432 44767 0 0
+45475 44871 0 0
+45555 44951 0 0
+45659 44995 0 0
+45772 44995 0 0
+45876 44952 0 0
+45956 44872 0 0
+46000 44768 0 0
+46000 51250 0 0
+45950 51250 0 0
+45950 46868 0 0
+45950 46755 0 0
+45907 46651 0 0
+45827 46571 0 0
+45723 46527 0 0
+45610 46527 0 0
+45506 46570 0 0
+45426 46650 0 0
+45382 46754 0 0
+45382 46867 0 0
+45425 46971 0 0
+45505 47051 0 0
+45609 47095 0 0
+45722 47095 0 0
+45826 47052 0 0
+45906 46972 0 0
+45950 46868 0 0
+45950 51250 0 0
+44350 51250 0 0
+44350 43446 0 0
+44405 43501 0 0
+44509 43545 0 0
+44622 43545 0 0
+44726 43502 0 0
+44806 43422 0 0
+44850 43318 0 0
+44850 43205 0 0
+44807 43101 0 0
+44727 43021 0 0
+44623 42977 0 0
+44510 42977 0 0
+44406 43020 0 0
+44350 43076 0 0
+44350 41200 0 0
+53650 41200 0 0
+53650 41616 0 0
+53544 41616 0 0
+53440 41659 0 0
+53360 41739 0 0
+53316 41843 0 0
+53316 41956 0 0
+53359 42060 0 0
+53439 42140 0 0
+53543 42184 0 0
+53650 42184 0 0
+53650 42516 0 0
+53644 42516 0 0
+53540 42559 0 0
+53460 42639 0 0
+53416 42743 0 0
+53416 42856 0 0
+53459 42960 0 0
+53539 43040 0 0
+53643 43084 0 0
+53650 43084 0 0
+53650 43771 1 0
+$endPOLYSCORNERS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 5031523F 1 "+3.3V"
+ZLayer 1
+ZAux 4 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 1 16 F 200 200
+ZSmoothing 2 0
+ZCorner 53700 47100 0
+ZCorner 53700 41300 0
+ZCorner 44300 41300 0
+ZCorner 44300 47100 1
+$POLYSCORNERS
+53415 42423 0 0
+53350 42488 0 0
+53350 42418 0 0
+53350 42305 0 0
+53307 42201 0 0
+53227 42121 0 0
+53123 42077 0 0
+53010 42077 0 0
+52906 42120 0 0
+52826 42200 0 0
+52782 42304 0 0
+52782 42417 0 0
+52825 42521 0 0
+52905 42601 0 0
+53009 42645 0 0
+53122 42645 0 0
+53226 42602 0 0
+53306 42522 0 0
+53350 42418 0 0
+53350 42488 0 0
+53319 42519 0 0
+53317 42521 0 0
+53269 42569 0 0
+53229 42629 0 0
+53215 42700 0 0
+53215 42800 0 0
+53215 43000 0 0
+53218 43017 0 0
+53123 42977 0 0
+53010 42977 0 0
+52906 43020 0 0
+52826 43100 0 0
+52782 43204 0 0
+52782 43317 0 0
+52825 43421 0 0
+52905 43501 0 0
+52989 43536 0 0
+52976 43550 0 0
+52960 43587 0 0
+51856 42483 0 0
+51856 42309 0 0
+51868 42297 0 0
+51905 42209 0 0
+51905 42114 0 0
+51869 42026 0 0
+51802 41959 0 0
+51714 41922 0 0
+51619 41922 0 0
+51531 41958 0 0
+51464 42025 0 0
+51427 42113 0 0
+51427 42208 0 0
+51463 42296 0 0
+51476 42309 0 0
+51476 42561 0 0
+51490 42634 0 0
+51532 42695 0 0
+53026 44189 0 0
+53026 44866 0 0
+53040 44939 0 0
+53082 45000 0 0
+53115 45033 0 0
+53115 45573 0 0
+53069 45619 0 0
+52500 46187 0 0
+52500 44368 0 0
+52500 44255 0 0
+52457 44151 0 0
+52377 44071 0 0
+52273 44027 0 0
+52160 44027 0 0
+52056 44070 0 0
+51976 44150 0 0
+51932 44254 0 0
+51932 44367 0 0
+51975 44471 0 0
+52055 44551 0 0
+52159 44595 0 0
+52272 44595 0 0
+52376 44552 0 0
+52456 44472 0 0
+52500 44368 0 0
+52500 46187 0 0
+51992 46695 0 0
+52000 46678 0 0
+52000 46565 0 0
+51957 46461 0 0
+51891 46395 0 0
+51972 46395 0 0
+52076 46352 0 0
+52156 46272 0 0
+52200 46168 0 0
+52200 46055 0 0
+52157 45951 0 0
+52077 45871 0 0
+51973 45827 0 0
+51860 45827 0 0
+51756 45870 0 0
+51676 45950 0 0
+51632 46054 0 0
+51632 46167 0 0
+51675 46271 0 0
+51741 46337 0 0
+51660 46337 0 0
+51556 46380 0 0
+51476 46460 0 0
+51432 46564 0 0
+51432 46677 0 0
+51475 46781 0 0
+51555 46861 0 0
+51659 46905 0 0
+51772 46905 0 0
+51790 46897 0 0
+51719 46969 0 0
+51638 47050 0 0
+51078 47050 0 0
+51106 47022 0 0
+51150 46918 0 0
+51150 46805 0 0
+51107 46701 0 0
+51027 46621 0 0
+50923 46577 0 0
+50850 46577 0 0
+50850 45168 0 0
+50850 45055 0 0
+50807 44951 0 0
+50727 44871 0 0
+50623 44827 0 0
+50510 44827 0 0
+50450 44851 0 0
+50450 44805 0 0
+50407 44701 0 0
+50327 44621 0 0
+50223 44577 0 0
+50110 44577 0 0
+50100 44581 0 0
+50100 44368 0 0
+50100 44255 0 0
+50057 44151 0 0
+50050 44144 0 0
+50050 42418 0 0
+50050 42305 0 0
+50007 42201 0 0
+49927 42121 0 0
+49823 42077 0 0
+49710 42077 0 0
+49606 42120 0 0
+49526 42200 0 0
+49482 42304 0 0
+49482 42417 0 0
+49525 42521 0 0
+49605 42601 0 0
+49709 42645 0 0
+49822 42645 0 0
+49926 42602 0 0
+50006 42522 0 0
+50050 42418 0 0
+50050 44144 0 0
+49977 44071 0 0
+49873 44027 0 0
+49760 44027 0 0
+49656 44070 0 0
+49600 44126 0 0
+49600 43868 0 0
+49600 43755 0 0
+49557 43651 0 0
+49477 43571 0 0
+49373 43527 0 0
+49260 43527 0 0
+49250 43531 0 0
+49250 42218 0 0
+49250 42105 0 0
+49207 42001 0 0
+49127 41921 0 0
+49023 41877 0 0
+48910 41877 0 0
+48806 41920 0 0
+48726 42000 0 0
+48682 42104 0 0
+48682 42217 0 0
+48725 42321 0 0
+48805 42401 0 0
+48909 42445 0 0
+49022 42445 0 0
+49126 42402 0 0
+49206 42322 0 0
+49250 42218 0 0
+49250 43531 0 0
+49156 43570 0 0
+49076 43650 0 0
+49032 43754 0 0
+49032 43826 0 0
+48977 43771 0 0
+48873 43727 0 0
+48760 43727 0 0
+48656 43770 0 0
+48650 43776 0 0
+48650 43668 0 0
+48650 43555 0 0
+48607 43451 0 0
+48527 43371 0 0
+48423 43327 0 0
+48310 43327 0 0
+48206 43370 0 0
+48126 43450 0 0
+48082 43554 0 0
+48082 43667 0 0
+48125 43771 0 0
+48205 43851 0 0
+48309 43895 0 0
+48422 43895 0 0
+48526 43852 0 0
+48606 43772 0 0
+48650 43668 0 0
+48650 43776 0 0
+48576 43850 0 0
+48532 43954 0 0
+48532 44067 0 0
+48575 44171 0 0
+48655 44251 0 0
+48759 44295 0 0
+48872 44295 0 0
+48976 44252 0 0
+49056 44172 0 0
+49100 44068 0 0
+49100 43996 0 0
+49155 44051 0 0
+49259 44095 0 0
+49372 44095 0 0
+49476 44052 0 0
+49556 43972 0 0
+49600 43868 0 0
+49600 44126 0 0
+49576 44150 0 0
+49532 44254 0 0
+49532 44367 0 0
+49575 44471 0 0
+49655 44551 0 0
+49759 44595 0 0
+49872 44595 0 0
+49976 44552 0 0
+50056 44472 0 0
+50100 44368 0 0
+50100 44581 0 0
+50006 44620 0 0
+49926 44700 0 0
+49882 44804 0 0
+49882 44917 0 0
+49925 45021 0 0
+50005 45101 0 0
+50109 45145 0 0
+50222 45145 0 0
+50282 45120 0 0
+50282 45167 0 0
+50325 45271 0 0
+50405 45351 0 0
+50509 45395 0 0
+50622 45395 0 0
+50726 45352 0 0
+50806 45272 0 0
+50850 45168 0 0
+50850 46577 0 0
+50810 46577 0 0
+50706 46620 0 0
+50626 46700 0 0
+50582 46804 0 0
+50582 46917 0 0
+50625 47021 0 0
+50654 47050 0 0
+50350 47050 0 0
+50350 45768 0 0
+50350 45655 0 0
+50307 45551 0 0
+50227 45471 0 0
+50123 45427 0 0
+50050 45427 0 0
+50050 45405 0 0
+50007 45301 0 0
+49927 45221 0 0
+49823 45177 0 0
+49710 45177 0 0
+49606 45220 0 0
+49526 45300 0 0
+49482 45404 0 0
+49482 45517 0 0
+49525 45621 0 0
+49605 45701 0 0
+49709 45745 0 0
+49782 45745 0 0
+49782 45767 0 0
+49825 45871 0 0
+49905 45951 0 0
+50009 45995 0 0
+50122 45995 0 0
+50226 45952 0 0
+50306 45872 0 0
+50350 45768 0 0
+50350 47050 0 0
+49700 47050 0 0
+49700 47045 0 0
+49722 47045 0 0
+49826 47002 0 0
+49906 46922 0 0
+49950 46818 0 0
+49950 46705 0 0
+49907 46601 0 0
+49827 46521 0 0
+49723 46477 0 0
+49610 46477 0 0
+49506 46520 0 0
+49500 46526 0 0
+49500 45818 0 0
+49500 45705 0 0
+49457 45601 0 0
+49377 45521 0 0
+49273 45477 0 0
+49160 45477 0 0
+49056 45520 0 0
+49050 45526 0 0
+49050 45218 0 0
+49050 45105 0 0
+49007 45001 0 0
+48927 44921 0 0
+48823 44877 0 0
+48710 44877 0 0
+48606 44920 0 0
+48526 45000 0 0
+48482 45104 0 0
+48482 45217 0 0
+48525 45321 0 0
+48605 45401 0 0
+48709 45445 0 0
+48822 45445 0 0
+48926 45402 0 0
+49006 45322 0 0
+49050 45218 0 0
+49050 45526 0 0
+48976 45600 0 0
+48932 45704 0 0
+48932 45817 0 0
+48975 45921 0 0
+49055 46001 0 0
+49159 46045 0 0
+49272 46045 0 0
+49376 46002 0 0
+49456 45922 0 0
+49500 45818 0 0
+49500 46526 0 0
+49426 46600 0 0
+49382 46704 0 0
+49382 46777 0 0
+49360 46777 0 0
+49256 46820 0 0
+49176 46900 0 0
+49132 47004 0 0
+49132 47050 0 0
+48450 47050 0 0
+48450 46818 0 0
+48450 46705 0 0
+48407 46601 0 0
+48327 46521 0 0
+48223 46477 0 0
+48110 46477 0 0
+48006 46520 0 0
+47926 46600 0 0
+47882 46704 0 0
+47882 46817 0 0
+47925 46921 0 0
+48005 47001 0 0
+48109 47045 0 0
+48222 47045 0 0
+48326 47002 0 0
+48406 46922 0 0
+48450 46818 0 0
+48450 47050 0 0
+47550 47050 0 0
+47550 44518 0 0
+47550 44405 0 0
+47507 44301 0 0
+47427 44221 0 0
+47323 44177 0 0
+47210 44177 0 0
+47106 44220 0 0
+47026 44300 0 0
+46982 44404 0 0
+46982 44517 0 0
+47019 44606 0 0
+46976 44650 0 0
+46932 44754 0 0
+46932 44867 0 0
+46975 44971 0 0
+47055 45051 0 0
+47159 45095 0 0
+47272 45095 0 0
+47376 45052 0 0
+47456 44972 0 0
+47500 44868 0 0
+47500 44755 0 0
+47462 44665 0 0
+47506 44622 0 0
+47550 44518 0 0
+47550 47050 0 0
+46800 47050 0 0
+46800 43168 0 0
+46800 43055 0 0
+46757 42951 0 0
+46677 42871 0 0
+46573 42827 0 0
+46460 42827 0 0
+46356 42870 0 0
+46276 42950 0 0
+46232 43054 0 0
+46232 43167 0 0
+46275 43271 0 0
+46355 43351 0 0
+46459 43395 0 0
+46572 43395 0 0
+46676 43352 0 0
+46756 43272 0 0
+46800 43168 0 0
+46800 47050 0 0
+46700 47050 0 0
+46700 46668 0 0
+46700 46555 0 0
+46700 45218 0 0
+46700 45105 0 0
+46657 45001 0 0
+46577 44921 0 0
+46473 44877 0 0
+46360 44877 0 0
+46256 44920 0 0
+46176 45000 0 0
+46132 45104 0 0
+46132 45217 0 0
+46175 45321 0 0
+46255 45401 0 0
+46359 45445 0 0
+46472 45445 0 0
+46576 45402 0 0
+46656 45322 0 0
+46700 45218 0 0
+46700 46555 0 0
+46657 46451 0 0
+46577 46371 0 0
+46473 46327 0 0
+46360 46327 0 0
+46256 46370 0 0
+46176 46450 0 0
+46132 46554 0 0
+46132 46667 0 0
+46175 46771 0 0
+46255 46851 0 0
+46359 46895 0 0
+46472 46895 0 0
+46576 46852 0 0
+46656 46772 0 0
+46700 46668 0 0
+46700 47050 0 0
+44350 47050 0 0
+44350 45210 0 0
+44375 45271 0 0
+44455 45351 0 0
+44559 45395 0 0
+44672 45395 0 0
+44776 45352 0 0
+44856 45272 0 0
+44900 45168 0 0
+44900 45055 0 0
+44857 44951 0 0
+44777 44871 0 0
+44673 44827 0 0
+44560 44827 0 0
+44456 44870 0 0
+44376 44950 0 0
+44350 45011 0 0
+44350 43446 0 0
+44405 43501 0 0
+44509 43545 0 0
+44622 43545 0 0
+44726 43502 0 0
+44806 43422 0 0
+44850 43318 0 0
+44850 43205 0 0
+44807 43101 0 0
+44727 43021 0 0
+44623 42977 0 0
+44510 42977 0 0
+44406 43020 0 0
+44350 43076 0 0
+44350 41350 0 0
+50145 41350 0 0
+50175 41421 0 0
+50255 41501 0 0
+50359 41545 0 0
+50472 41545 0 0
+50576 41502 0 0
+50656 41422 0 0
+50686 41350 0 0
+53184 41350 0 0
+53166 41393 0 0
+53166 41506 0 0
+53209 41610 0 0
+53289 41690 0 0
+53373 41725 0 0
+53360 41739 0 0
+53316 41843 0 0
+53316 41956 0 0
+53359 42060 0 0
+53415 42116 0 0
+53415 42300 0 0
+53415 42423 1 0
+$endPOLYSCORNERS
+$FILLSEGMENTS
+44350 41350 50145 41350
+50686 41350 53184 41350
+44350 41430 50184 41430
+50648 41430 53166 41430
+44350 41510 50277 41510
+50557 41510 53168 41510
+44350 41590 53201 41590
+44350 41670 53269 41670
+44350 41750 53355 41750
+44350 41830 53321 41830
+44350 41910 48830 41910
+49101 41910 53316 41910
+44350 41990 48736 41990
+49196 41990 51499 41990
+51833 41990 53331 41990
+44350 42070 48696 42070
+49235 42070 51445 42070
+51887 42070 53369 42070
+44350 42150 48682 42150
+49250 42150 49576 42150
+49956 42150 51427 42150
+51905 42150 52876 42150
+53256 42150 53415 42150
+44350 42230 48688 42230
+49245 42230 49250 42230
+49250 42230 49513 42230
+50018 42230 51436 42230
+51897 42230 52813 42230
+53318 42230 53415 42230
+44350 42310 48721 42310
+49212 42310 49250 42310
+49250 42310 49482 42310
+50050 42310 51476 42310
+51856 42310 52782 42310
+53350 42310 53415 42310
+44350 42390 48794 42390
+49138 42390 49250 42390
+49250 42390 49482 42390
+50050 42390 51476 42390
+51856 42390 52782 42390
+53350 42390 53415 42390
+44350 42470 49250 42470
+49250 42470 49504 42470
+50028 42470 50050 42470
+50050 42470 51476 42470
+51856 42470 52804 42470
+53328 42470 53350 42470
+53350 42470 53368 42470
+44350 42550 49250 42550
+49250 42550 49554 42550
+49978 42550 50050 42550
+50050 42550 51476 42550
+51923 42550 52854 42550
+53278 42550 53288 42550
+44350 42630 49250 42630
+49250 42630 49674 42630
+49859 42630 50050 42630
+50050 42630 51490 42630
+52003 42630 52974 42630
+53159 42630 53228 42630
+44350 42710 49250 42710
+49250 42710 50050 42710
+50050 42710 51547 42710
+52083 42710 53215 42710
+44350 42790 49250 42790
+49250 42790 50050 42790
+50050 42790 51627 42790
+52163 42790 53215 42790
+44350 42870 46356 42870
+46674 42870 49250 42870
+49250 42870 50050 42870
+50050 42870 51707 42870
+52243 42870 53215 42870
+44350 42950 46276 42950
+46756 42950 49250 42950
+49250 42950 50050 42950
+50050 42950 51787 42950
+52323 42950 53215 42950
+44350 43030 44396 43030
+44736 43030 46242 43030
+46789 43030 49250 43030
+49250 43030 50050 43030
+50050 43030 51867 43030
+52403 43030 52896 43030
+44810 43110 46232 43110
+46800 43110 49250 43110
+49250 43110 50050 43110
+50050 43110 51947 43110
+52483 43110 52821 43110
+44843 43190 46242 43190
+46791 43190 46800 43190
+46800 43190 49250 43190
+49250 43190 50050 43190
+50050 43190 52027 43190
+52563 43190 52787 43190
+44850 43270 46275 43270
+46757 43270 46800 43270
+46800 43270 49250 43270
+49250 43270 50050 43270
+50050 43270 52107 43270
+52643 43270 52782 43270
+44837 43350 46354 43350
+46678 43350 46800 43350
+46800 43350 48254 43350
+48477 43350 49250 43350
+49250 43350 50050 43350
+50050 43350 52187 43350
+52723 43350 52796 43350
+44798 43430 46800 43430
+46800 43430 48146 43430
+48586 43430 49250 43430
+49250 43430 50050 43430
+50050 43430 52267 43430
+52803 43430 52834 43430
+44350 43510 44427 43510
+44707 43510 46800 43510
+46800 43510 48100 43510
+48631 43510 49250 43510
+49250 43510 50050 43510
+50050 43510 52347 43510
+52883 43510 52927 43510
+44350 43590 46800 43590
+46800 43590 48082 43590
+48650 43590 49136 43590
+49496 43590 50050 43590
+50050 43590 52427 43590
+44350 43670 46800 43670
+46800 43670 48084 43670
+48650 43670 48650 43670
+48650 43670 49067 43670
+49564 43670 50050 43670
+50050 43670 52507 43670
+44350 43750 46800 43750
+46800 43750 48117 43750
+48616 43750 48650 43750
+48650 43750 48704 43750
+48927 43750 49033 43750
+49597 43750 50050 43750
+50050 43750 52587 43750
+44350 43830 46800 43830
+46800 43830 48184 43830
+48548 43830 48596 43830
+49600 43830 50050 43830
+50050 43830 52667 43830
+44350 43910 46800 43910
+46800 43910 48550 43910
+49583 43910 49600 43910
+49600 43910 50050 43910
+50050 43910 52747 43910
+44350 43990 46800 43990
+46800 43990 48532 43990
+49538 43990 49600 43990
+49600 43990 50050 43990
+50050 43990 52827 43990
+44350 44070 46800 44070
+46800 44070 48534 44070
+49100 44070 49200 44070
+49433 44070 49600 44070
+49600 44070 49656 44070
+49974 44070 50050 44070
+50050 44070 52056 44070
+52374 44070 52907 44070
+44350 44150 46800 44150
+46800 44150 48567 44150
+49066 44150 49576 44150
+50056 44150 51976 44150
+52456 44150 52987 44150
+44350 44230 46800 44230
+46800 44230 47096 44230
+47436 44230 48634 44230
+48998 44230 49542 44230
+50089 44230 51942 44230
+52489 44230 53026 44230
+44350 44310 46800 44310
+46800 44310 47021 44310
+47510 44310 49532 44310
+50100 44310 51932 44310
+52500 44310 53026 44310
+44350 44390 46800 44390
+46800 44390 46987 44390
+47543 44390 49542 44390
+50091 44390 50100 44390
+50100 44390 51942 44390
+52491 44390 52500 44390
+52500 44390 53026 44390
+44350 44470 46800 44470
+46800 44470 46982 44470
+47550 44470 49575 44470
+50057 44470 50100 44470
+50100 44470 51975 44470
+52457 44470 52500 44470
+52500 44470 53026 44470
+44350 44550 46800 44550
+46800 44550 46996 44550
+47537 44550 47550 44550
+47550 44550 49654 44550
+49978 44550 50100 44550
+50100 44550 52054 44550
+52378 44550 52500 44550
+52500 44550 53026 44550
+44350 44630 46800 44630
+46800 44630 46995 44630
+47498 44630 47550 44630
+47550 44630 49996 44630
+50336 44630 52500 44630
+52500 44630 53026 44630
+44350 44710 46800 44710
+46800 44710 46950 44710
+47481 44710 47550 44710
+47550 44710 49921 44710
+50410 44710 52500 44710
+52500 44710 53026 44710
+44350 44790 46800 44790
+46800 44790 46932 44790
+47500 44790 47550 44790
+47550 44790 49887 44790
+50443 44790 52500 44790
+52500 44790 53026 44790
+44350 44870 44456 44870
+44774 44870 46800 44870
+46800 44870 46934 44870
+47500 44870 47550 44870
+47550 44870 49882 44870
+50724 44870 52500 44870
+52500 44870 53027 44870
+44350 44950 44376 44950
+44856 44950 46226 44950
+46606 44950 46800 44950
+46800 44950 46967 44950
+47466 44950 47550 44950
+47550 44950 48576 44950
+48956 44950 49896 44950
+50806 44950 52500 44950
+52500 44950 53048 44950
+44889 45030 46163 45030
+46668 45030 46800 45030
+46800 45030 47034 45030
+47398 45030 47550 45030
+47550 45030 48513 45030
+49018 45030 49934 45030
+50839 45030 52500 45030
+52500 45030 53112 45030
+44900 45110 46132 45110
+46700 45110 46800 45110
+46800 45110 47550 45110
+47550 45110 48482 45110
+49050 45110 50027 45110
+50850 45110 52500 45110
+52500 45110 53115 45110
+44891 45190 46132 45190
+46700 45190 46800 45190
+46800 45190 47550 45190
+47550 45190 48482 45190
+49050 45190 49678 45190
+49853 45190 50292 45190
+50841 45190 50850 45190
+50850 45190 52500 45190
+52500 45190 53115 45190
+44350 45270 44375 45270
+44857 45270 46154 45270
+46678 45270 46700 45270
+46700 45270 46800 45270
+46800 45270 47550 45270
+47550 45270 48504 45270
+49028 45270 49050 45270
+49050 45270 49556 45270
+49976 45270 50325 45270
+50807 45270 50850 45270
+50850 45270 52500 45270
+52500 45270 53115 45270
+44350 45350 44454 45350
+44778 45350 46204 45350
+46628 45350 46700 45350
+46700 45350 46800 45350
+46800 45350 47550 45350
+47550 45350 48554 45350
+48978 45350 49050 45350
+49050 45350 49504 45350
+50027 45350 50404 45350
+50728 45350 50850 45350
+50850 45350 52500 45350
+52500 45350 53115 45350
+44350 45430 46324 45430
+46509 45430 46700 45430
+46700 45430 46800 45430
+46800 45430 47550 45430
+47550 45430 48674 45430
+48859 45430 49050 45430
+49050 45430 49482 45430
+50130 45430 50850 45430
+50850 45430 52500 45430
+52500 45430 53115 45430
+44350 45510 46700 45510
+46700 45510 46800 45510
+46800 45510 47550 45510
+47550 45510 49050 45510
+49050 45510 49080 45510
+49351 45510 49482 45510
+50266 45510 50850 45510
+50850 45510 52500 45510
+52500 45510 53115 45510
+44350 45590 46700 45590
+46700 45590 46800 45590
+46800 45590 47550 45590
+47550 45590 48986 45590
+49446 45590 49513 45590
+50323 45590 50850 45590
+50850 45590 52500 45590
+52500 45590 53098 45590
+44350 45670 46700 45670
+46700 45670 46800 45670
+46800 45670 47550 45670
+47550 45670 48946 45670
+49485 45670 49574 45670
+50350 45670 50850 45670
+50850 45670 52500 45670
+52500 45670 53017 45670
+44350 45750 46700 45750
+46700 45750 46800 45750
+46800 45750 47550 45750
+47550 45750 48932 45750
+49500 45750 49782 45750
+50350 45750 50850 45750
+50850 45750 52500 45750
+52500 45750 52937 45750
+44350 45830 46700 45830
+46700 45830 46800 45830
+46800 45830 47550 45830
+47550 45830 48938 45830
+49495 45830 49500 45830
+49500 45830 49809 45830
+50324 45830 50350 45830
+50350 45830 50850 45830
+50850 45830 51852 45830
+51980 45830 52500 45830
+52500 45830 52857 45830
+44350 45910 46700 45910
+46700 45910 46800 45910
+46800 45910 47550 45910
+47550 45910 48971 45910
+49462 45910 49500 45910
+49500 45910 49864 45910
+50268 45910 50350 45910
+50350 45910 50850 45910
+50850 45910 51716 45910
+52116 45910 52500 45910
+52500 45910 52777 45910
+44350 45990 46700 45990
+46700 45990 46800 45990
+46800 45990 47550 45990
+47550 45990 49044 45990
+49388 45990 49500 45990
+49500 45990 49998 45990
+50135 45990 50350 45990
+50350 45990 50850 45990
+50850 45990 51659 45990
+52173 45990 52500 45990
+52500 45990 52697 45990
+44350 46070 46700 46070
+46700 46070 46800 46070
+46800 46070 47550 46070
+47550 46070 49500 46070
+49500 46070 50350 46070
+50350 46070 50850 46070
+50850 46070 51632 46070
+52200 46070 52500 46070
+52500 46070 52617 46070
+44350 46150 46700 46150
+46700 46150 46800 46150
+46800 46150 47550 46150
+47550 46150 49500 46150
+49500 46150 50350 46150
+50350 46150 50850 46150
+50850 46150 51632 46150
+52200 46150 52500 46150
+52500 46150 52537 46150
+44350 46230 46700 46230
+46700 46230 46800 46230
+46800 46230 47550 46230
+47550 46230 49500 46230
+49500 46230 50350 46230
+50350 46230 50850 46230
+50850 46230 51659 46230
+52174 46230 52457 46230
+44350 46310 46700 46310
+46700 46310 46800 46310
+46800 46310 47550 46310
+47550 46310 49500 46310
+49500 46310 50350 46310
+50350 46310 50850 46310
+50850 46310 51714 46310
+52118 46310 52377 46310
+44350 46390 46236 46390
+46596 46390 46700 46390
+46700 46390 46800 46390
+46800 46390 47550 46390
+47550 46390 49500 46390
+49500 46390 50350 46390
+50350 46390 50850 46390
+50850 46390 51546 46390
+51985 46390 52297 46390
+44350 46470 46167 46470
+46664 46470 46700 46470
+46700 46470 46800 46470
+46800 46470 47550 46470
+47550 46470 49500 46470
+49500 46470 50350 46470
+50350 46470 50850 46470
+50850 46470 51471 46470
+51960 46470 52217 46470
+44350 46550 46133 46550
+46697 46550 46700 46550
+46700 46550 46800 46550
+46800 46550 47550 46550
+47550 46550 47976 46550
+48356 46550 49476 46550
+49856 46550 50350 46550
+50350 46550 50850 46550
+50850 46550 51437 46550
+51993 46550 52137 46550
+44350 46630 46132 46630
+46700 46630 46800 46630
+46800 46630 47550 46630
+47550 46630 47913 46630
+48418 46630 49413 46630
+49918 46630 50350 46630
+50350 46630 50696 46630
+51036 46630 51432 46630
+52000 46630 52057 46630
+44350 46710 46150 46710
+46683 46710 46700 46710
+46700 46710 46800 46710
+46800 46710 47550 46710
+47550 46710 47882 46710
+48450 46710 49382 46710
+49950 46710 50350 46710
+50350 46710 50621 46710
+51110 46710 51446 46710
+44350 46790 46194 46790
+46638 46790 46700 46790
+46700 46790 46800 46790
+46800 46790 47550 46790
+47550 46790 47882 46790
+48450 46790 49328 46790
+49950 46790 50350 46790
+50350 46790 50587 46790
+51143 46790 51484 46790
+44350 46870 46300 46870
+46533 46870 46700 46870
+46700 46870 46800 46870
+46800 46870 47550 46870
+47550 46870 47904 46870
+48428 46870 48450 46870
+48450 46870 49206 46870
+49928 46870 50350 46870
+50350 46870 50582 46870
+51150 46870 51577 46870
+44350 46950 46700 46950
+46700 46950 46800 46950
+46800 46950 47550 46950
+47550 46950 47954 46950
+48378 46950 48450 46950
+48450 46950 49154 46950
+49878 46950 50350 46950
+50350 46950 50596 46950
+51137 46950 51737 46950
+44350 47030 46700 47030
+46700 47030 46800 47030
+46800 47030 47550 47030
+47550 47030 48074 47030
+48259 47030 48450 47030
+48450 47030 49132 47030
+49759 47030 50350 47030
+50350 47030 50634 47030
+51098 47030 51658 47030
+$endFILLSEGMENTS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 5032D9D0 0 ""
+ZLayer 23
+ZAux 4 E
+ZClearance 100 T
+ZMinThickness 100
+ZOptions 0 16 F 200 200
+ZSmoothing 0 0
+ZCorner 47816 54961 0
+ZCorner 47816 53361 0
+ZCorner 44016 53361 0
+ZCorner 44016 54961 1
+$POLYSCORNERS
+47816 54961 0 0
+47816 53361 0 0
+44016 53361 0 0
+44016 54961 1 0
+$endPOLYSCORNERS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 5032D9F4 0 ""
+ZLayer 23
+ZAux 4 E
+ZClearance 100 T
+ZMinThickness 100
+ZOptions 0 16 F 200 200
+ZSmoothing 0 0
+ZCorner 50416 54961 0
+ZCorner 50416 53361 0
+ZCorner 49016 53361 0
+ZCorner 49016 54961 1
+$POLYSCORNERS
+50416 54961 0 0
+50416 53361 0 0
+49016 53361 0 0
+49016 54961 1 0
+$endPOLYSCORNERS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 5032DA26 0 ""
+ZLayer 23
+ZAux 4 E
+ZClearance 100 T
+ZMinThickness 100
+ZOptions 0 16 F 200 200
+ZSmoothing 0 0
+ZCorner 53016 54961 0
+ZCorner 53016 53361 0
+ZCorner 51616 53361 0
+ZCorner 51616 54961 1
+$POLYSCORNERS
+53016 54961 0 0
+53016 53361 0 0
+51616 53361 0 0
+51616 54961 1 0
+$endPOLYSCORNERS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 5032DA99 0 ""
+ZLayer 22
+ZAux 4 E
+ZClearance 100 T
+ZMinThickness 100
+ZOptions 0 16 F 200 200
+ZSmoothing 0 0
+ZCorner 46316 54961 0
+ZCorner 46316 53161 0
+ZCorner 44016 53161 0
+ZCorner 44016 54961 1
+$POLYSCORNERS
+46316 54961 0 0
+46316 53161 0 0
+44016 53161 0 0
+44016 54961 1 0
+$endPOLYSCORNERS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 503704E3 48 "PHA"
+ZLayer 1
+ZAux 4 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 0 16 F 200 200
+ZSmoothing 2 0
+ZCorner 47916 54761 0
+ZCorner 47916 50661 0
+ZCorner 46416 50661 0
+ZCorner 46416 54761 1
+$POLYSCORNERS
+47866 54711 0 0
+46466 54711 0 0
+46466 50711 0 0
+47866 50711 0 0
+47866 54711 1 0
+$endPOLYSCORNERS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 50370524 49 "PHB"
+ZLayer 1
+ZAux 4 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 0 16 F 200 200
+ZSmoothing 2 0
+ZCorner 50516 54761 0
+ZCorner 50566 50661 0
+ZCorner 49066 50661 0
+ZCorner 49016 54761 1
+$POLYSCORNERS
+50515 50711 0 0
+50497 52149 0 0
+50490 52161 0 0
+50476 52234 0 0
+50476 53961 0 0
+50467 54711 0 0
+49067 54711 0 0
+49115 50711 0 0
+50515 50711 1 0
+$endPOLYSCORNERS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 50370550 50 "PHC"
+ZLayer 1
+ZAux 4 F
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 0 16 F 200 200
+ZSmoothing 2 0
+ZCorner 53116 54761 0
+ZCorner 53116 50661 0
+ZCorner 51616 50661 0
+ZCorner 51616 54761 1
+$POLYSCORNERS
+53066 54711 0 0
+51666 54711 0 0
+51666 50711 0 0
+53066 50711 0 0
+53066 54711 1 0
+$endPOLYSCORNERS
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 503985F2 3 "+8V"
+ZLayer 15
+ZAux 11 E
+ZClearance 100 I
+ZMinThickness 100
+ZOptions 0 16 F 200 200
+ZSmoothing 0 0
+ZCorner 53716 48261 0
+ZCorner 53716 47411 0
+ZCorner 46016 47411 0
+ZCorner 45866 47261 0
+ZCorner 45866 45711 0
+ZCorner 45066 45711 0
+ZCorner 45066 46511 0
+ZCorner 45216 46661 0
+ZCorner 45216 47511 0
+ZCorner 45816 47511 0
+ZCorner 46566 48261 1
+$POLYSCORNERS
+53666 48211 0 0
+53605 48211 0 0
+53600 48210 0 0
+51600 48210 0 0
+51594 48211 0 0
+51005 48211 0 0
+51000 48210 0 0
+49000 48210 0 0
+48994 48211 0 0
+48405 48211 0 0
+48400 48210 0 0
+46586 48210 0 0
+45837 47461 0 0
+45266 47461 0 0
+45266 46640 0 0
+45116 46490 0 0
+45116 45761 0 0
+45816 45761 0 0
+45816 46566 0 0
+45723 46527 0 0
+45610 46527 0 0
+45506 46570 0 0
+45426 46650 0 0
+45382 46754 0 0
+45382 46867 0 0
+45425 46971 0 0
+45505 47051 0 0
+45609 47095 0 0
+45722 47095 0 0
+45816 47056 0 0
+45816 47282 0 0
+45995 47461 0 0
+53666 47461 0 0
+53666 48211 1 0
+$endPOLYSCORNERS
+$endCZONE_OUTLINE
+$EndBOARD
