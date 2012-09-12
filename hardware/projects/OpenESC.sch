@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 9/11/2012 10:50:08 PM
+EESchema Schematic File Version 2  date 9/11/2012 11:42:22 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,7 +29,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:OpenESC_00-cache
+LIBS:custom
 EELAYER 25  0
 EELAYER END
 $Descr A2 23400 16535
