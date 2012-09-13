@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project default="postbuild" name="test">
-  <property name="project.name" value="openEsc"/>
+  <property name="project.name" value="software"/>
   <property name="project.debug" value="Debug"/>
   <property name="project.obj" value="Debug/obj"/>
   <property name="project.bin" value="Debug/bin"/>
