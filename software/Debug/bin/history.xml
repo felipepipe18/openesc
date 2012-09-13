@@ -1,34 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
    <processor signature="4.5.2 -O0 -nostartfiles -Map=software.map -mcpu=cortex-m3 -mthumb -LC:\gitRepo\OpenESC\software --gc-sections -TC:\gitRepo\OpenESC\software\link.ld -g">
-      <target file="software.elf" lastModified="139bce22c6e">
-         <source file="..\obj\stm32f10x_rtc.o" lastModified="139bce212f5"/>
-         <source file="..\obj\semihosting.o" lastModified="139bce2142d"/>
-         <source file="..\obj\stm32f10x_tim.o" lastModified="139bce2165f"/>
-         <source file="..\obj\core_cm3.o" lastModified="139bce216fb"/>
-         <source file="..\obj\stm32f10x_dbgmcu.o" lastModified="139bce21797"/>
-         <source file="..\obj\system_stm32f10x.o" lastModified="139bce21862"/>
-         <source file="..\obj\stm32f10x_pwr.o" lastModified="139bce2191d"/>
-         <source file="..\obj\startup_stm32f10x_md.o" lastModified="139bce2198a"/>
-         <source file="..\obj\stm32f10x_can.o" lastModified="139bce21ae1"/>
-         <source file="..\obj\stm32f10x_gpio.o" lastModified="139bce21bbc"/>
-         <source file="..\obj\main.o" lastModified="139bce21c0a"/>
-         <source file="..\obj\stm32f10x_crc.o" lastModified="139bce21cb5"/>
-         <source file="..\obj\printf.o" lastModified="139bce21e0c"/>
-         <source file="..\obj\stm32f10x_rcc.o" lastModified="139bce21f25"/>
-         <source file="..\obj\stm32f10x_exti.o" lastModified="139bce21ff0"/>
-         <source file="..\obj\stm32f10x_adc.o" lastModified="139bce22157"/>
-         <source file="..\obj\stm32f10x_usart.o" lastModified="139bce2228f"/>
-         <source file="..\obj\sh_cmd.o" lastModified="139bce222dd"/>
-         <source file="..\obj\syscalls.o" lastModified="139bce22379"/>
-         <source file="..\obj\stm32f10x_flash.o" lastModified="139bce22482"/>
-         <source file="..\obj\stm32f10x_dma.o" lastModified="139bce2254d"/>
-         <source file="..\obj\misc.o" lastModified="139bce22608"/>
-         <source file="..\obj\stm32f10x_wwdg.o" lastModified="139bce226b4"/>
-         <source file="..\obj\stm32f10x_spi.o" lastModified="139bce2279e"/>
-         <source file="..\obj\stm32f10x_i2c.o" lastModified="139bce228a7"/>
-         <source file="..\obj\stm32f10x_bkp.o" lastModified="139bce22972"/>
-         <source file="..\obj\stm32f10x_iwdg.o" lastModified="139bce22a8a"/>
+      <target file="software.elf" lastModified="139bdac29ca">
+         <source file="..\obj\stm32f10x_rtc.o" lastModified="139bdac1123"/>
+         <source file="..\obj\semihosting.o" lastModified="139bdac120b"/>
+         <source file="..\obj\stm32f10x_tim.o" lastModified="139bdac13f7"/>
+         <source file="..\obj\core_cm3.o" lastModified="139bdac1477"/>
+         <source file="..\obj\openesc_v01.o" lastModified="139bdac1516"/>
+         <source file="..\obj\stm32f10x_dbgmcu.o" lastModified="139bdac15c6"/>
+         <source file="..\obj\system_stm32f10x.o" lastModified="139bdac1691"/>
+         <source file="..\obj\stm32f10x_pwr.o" lastModified="139bdac1774"/>
+         <source file="..\obj\startup_stm32f10x_md.o" lastModified="139bdac17ed"/>
+         <source file="..\obj\stm32f10x_can.o" lastModified="139bdac1926"/>
+         <source file="..\obj\stm32f10x_gpio.o" lastModified="139bdac1a15"/>
+         <source file="..\obj\main.o" lastModified="139bdac1aaa"/>
+         <source file="..\obj\stm32f10x_crc.o" lastModified="139bdac1b60"/>
+         <source file="..\obj\printf.o" lastModified="139bdac1cc0"/>
+         <source file="..\obj\stm32f10x_rcc.o" lastModified="139bdac1de0"/>
+         <source file="..\obj\stm32f10x_exti.o" lastModified="139bdac1ea2"/>
+         <source file="..\obj\stm32f10x_adc.o" lastModified="139bdac1ffb"/>
+         <source file="..\obj\stm32f10x_usart.o" lastModified="139bdac210d"/>
+         <source file="..\obj\sh_cmd.o" lastModified="139bdac213a"/>
+         <source file="..\obj\syscalls.o" lastModified="139bdac21b3"/>
+         <source file="..\obj\stm32f10x_flash.o" lastModified="139bdac22bc"/>
+         <source file="..\obj\stm32f10x_dma.o" lastModified="139bdac23de"/>
+         <source file="..\obj\misc.o" lastModified="139bdac249e"/>
+         <source file="..\obj\stm32f10x_wwdg.o" lastModified="139bdac2552"/>
+         <source file="..\obj\stm32f10x_spi.o" lastModified="139bdac2640"/>
+         <source file="..\obj\stm32f10x_i2c.o" lastModified="139bdac274d"/>
+         <source file="..\obj\stm32f10x_bkp.o" lastModified="139bdac2800"/>
+         <source file="..\obj\stm32f10x_iwdg.o" lastModified="139bdac28a4"/>
       </target>
    </processor>
 </history>

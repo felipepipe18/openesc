@@ -59,4 +59,9 @@
 
 
 
+// Declare any functions that are implemented
+//	in "openesc_v01.c"
+void setupOpenESC(void);
+void initClock(void);
+
 #endif

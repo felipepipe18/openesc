@@ -20,14 +20,15 @@
  *	General Public License along with OpenESC. If
  *	not, see http://www.gnu.org/licenses/.
 *************************************************/
-
+#include "stm32f10x_gpio.h"
+#include "stm32f10x_rcc.h"
 #include "openesc.h"
 
 int main(void)
 {
 	// Setup all of the pins and peripherals
 	//	of the openESC board
-	// setupOpenESC();
+	setupOpenESC();
 
 	// Run the bootloader
 	// bootloader();
