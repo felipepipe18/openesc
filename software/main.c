@@ -23,17 +23,23 @@
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_rcc.h"
 #include "openesc.h"
+#include "rcPwm.h"
+#include "motor.h"
 
 int main(void)
 {
 	// Setup all of the pins and peripherals
 	//	of the openESC board
 	setupOpenESC();
+	// setupRcPwm();
+	// setupMotor();
 
-	// Run the bootloader
-	// bootloader();
-
+	// Implement the simplest form of open-loop motor control
+	//	using just the input RC signal and the motor interface
     while(1)
     {
+    	// Get requested duty cycle from rcPwm
+
+    	// Pass requested duty cycle to the motor
     }
 }
