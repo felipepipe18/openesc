@@ -52,7 +52,7 @@ void
 setupOpenESC(void)
 {
 	initClock();
-	// initI2C();
+	// initDio();
 	// initUsart();
 	// initRcPwm();
 	// initMcPwm();
@@ -106,4 +106,43 @@ initClock(void)
 	while (RCC_GetSYSCLKSource() != 0x08)
 	{
 	}
+}
+
+void
+initDio(void)
+{
+	// Setup STATUS and ERROR LED's
+	GPIO_InitTypeDef  GPIO_InitStructure;
+    GPIO_InitStructure.GPIO_Pin = ERROR_LED_PIN|STATUS_LED_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+
+    // Setup analog input pins
+    GPIO_InitStructure.GPIO_Pin = ANALOG_PHA_FBK_PIN|ANALOG_PHB_FBK_PIN|ANALOG_PHC_FBK_PIN|ANALOG_BUS_VOLT_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = ANALOG_CURR_SENSE_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+
+    // Setup current fault as a pull-up to eliminate an external resistor
+    GPIO_InitStructure.GPIO_Pin = FAULT_INPUT_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+    // Setup RC PWM input pin
+    GPIO_InitStructure.GPIO_Pin = RC_PWM_IN_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+
+    // Setup TIM1 outputs
+    GPIO_InitStructure.GPIO_Pin = MCPWM_AH_PIN|MCPWM_BH_PIN|MCPWM_CH_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = MCPWM_AL_PIN|MCPWM_BL_PIN|MCPWM_CL_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
 }

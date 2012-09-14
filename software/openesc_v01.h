@@ -32,15 +32,25 @@
 #define OPENESC_V01
 
 // Define ADC pins
+#define ANALOG_PHA_FBK_PIN		GPIO_Pin_0
+#define ANALOG_PHB_FBK_PIN		GPIO_Pin_1
+#define ANALOG_PHC_FBK_PIN		GPIO_Pin_2
+#define ANALOG_BUS_VOLT_PIN		GPIO_Pin_3
+#define ANALOG_CURR_SENSE_PIN	GPIO_Pin_0
 
 
 
 // Define RC PWM pins
-
+#define RC_PWM_IN_PIN	GPIO_Pin_1
 
 
 // Define motor control PWM pins
-
+#define MCPWM_AH_PIN	GPIO_Pin_10
+#define MCPWM_BH_PIN	GPIO_Pin_9
+#define MCPWM_CH_PIN	GPIO_Pin_8
+#define MCPWM_AL_PIN	GPIO_Pin_15
+#define MCPWM_BL_PIN	GPIO_Pin_14
+#define MCPWM_CL_PIN	GPIO_Pin_13
 
 
 // Define USART pins
@@ -51,11 +61,14 @@
 
 
 
-// Define I2C pins
+// Define Fault pin
+#define FAULT_INPUT_PIN	GPIO_Pin_7
 
 
 
 // Define LED pins
+#define ERROR_LED_PIN	GPIO_Pin_4
+#define STATUS_LED_PIN	GPIO_Pin_5
 
 
 
@@ -63,5 +76,6 @@
 //	in "openesc_v01.c"
 void setupOpenESC(void);
 void initClock(void);
+void initDio(void);
 
 #endif

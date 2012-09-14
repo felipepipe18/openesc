@@ -35,6 +35,7 @@
       
       <fileset dir=".">
         <include name="**/*.c"/>
+        <include name="**/*.cpp"/>
         <include name="**/*.s"/>
       </fileset>
       <project outfile="${project.name}.elf" overwrite="true" type="xcode"/>
