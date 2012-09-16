@@ -21,3 +21,30 @@
  *	not, see http://www.gnu.org/licenses/.
 *************************************************/
 #include "rcPwm.h"
+
+void
+setupRcPwm(void)
+{
+	/* TIM3 clock enable */
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
+
+	TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStruct;
+	TIM_ICInitTypeDef TIM_ICInitStruct;
+
+	// Time base structure initialization
+	TIM_TimeBaseInitStruct.TIM_Prescaler = 0;
+	TIM_TimeBaseInitStruct.TIM_CounterMode = TIM_CounterMode_Up;
+	TIM_TimeBaseInitStruct.TIM_Period = 65535;
+	TIM_TimeBaseInitStruct.TIM_ClockDivision = TIM_CKD_DIV4;
+	TIM_TimeBaseInitStruct.TIM_RepetitionCounter = 0;
+	TIM_TimeBaseInit(TIM3, &TIM_TimeBaseInitStruct);
+
+	TIM_ICInitStruct.TIM_Channel = TIM_Channel_4;
+	TIM_ICInitStruct.TIM_ICPolarity = TIM_ICPolarity_BothEdge;
+	TIM_ICInitStruct.TIM_ICSelection = TIM_ICSelection_DirectTI;
+	TIM_ICInitStruct.TIM_ICPrescaler = TIM_ICPSC_DIV1;
+	TIM_ICInitStruct.TIM_ICFilter = IS_TIM_IC_FILTER(0);
+	TIM_ICInit(TIM3, &TIM_ICInitStruct);
+
+	TIM_Cmd(TIM3, ENABLE);
+}

@@ -24,6 +24,13 @@
 #ifndef RCPWM_H
 #define RCPWM_H
 
+#include "stm32f10x_tim.h"
 
+typedef struct
+{
+  uint16_t highestDutyCycle, lowestDutyCycle, currentDutyCycle;
+} rcpwm;
+
+void setupRcPwm(void);
 
 #endif
