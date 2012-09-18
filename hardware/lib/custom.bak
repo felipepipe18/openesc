@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  9/1/2012 8:46:11 PM
+PCBNEW-LibModule-V1  18/09/2012 21:56:56
 # encoding utf-8
 $INDEX
 16
@@ -1268,104 +1268,6 @@ Po 669 0
 .LocalClearance 3
 $EndPAD
 $EndMODULE  CRYSTAL_CX2520_SERIES
-$MODULE USB_MICRO_AB
-Po 0 0 0 15 50422BCE 00000000 ~~
-Li USB_MICRO_AB
-Sc 00000000
-AR
-Op 0 0 0
-T0 0 -1614 315 315 0 79 N V 21 N "USB_MICRO_AB"
-T1 0 0 394 394 0 79 N I 21 N "VAL**"
-DS -1575 571 1575 571 79 21
-$PAD
-Sh "1" R 157 531 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 0 ""
-Po -512 -1063
-.LocalClearance 3
-$EndPAD
-$PAD
-Sh "2" R 157 531 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 0 ""
-Po -256 -1063
-.LocalClearance 3
-$EndPAD
-$PAD
-Sh "3" R 157 531 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 0 ""
-Po 0 -1063
-.LocalClearance 3
-$EndPAD
-$PAD
-Sh "4" R 157 531 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 0 ""
-Po 256 -1063
-.LocalClearance 3
-$EndPAD
-$PAD
-Sh "5" R 157 531 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 0 ""
-Po 512 -1063
-.LocalClearance 3
-$EndPAD
-$PAD
-Sh "" R 827 630 0 0 0
-Dr 0 0 0
-At HOLE N 00E08000
-Ne 0 ""
-Po -1220 -1004
-.LocalClearance 3
-$EndPAD
-$PAD
-Sh "" R 827 630 0 0 0
-Dr 0 0 0
-At HOLE N 00E08000
-Ne 0 ""
-Po 1220 -1004
-.LocalClearance 3
-$EndPAD
-$PAD
-Sh "" R 748 748 0 0 0
-Dr 0 0 0
-At HOLE N 00E08000
-Ne 0 ""
-Po -472 0
-.LocalClearance 3
-$EndPAD
-$PAD
-Sh "" R 748 748 0 0 0
-Dr 0 0 0
-At HOLE N 00E08000
-Ne 0 ""
-Po 472 0
-.LocalClearance 3
-$EndPAD
-$PAD
-Sh "" R 748 748 0 0 0
-Dr 0 0 0
-At HOLE N 00E08000
-Ne 0 ""
-Po 1575 0
-.LocalClearance 3
-$EndPAD
-$PAD
-Sh "" R 748 748 0 0 0
-Dr 0 0 0
-At HOLE N 00E08000
-Ne 0 ""
-Po -1575 0
-.LocalClearance 3
-$EndPAD
-$EndMODULE  USB_MICRO_AB
 $MODULE CONN_5_SM
 Po 0 0 0 15 5042AC44 00000000 ~~
 Li CONN_5_SM
@@ -1430,4 +1332,108 @@ Po 2000 0
 .LocalClearance 80
 $EndPAD
 $EndMODULE  CONN_5_SM
+$MODULE USB_MICRO_AB
+Po 0 0 0 15 504EF9D2 00000000 ~~
+Li USB_MICRO_AB
+Sc 00000000
+AR /50401850
+Op 0 0 0
+T0 -700 -1650 315 315 0 79 N V 21 N "P3"
+T1 0 0 394 394 0 79 N I 21 N "CONN_5"
+DS -1575 571 1575 571 79 21
+$PAD
+Sh "1" R 157 531 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "+5V"
+Po -512 -1063
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "2" R 157 531 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 4 "USB_D-"
+Po -256 -1063
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "3" R 157 531 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "USB_D+"
+Po 0 -1063
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "4" R 157 531 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 256 -1063
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "5" R 157 531 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "GND"
+Po 512 -1063
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "" R 827 630 0 0 0
+Dr 0 0 0
+At HOLE N 00A08000
+Ne 0 ""
+Po -1220 -1004
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "" R 827 630 0 0 0
+Dr 0 0 0
+At HOLE N 00A08000
+Ne 0 ""
+Po 1220 -1004
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "" R 748 748 0 0 0
+Dr 0 0 0
+At HOLE N 00A08000
+Ne 0 ""
+Po -472 0
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "" R 748 748 0 0 0
+Dr 0 0 0
+At HOLE N 00A08000
+Ne 0 ""
+Po 472 0
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "" R 748 748 0 0 0
+Dr 0 0 0
+At HOLE N 00A08000
+Ne 0 ""
+Po 1575 0
+.LocalClearance 3
+$EndPAD
+$PAD
+Sh "" R 748 748 0 0 0
+Dr 0 0 0
+At HOLE N 00A08000
+Ne 0 ""
+Po -1575 0
+.LocalClearance 3
+$EndPAD
+$SHAPE3D
+Na "3Dmodels\\USB-micro-AB.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.001000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  USB_MICRO_AB
 $EndLIBRARY
