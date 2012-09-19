@@ -22,8 +22,10 @@
 *************************************************/
 #include "rcPwm.h"
 
+struct rcpwm rcPwm;
+
 void
-setupRcPwm(void)
+initRcPwm(void)
 {
 	/* TIM3 clock enable */
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
@@ -51,6 +53,9 @@ setupRcPwm(void)
 
 	// Enable the counter
 	TIM3->CR1 |= 0x0001;
+
+	// TODO: initialize rcPwm.longestPulseTime and rcPwm.shortestPulseTime
+	//	to reasonable starting values (maybe 1.25ms and 1.75ms?)
 }
 
 uint16_t
@@ -68,7 +73,21 @@ getFallingEdgeTime(void)
 void
 TIM3_CC_IRQHandler (void)
 {
+	// Find the current pulse time
 	uint16_t pulseWidth = getRisingEdgeTime() - getFallingEdgeTime();
+
+	// Determine if the current pulse is the longest or the shortest
+	//	measured thus far (for calibration purposes)
+	if(pulseWidth > rcPwm.longestPulseTime)
+		rcPwm.longestPulseTime = pulseWidth;
+	else if(pulseWidth < rcPwm.shortestPulseTime)
+		rcPwm.shortestPulseTime = pulseWidth;
+
+	uint16_t range = rcPwm.longestPulseTime - rcPwm.shortestPulseTime;
+	uint16_t pulse = pulseWidth - rcPwm.shortestPulseTime;
+
+	// Determine the speed demand as a percentage of the range
+	// rcPwm.demandQ15 = pulse/range       TODO: implement in Q15 format (fixed point)
 
 	// Reset the flag
 	TIM3->SR = 0;

@@ -31,6 +31,14 @@
 #ifndef OPENESC_V01
 #define OPENESC_V01
 
+#include "stm32f10x.h"
+#include "stm32f10x_flash.h"
+#include "stm32f10x_gpio.h"
+#include "stm32f10x_rcc.h"
+#include "misc.h"
+#include "rcPwm.h"
+#include "motor.h"
+
 // Define ADC pins
 #define ANALOG_PHA_FBK_PIN		GPIO_Pin_0
 #define ANALOG_PHB_FBK_PIN		GPIO_Pin_1

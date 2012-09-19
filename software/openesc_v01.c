@@ -33,13 +33,6 @@
  * 	variables.
 *************************************************/
 
-
-#include "stm32f10x.h"
-#include "stm32f10x_flash.h"
-#include "stm32f10x_gpio.h"
-#include "stm32f10x_rcc.h"
-#include "misc.h"
-
 #include "openesc_v01.h"
 
 // Declare any global variables here
@@ -52,9 +45,10 @@ void
 setupOpenESC(void)
 {
 	initClock();
-	// initDio();
+	initDio();
+	initRcPwm();
 	// initUsart();
-	// initRcPwm();
+	// initUsb();
 	// initMcPwm();
 }
 
