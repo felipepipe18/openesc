@@ -32,5 +32,7 @@ typedef struct
 } rcpwm;
 
 void setupRcPwm(void);
+uint16_t getRisingEdgeTime(void);
+uint16_t getFallingEdgeTime(void);
 
 #endif

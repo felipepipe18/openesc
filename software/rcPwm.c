@@ -28,23 +28,48 @@ setupRcPwm(void)
 	/* TIM3 clock enable */
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 
-	TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStruct;
-	TIM_ICInitTypeDef TIM_ICInitStruct;
+	// TODO: write interrupt routine
+	// Interrupt on Capture/Compare 4
+	TIM3->DIER |= 0x0010;
 
-	// Time base structure initialization
-	TIM_TimeBaseInitStruct.TIM_Prescaler = 0;
-	TIM_TimeBaseInitStruct.TIM_CounterMode = TIM_CounterMode_Up;
-	TIM_TimeBaseInitStruct.TIM_Period = 65535;
-	TIM_TimeBaseInitStruct.TIM_ClockDivision = TIM_CKD_DIV4;
-	TIM_TimeBaseInitStruct.TIM_RepetitionCounter = 0;
-	TIM_TimeBaseInit(TIM3, &TIM_TimeBaseInitStruct);
+	// Capture current value of counter
+	//	on and set appropriate interrupt
+	//	flags on capture (CC3 and 4)
+	TIM3->EGR |= 0x0018;
 
-	TIM_ICInitStruct.TIM_Channel = TIM_Channel_4;
-	TIM_ICInitStruct.TIM_ICPolarity = TIM_ICPolarity_BothEdge;
-	TIM_ICInitStruct.TIM_ICSelection = TIM_ICSelection_DirectTI;
-	TIM_ICInitStruct.TIM_ICPrescaler = TIM_ICPSC_DIV1;
-	TIM_ICInitStruct.TIM_ICFilter = IS_TIM_IC_FILTER(0);
-	TIM_ICInit(TIM3, &TIM_ICInitStruct);
+	// CC4 is an input, IC4 is mapped on TI4
+	TIM3->CCMR2 |= 0x0100;
 
-	TIM_Cmd(TIM3, ENABLE);
+	// CC3 is an input, IC3 is mapped on TI4
+	TIM3->CCMR2 |= 0x0002;
+
+	// CC3 capture occurs on rising edge, CC3 is enabled
+	TIM3->CCER |= 0x0100;
+
+	// CC4 capture occurs on falling edge, CC4 is enabled
+	TIM3->CCER |= 0x3000;
+
+	// Enable the counter
+	TIM3->CR1 |= 0x0001;
+}
+
+uint16_t
+getRisingEdgeTime(void)
+{
+	return TIM3->CCR3;
+}
+
+uint16_t
+getFallingEdgeTime(void)
+{
+	return TIM3->CCR4;
+}
+
+void
+TIM3_CC_IRQHandler (void)
+{
+	uint16_t pulseWidth = getRisingEdgeTime() - getFallingEdgeTime();
+
+	// Reset the flag
+	TIM3->SR = 0;
 }
