@@ -59,47 +59,66 @@ initClock(void)
 	/* RCC system reset(for debug purpose) */
 	RCC_DeInit();
 
-	/* Enable HSE */
-	RCC_HSEConfig(RCC_HSE_ON);
-
-	/* Wait till HSE is ready */
-	HSEStartUpStatus = RCC_WaitForHSEStartUp();
-
 	/* Enable Prefetch Buffer */
 	FLASH_PrefetchBufferCmd(FLASH_PrefetchBuffer_Enable);
 
 	/* Flash 2 wait state */
 	FLASH_SetLatency(FLASH_Latency_2);
 
-	/* HCLK = SYSCLK */
-	RCC_HCLKConfig(RCC_SYSCLK_Div1);
+	// HSE on
+	RCC->CR |= (1 << 16);
 
-	/* PCLK2 = HCLK */
-	RCC_PCLK2Config(RCC_HCLK_Div1);
+	// Wait for HSE to start
+	bool hseRdy = 0;
 
-	/* PCLK1 = HCLK/2 */
-	RCC_PCLK1Config(RCC_HCLK_Div2);
-
-	/* PLLCLK = (16MHz/2) * 9 = 72 MHz */
-	// For USB to work correctly, PLL output frequency
-	//	must be 48MHz or 72MHz according to ref man para 7.2.3
-	RCC_PLLConfig(RCC_PLLSource_HSE_Div2, RCC_PLLMul_9);
-
-	/* Enable PLL */
-	RCC_PLLCmd(ENABLE);
-
-	/* Wait till PLL is ready */
-	while (RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET)
-	{
+	while(!hseRdy){
+		hseRdy = (bool)(0b1 & (RCC->CR  >> 17));
 	}
 
-	/* Select PLL as system clock source */
-	RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);
+	// pllInput = hseInput/2 = 16MHz/2 = 8MHz
+	RCC->CFGR |= (0b1 << 17);
 
-	/* Wait till PLL is used as system clock source */
-	while (RCC_GetSYSCLKSource() != 0x08)
-	{
+	// pllOutput = pllInput x 9 = 8MHz x 9 = 72MHz
+	RCC->CFGR |= (0b0111 << 18);
+
+	// pllSrc = hse
+	RCC->CFGR |= (0b1 << 16);
+
+	// PLL ON
+	RCC->CFGR |= (0b1 << 24);
+
+	// Wait for PLL to lock
+	bool pllRdy = 0;
+
+	while(!pllRdy){
+		pllRdy = (bool)(0b1 & (RCC->CR >> 25));
 	}
+
+	// Set system clock as PLL
+	RCC->CFGR |= (0b10);
+
+	// Wait for system clock to complete switch
+	while(((RCC->CFGR >> 2) & 0x11) != 0b10);
+
+	// APB1 = 36MHz
+	RCC->CFGR |= (0b100 << 8);
+
+	// ADCPRE = PCLK2/6 = 72MHz/6 = 12MHz (14MHz max)
+	RCC->CFGR |= (0b10 << 14);
+
+
+
+	// Enable peripheral clocks
+	RCC->APB2ENR |= ((1 << 11)		// TIM1
+					+ (1 << 10)		// ADC2
+					+ (1 << 9)		// ADC1
+					+ (1 << 4)		// IO port C
+					+ (1 << 3)		// IO port B
+					+ (1 << 2));	// IO port A
+
+	RCC->APB1ENR |= ((1 << 23)		// USB
+					+ (1 << 17)		// USART2
+					+ (1 << 1));	// TIM3
 }
 
 void

@@ -36,6 +36,9 @@
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_rcc.h"
 #include "misc.h"
+
+#include <stdbool.h>
+
 #include "rcPwm.h"
 #include "motor.h"
 
