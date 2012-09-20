@@ -42,9 +42,38 @@
 #include "rcPwm.h"
 #include "motor.h"
 
+#define PORT_CNF_7	30
+#define PORT_CNF_6	26
+#define PORT_CNF_5	22
+#define PORT_CNF_4	18
+#define PORT_CNF_3	14
+#define PORT_CNF_2	10
+#define PORT_CNF_1	6
+#define PORT_CNF_0	2
+
+#define PORT_MODE_7 28
+#define PORT_MODE_6 24
+#define PORT_MODE_5 20
+#define PORT_MODE_4 16
+#define PORT_MODE_3 12
+#define PORT_MODE_2 8
+#define PORT_MODE_1 4
+#define PORT_MODE_0 0
+
+#define PORT_CNF_INPUT_ANALOG			0b00
+#define PORT_CNF_FLOATING_INPUT			0b01
+#define PORT_CNF_INPUT_PU_OR_PD			0b10
+#define PORT_CNF_OUTPUT_PP				0b00
+#define PORT_CNF_OUTPUT_OPEN_DRN		0b01
+#define PORT_CNF_OUTPUT_ALT_PP			0b10
+#define PORT_CNF_OUTPUT_ALT_OPEN_DR		0b11
+
+#define PORT_MODE_INPUT		0b00
+#define PORT_MODE_OUTPUT	0b11
+
 // Define ADC pins
-#define ANALOG_PHA_FBK_PIN		GPIO_Pin_0
-#define ANALOG_PHB_FBK_PIN		GPIO_Pin_1
+#define ANALOG_PHA_FBK_PIN		0
+#define ANALOG_PHB_FBK_PIN		0
 #define ANALOG_PHC_FBK_PIN		GPIO_Pin_2
 #define ANALOG_BUS_VOLT_PIN		GPIO_Pin_3
 #define ANALOG_CURR_SENSE_PIN	GPIO_Pin_0
@@ -65,10 +94,6 @@
 
 
 // Define USART pins
-
-
-
-// Define USB pins
 
 
 

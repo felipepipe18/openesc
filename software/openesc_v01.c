@@ -124,6 +124,9 @@ initClock(void)
 void
 initDio(void)
 {
+	// Setup LED pins
+
+
 	// Setup STATUS and ERROR LED's
 	GPIO_InitTypeDef  GPIO_InitStructure;
     GPIO_InitStructure.GPIO_Pin = ERROR_LED_PIN|STATUS_LED_PIN;
