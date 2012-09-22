@@ -3,7 +3,7 @@ Allocating common symbols
 Common symbol       size              file
 
 HSEStartUpStatus    0x1               ..\obj\openesc_v01.o
-rcPwm               0x6               ..\obj\rcPwm.o
+rcPwm               0x8               ..\obj\rcPwm.o
 RCC_ClockFreq       0x14              ..\obj\openesc_v01.o
 GPIO_InitStructure  0x4               ..\obj\openesc_v01.o
 
@@ -433,13 +433,9 @@ Discarded input sections
  .text          0x00000000        0x0 ..\obj\rcPwm.o
  .data          0x00000000        0x0 ..\obj\rcPwm.o
  .bss           0x00000000        0x0 ..\obj\rcPwm.o
- .text.getRisingEdgeTime
-                0x00000000       0x18 ..\obj\rcPwm.o
- .text.getFallingEdgeTime
-                0x00000000       0x1c ..\obj\rcPwm.o
  .text.TIM3_CC_IRQHandler
-                0x00000000       0x90 ..\obj\rcPwm.o
- COMMON         0x00000000        0x6 ..\obj\rcPwm.o
+                0x00000000       0xb8 ..\obj\rcPwm.o
+ COMMON         0x00000000        0x8 ..\obj\rcPwm.o
  .text          0x00000000        0x0 ..\obj\printf.o
  .data          0x00000000      0x430 ..\obj\printf.o
  .bss           0x00000000        0x0 ..\obj\printf.o
@@ -1164,7 +1160,7 @@ LOAD c:/program files (x86)/arm-none-eabi-gcc-4_6/bin/../lib/gcc/arm-none-eabi/4
 END GROUP
 OUTPUT(software.elf elf32-littlearm)
 
-.debug_info     0x00000000     0xbcf0
+.debug_info     0x00000000     0xbcbe
  .debug_info    0x00000000      0x46a ..\obj\stm32f10x_rtc.o
  .debug_info    0x0000046a      0x12b ..\obj\semihosting.o
  .debug_info    0x00000595     0x1e18 ..\obj\stm32f10x_tim.o
@@ -1178,24 +1174,24 @@ OUTPUT(software.elf elf32-littlearm)
  .debug_info    0x00004466      0x723 ..\obj\stm32f10x_gpio.o
  .debug_info    0x00004b89       0xa6 ..\obj\main.o
  .debug_info    0x00004c2f      0x200 ..\obj\stm32f10x_crc.o
- .debug_info    0x00004e2f      0x40c ..\obj\rcPwm.o
- .debug_info    0x0000523b      0xf66 ..\obj\printf.o
- .debug_info    0x000061a1      0x901 ..\obj\stm32f10x_rcc.o
- .debug_info    0x00006aa2      0x361 ..\obj\stm32f10x_exti.o
- .debug_info    0x00006e03      0xc0e ..\obj\stm32f10x_adc.o
- .debug_info    0x00007a11      0xa6c ..\obj\stm32f10x_usart.o
- .debug_info    0x0000847d       0x7f ..\obj\sh_cmd.o
- .debug_info    0x000084fc      0x440 ..\obj\syscalls.o
- .debug_info    0x0000893c      0x819 ..\obj\stm32f10x_flash.o
- .debug_info    0x00009155      0x4a2 ..\obj\stm32f10x_dma.o
- .debug_info    0x000095f7      0x546 ..\obj\misc.o
- .debug_info    0x00009b3d      0x235 ..\obj\stm32f10x_wwdg.o
- .debug_info    0x00009d72      0x971 ..\obj\stm32f10x_spi.o
- .debug_info    0x0000a6e3      0xb94 ..\obj\stm32f10x_i2c.o
- .debug_info    0x0000b277      0x879 ..\obj\stm32f10x_bkp.o
- .debug_info    0x0000baf0      0x200 ..\obj\stm32f10x_iwdg.o
+ .debug_info    0x00004e2f      0x3da ..\obj\rcPwm.o
+ .debug_info    0x00005209      0xf66 ..\obj\printf.o
+ .debug_info    0x0000616f      0x901 ..\obj\stm32f10x_rcc.o
+ .debug_info    0x00006a70      0x361 ..\obj\stm32f10x_exti.o
+ .debug_info    0x00006dd1      0xc0e ..\obj\stm32f10x_adc.o
+ .debug_info    0x000079df      0xa6c ..\obj\stm32f10x_usart.o
+ .debug_info    0x0000844b       0x7f ..\obj\sh_cmd.o
+ .debug_info    0x000084ca      0x440 ..\obj\syscalls.o
+ .debug_info    0x0000890a      0x819 ..\obj\stm32f10x_flash.o
+ .debug_info    0x00009123      0x4a2 ..\obj\stm32f10x_dma.o
+ .debug_info    0x000095c5      0x546 ..\obj\misc.o
+ .debug_info    0x00009b0b      0x235 ..\obj\stm32f10x_wwdg.o
+ .debug_info    0x00009d40      0x971 ..\obj\stm32f10x_spi.o
+ .debug_info    0x0000a6b1      0xb94 ..\obj\stm32f10x_i2c.o
+ .debug_info    0x0000b245      0x879 ..\obj\stm32f10x_bkp.o
+ .debug_info    0x0000babe      0x200 ..\obj\stm32f10x_iwdg.o
 
-.debug_abbrev   0x00000000     0x229e
+.debug_abbrev   0x00000000     0x2287
  .debug_abbrev  0x00000000      0x166 ..\obj\stm32f10x_rtc.o
  .debug_abbrev  0x00000166       0x9a ..\obj\semihosting.o
  .debug_abbrev  0x00000200      0x172 ..\obj\stm32f10x_tim.o
@@ -1209,26 +1205,26 @@ OUTPUT(software.elf elf32-littlearm)
  .debug_abbrev  0x00000b84      0x1a4 ..\obj\stm32f10x_gpio.o
  .debug_abbrev  0x00000d28       0x59 ..\obj\main.o
  .debug_abbrev  0x00000d81      0x10a ..\obj\stm32f10x_crc.o
- .debug_abbrev  0x00000e8b      0x12f ..\obj\rcPwm.o
- .debug_abbrev  0x00000fba      0x25f ..\obj\printf.o
- .debug_abbrev  0x00001219      0x191 ..\obj\stm32f10x_rcc.o
- .debug_abbrev  0x000013aa        0x1 ..\obj\motor.o
- .debug_abbrev  0x000013ab      0x14a ..\obj\stm32f10x_exti.o
- .debug_abbrev  0x000014f5      0x174 ..\obj\stm32f10x_adc.o
- .debug_abbrev  0x00001669      0x15b ..\obj\stm32f10x_usart.o
- .debug_abbrev  0x000017c4       0x14 ..\obj\sh_cmd.o
- .debug_abbrev  0x000017d8       0xde ..\obj\syscalls.o
- .debug_abbrev  0x000018b6      0x162 ..\obj\stm32f10x_flash.o
- .debug_abbrev  0x00001a18      0x14e ..\obj\stm32f10x_dma.o
- .debug_abbrev  0x00001b66        0x1 ..\obj\motPwm.o
- .debug_abbrev  0x00001b67      0x135 ..\obj\misc.o
- .debug_abbrev  0x00001c9c       0xf8 ..\obj\stm32f10x_wwdg.o
- .debug_abbrev  0x00001d94      0x15d ..\obj\stm32f10x_spi.o
- .debug_abbrev  0x00001ef1      0x15d ..\obj\stm32f10x_i2c.o
- .debug_abbrev  0x0000204e      0x156 ..\obj\stm32f10x_bkp.o
- .debug_abbrev  0x000021a4       0xfa ..\obj\stm32f10x_iwdg.o
+ .debug_abbrev  0x00000e8b      0x118 ..\obj\rcPwm.o
+ .debug_abbrev  0x00000fa3      0x25f ..\obj\printf.o
+ .debug_abbrev  0x00001202      0x191 ..\obj\stm32f10x_rcc.o
+ .debug_abbrev  0x00001393        0x1 ..\obj\motor.o
+ .debug_abbrev  0x00001394      0x14a ..\obj\stm32f10x_exti.o
+ .debug_abbrev  0x000014de      0x174 ..\obj\stm32f10x_adc.o
+ .debug_abbrev  0x00001652      0x15b ..\obj\stm32f10x_usart.o
+ .debug_abbrev  0x000017ad       0x14 ..\obj\sh_cmd.o
+ .debug_abbrev  0x000017c1       0xde ..\obj\syscalls.o
+ .debug_abbrev  0x0000189f      0x162 ..\obj\stm32f10x_flash.o
+ .debug_abbrev  0x00001a01      0x14e ..\obj\stm32f10x_dma.o
+ .debug_abbrev  0x00001b4f        0x1 ..\obj\motPwm.o
+ .debug_abbrev  0x00001b50      0x135 ..\obj\misc.o
+ .debug_abbrev  0x00001c85       0xf8 ..\obj\stm32f10x_wwdg.o
+ .debug_abbrev  0x00001d7d      0x15d ..\obj\stm32f10x_spi.o
+ .debug_abbrev  0x00001eda      0x15d ..\obj\stm32f10x_i2c.o
+ .debug_abbrev  0x00002037      0x156 ..\obj\stm32f10x_bkp.o
+ .debug_abbrev  0x0000218d       0xfa ..\obj\stm32f10x_iwdg.o
 
-.debug_loc      0x00000000     0x62aa
+.debug_loc      0x00000000     0x6252
  .debug_loc     0x00000000      0x2e0 ..\obj\stm32f10x_rtc.o
  .debug_loc     0x000002e0       0xa8 ..\obj\semihosting.o
  .debug_loc     0x00000388     0x13e8 ..\obj\stm32f10x_tim.o
@@ -1242,23 +1238,23 @@ OUTPUT(software.elf elf32-littlearm)
  .debug_loc     0x0000255c      0x3e4 ..\obj\stm32f10x_gpio.o
  .debug_loc     0x00002940       0x2c ..\obj\main.o
  .debug_loc     0x0000296c      0x12c ..\obj\stm32f10x_crc.o
- .debug_loc     0x00002a98       0xbc ..\obj\rcPwm.o
- .debug_loc     0x00002b54      0x3ea ..\obj\printf.o
- .debug_loc     0x00002f3e      0x6dc ..\obj\stm32f10x_rcc.o
- .debug_loc     0x0000361a      0x1b4 ..\obj\stm32f10x_exti.o
- .debug_loc     0x000037ce      0x7d4 ..\obj\stm32f10x_adc.o
- .debug_loc     0x00003fa2      0x658 ..\obj\stm32f10x_usart.o
- .debug_loc     0x000045fa      0x1ec ..\obj\syscalls.o
- .debug_loc     0x000047e6      0x5d8 ..\obj\stm32f10x_flash.o
- .debug_loc     0x00004dbe      0x268 ..\obj\stm32f10x_dma.o
- .debug_loc     0x00005026      0x118 ..\obj\misc.o
- .debug_loc     0x0000513e      0x190 ..\obj\stm32f10x_wwdg.o
- .debug_loc     0x000052ce      0x508 ..\obj\stm32f10x_spi.o
- .debug_loc     0x000057d6      0x738 ..\obj\stm32f10x_i2c.o
- .debug_loc     0x00005f0e      0x264 ..\obj\stm32f10x_bkp.o
- .debug_loc     0x00006172      0x138 ..\obj\stm32f10x_iwdg.o
+ .debug_loc     0x00002a98       0x64 ..\obj\rcPwm.o
+ .debug_loc     0x00002afc      0x3ea ..\obj\printf.o
+ .debug_loc     0x00002ee6      0x6dc ..\obj\stm32f10x_rcc.o
+ .debug_loc     0x000035c2      0x1b4 ..\obj\stm32f10x_exti.o
+ .debug_loc     0x00003776      0x7d4 ..\obj\stm32f10x_adc.o
+ .debug_loc     0x00003f4a      0x658 ..\obj\stm32f10x_usart.o
+ .debug_loc     0x000045a2      0x1ec ..\obj\syscalls.o
+ .debug_loc     0x0000478e      0x5d8 ..\obj\stm32f10x_flash.o
+ .debug_loc     0x00004d66      0x268 ..\obj\stm32f10x_dma.o
+ .debug_loc     0x00004fce      0x118 ..\obj\misc.o
+ .debug_loc     0x000050e6      0x190 ..\obj\stm32f10x_wwdg.o
+ .debug_loc     0x00005276      0x508 ..\obj\stm32f10x_spi.o
+ .debug_loc     0x0000577e      0x738 ..\obj\stm32f10x_i2c.o
+ .debug_loc     0x00005eb6      0x264 ..\obj\stm32f10x_bkp.o
+ .debug_loc     0x0000611a      0x138 ..\obj\stm32f10x_iwdg.o
 
-.debug_aranges  0x00000000     0x1140
+.debug_aranges  0x00000000     0x1130
  .debug_aranges
                 0x00000000       0x88 ..\obj\stm32f10x_rtc.o
  .debug_aranges
@@ -1286,39 +1282,39 @@ OUTPUT(software.elf elf32-littlearm)
  .debug_aranges
                 0x00000748       0x48 ..\obj\stm32f10x_crc.o
  .debug_aranges
-                0x00000790       0x38 ..\obj\rcPwm.o
+                0x00000790       0x28 ..\obj\rcPwm.o
  .debug_aranges
-                0x000007c8       0xa0 ..\obj\printf.o
+                0x000007b8       0xa0 ..\obj\printf.o
  .debug_aranges
-                0x00000868      0x118 ..\obj\stm32f10x_rcc.o
+                0x00000858      0x118 ..\obj\stm32f10x_rcc.o
  .debug_aranges
-                0x00000980       0x58 ..\obj\stm32f10x_exti.o
+                0x00000970       0x58 ..\obj\stm32f10x_exti.o
  .debug_aranges
-                0x000009d8      0x138 ..\obj\stm32f10x_adc.o
+                0x000009c8      0x138 ..\obj\stm32f10x_adc.o
  .debug_aranges
-                0x00000b10      0x100 ..\obj\stm32f10x_usart.o
+                0x00000b00      0x100 ..\obj\stm32f10x_usart.o
  .debug_aranges
-                0x00000c10       0x20 ..\obj\sh_cmd.o
+                0x00000c00       0x20 ..\obj\sh_cmd.o
  .debug_aranges
-                0x00000c30       0x60 ..\obj\syscalls.o
+                0x00000c20       0x60 ..\obj\syscalls.o
  .debug_aranges
-                0x00000c90       0xf8 ..\obj\stm32f10x_flash.o
+                0x00000c80       0xf8 ..\obj\stm32f10x_flash.o
  .debug_aranges
-                0x00000d88       0x70 ..\obj\stm32f10x_dma.o
+                0x00000d78       0x70 ..\obj\stm32f10x_dma.o
  .debug_aranges
-                0x00000df8       0x40 ..\obj\misc.o
+                0x00000de8       0x40 ..\obj\misc.o
  .debug_aranges
-                0x00000e38       0x58 ..\obj\stm32f10x_wwdg.o
+                0x00000e28       0x58 ..\obj\stm32f10x_wwdg.o
  .debug_aranges
-                0x00000e90       0xd0 ..\obj\stm32f10x_spi.o
+                0x00000e80       0xd0 ..\obj\stm32f10x_spi.o
  .debug_aranges
-                0x00000f60      0x120 ..\obj\stm32f10x_i2c.o
+                0x00000f50      0x120 ..\obj\stm32f10x_i2c.o
  .debug_aranges
-                0x00001080       0x78 ..\obj\stm32f10x_bkp.o
+                0x00001070       0x78 ..\obj\stm32f10x_bkp.o
  .debug_aranges
-                0x000010f8       0x48 ..\obj\stm32f10x_iwdg.o
+                0x000010e8       0x48 ..\obj\stm32f10x_iwdg.o
 
-.debug_ranges   0x00000000      0xf60
+.debug_ranges   0x00000000      0xf50
  .debug_ranges  0x00000000       0x78 ..\obj\stm32f10x_rtc.o
  .debug_ranges  0x00000078       0x20 ..\obj\semihosting.o
  .debug_ranges  0x00000098      0x2e0 ..\obj\stm32f10x_tim.o
@@ -1332,23 +1328,23 @@ OUTPUT(software.elf elf32-littlearm)
  .debug_ranges  0x000005e0       0x98 ..\obj\stm32f10x_gpio.o
  .debug_ranges  0x00000678       0x10 ..\obj\main.o
  .debug_ranges  0x00000688       0x38 ..\obj\stm32f10x_crc.o
- .debug_ranges  0x000006c0       0x28 ..\obj\rcPwm.o
- .debug_ranges  0x000006e8       0x90 ..\obj\printf.o
- .debug_ranges  0x00000778      0x108 ..\obj\stm32f10x_rcc.o
- .debug_ranges  0x00000880       0x48 ..\obj\stm32f10x_exti.o
- .debug_ranges  0x000008c8      0x128 ..\obj\stm32f10x_adc.o
- .debug_ranges  0x000009f0       0xf0 ..\obj\stm32f10x_usart.o
- .debug_ranges  0x00000ae0       0x50 ..\obj\syscalls.o
- .debug_ranges  0x00000b30       0xe8 ..\obj\stm32f10x_flash.o
- .debug_ranges  0x00000c18       0x60 ..\obj\stm32f10x_dma.o
- .debug_ranges  0x00000c78       0x30 ..\obj\misc.o
- .debug_ranges  0x00000ca8       0x48 ..\obj\stm32f10x_wwdg.o
- .debug_ranges  0x00000cf0       0xc0 ..\obj\stm32f10x_spi.o
- .debug_ranges  0x00000db0      0x110 ..\obj\stm32f10x_i2c.o
- .debug_ranges  0x00000ec0       0x68 ..\obj\stm32f10x_bkp.o
- .debug_ranges  0x00000f28       0x38 ..\obj\stm32f10x_iwdg.o
+ .debug_ranges  0x000006c0       0x18 ..\obj\rcPwm.o
+ .debug_ranges  0x000006d8       0x90 ..\obj\printf.o
+ .debug_ranges  0x00000768      0x108 ..\obj\stm32f10x_rcc.o
+ .debug_ranges  0x00000870       0x48 ..\obj\stm32f10x_exti.o
+ .debug_ranges  0x000008b8      0x128 ..\obj\stm32f10x_adc.o
+ .debug_ranges  0x000009e0       0xf0 ..\obj\stm32f10x_usart.o
+ .debug_ranges  0x00000ad0       0x50 ..\obj\syscalls.o
+ .debug_ranges  0x00000b20       0xe8 ..\obj\stm32f10x_flash.o
+ .debug_ranges  0x00000c08       0x60 ..\obj\stm32f10x_dma.o
+ .debug_ranges  0x00000c68       0x30 ..\obj\misc.o
+ .debug_ranges  0x00000c98       0x48 ..\obj\stm32f10x_wwdg.o
+ .debug_ranges  0x00000ce0       0xc0 ..\obj\stm32f10x_spi.o
+ .debug_ranges  0x00000da0      0x110 ..\obj\stm32f10x_i2c.o
+ .debug_ranges  0x00000eb0       0x68 ..\obj\stm32f10x_bkp.o
+ .debug_ranges  0x00000f18       0x38 ..\obj\stm32f10x_iwdg.o
 
-.debug_line     0x00000000     0x4f64
+.debug_line     0x00000000     0x4f41
  .debug_line    0x00000000      0x26a ..\obj\stm32f10x_rtc.o
  .debug_line    0x0000026a       0xa0 ..\obj\semihosting.o
  .debug_line    0x0000030a      0xa22 ..\obj\stm32f10x_tim.o
@@ -1362,26 +1358,26 @@ OUTPUT(software.elf elf32-littlearm)
  .debug_line    0x00001ca3      0x33c ..\obj\stm32f10x_gpio.o
  .debug_line    0x00001fdf       0x8a ..\obj\main.o
  .debug_line    0x00002069      0x1bc ..\obj\stm32f10x_crc.o
- .debug_line    0x00002225      0x1a4 ..\obj\rcPwm.o
- .debug_line    0x000023c9      0x3ce ..\obj\printf.o
- .debug_line    0x00002797      0x44a ..\obj\stm32f10x_rcc.o
- .debug_line    0x00002be1        0x0 ..\obj\motor.o
- .debug_line    0x00002be1      0x231 ..\obj\stm32f10x_exti.o
- .debug_line    0x00002e12      0x4b0 ..\obj\stm32f10x_adc.o
- .debug_line    0x000032c2      0x428 ..\obj\stm32f10x_usart.o
- .debug_line    0x000036ea       0x73 ..\obj\sh_cmd.o
- .debug_line    0x0000375d      0x189 ..\obj\syscalls.o
- .debug_line    0x000038e6      0x466 ..\obj\stm32f10x_flash.o
- .debug_line    0x00003d4c      0x290 ..\obj\stm32f10x_dma.o
- .debug_line    0x00003fdc        0x0 ..\obj\motPwm.o
- .debug_line    0x00003fdc      0x1d1 ..\obj\misc.o
- .debug_line    0x000041ad      0x1d4 ..\obj\stm32f10x_wwdg.o
- .debug_line    0x00004381      0x3af ..\obj\stm32f10x_spi.o
- .debug_line    0x00004730      0x464 ..\obj\stm32f10x_i2c.o
- .debug_line    0x00004b94      0x223 ..\obj\stm32f10x_bkp.o
- .debug_line    0x00004db7      0x1ad ..\obj\stm32f10x_iwdg.o
+ .debug_line    0x00002225      0x181 ..\obj\rcPwm.o
+ .debug_line    0x000023a6      0x3ce ..\obj\printf.o
+ .debug_line    0x00002774      0x44a ..\obj\stm32f10x_rcc.o
+ .debug_line    0x00002bbe        0x0 ..\obj\motor.o
+ .debug_line    0x00002bbe      0x231 ..\obj\stm32f10x_exti.o
+ .debug_line    0x00002def      0x4b0 ..\obj\stm32f10x_adc.o
+ .debug_line    0x0000329f      0x428 ..\obj\stm32f10x_usart.o
+ .debug_line    0x000036c7       0x73 ..\obj\sh_cmd.o
+ .debug_line    0x0000373a      0x189 ..\obj\syscalls.o
+ .debug_line    0x000038c3      0x466 ..\obj\stm32f10x_flash.o
+ .debug_line    0x00003d29      0x290 ..\obj\stm32f10x_dma.o
+ .debug_line    0x00003fb9        0x0 ..\obj\motPwm.o
+ .debug_line    0x00003fb9      0x1d1 ..\obj\misc.o
+ .debug_line    0x0000418a      0x1d4 ..\obj\stm32f10x_wwdg.o
+ .debug_line    0x0000435e      0x3af ..\obj\stm32f10x_spi.o
+ .debug_line    0x0000470d      0x464 ..\obj\stm32f10x_i2c.o
+ .debug_line    0x00004b71      0x223 ..\obj\stm32f10x_bkp.o
+ .debug_line    0x00004d94      0x1ad ..\obj\stm32f10x_iwdg.o
 
-.debug_str      0x00000000     0x470e
+.debug_str      0x00000000     0x46e9
  .debug_str     0x00000000      0x2db ..\obj\stm32f10x_rtc.o
                                 0x333 (size before relaxing)
  .debug_str     0x000002db       0x70 ..\obj\semihosting.o
@@ -1408,35 +1404,35 @@ OUTPUT(software.elf elf32-littlearm)
                                 0x102 (size before relaxing)
  .debug_str     0x00001d88       0xbf ..\obj\stm32f10x_crc.o
                                 0x1cc (size before relaxing)
- .debug_str     0x00001e47       0xb0 ..\obj\rcPwm.o
-                                0x2c8 (size before relaxing)
- .debug_str     0x00001ef7      0x4c5 ..\obj\printf.o
+ .debug_str     0x00001e47       0x8b ..\obj\rcPwm.o
+                                0x2a3 (size before relaxing)
+ .debug_str     0x00001ed2      0x4c5 ..\obj\printf.o
                                 0x5fe (size before relaxing)
- .debug_str     0x000023bc      0x362 ..\obj\stm32f10x_rcc.o
+ .debug_str     0x00002397      0x362 ..\obj\stm32f10x_rcc.o
                                 0x5ab (size before relaxing)
- .debug_str     0x0000271e      0x1c9 ..\obj\stm32f10x_exti.o
+ .debug_str     0x000026f9      0x1c9 ..\obj\stm32f10x_exti.o
                                 0x2ef (size before relaxing)
- .debug_str     0x000028e7      0x523 ..\obj\stm32f10x_adc.o
+ .debug_str     0x000028c2      0x523 ..\obj\stm32f10x_adc.o
                                 0x68c (size before relaxing)
- .debug_str     0x00002e0a      0x41f ..\obj\stm32f10x_usart.o
+ .debug_str     0x00002de5      0x41f ..\obj\stm32f10x_usart.o
                                 0x621 (size before relaxing)
- .debug_str     0x00003229      0x13e ..\obj\syscalls.o
+ .debug_str     0x00003204      0x13e ..\obj\syscalls.o
                                 0x276 (size before relaxing)
- .debug_str     0x00003367      0x3fe ..\obj\stm32f10x_flash.o
+ .debug_str     0x00003342      0x3fe ..\obj\stm32f10x_flash.o
                                 0x579 (size before relaxing)
- .debug_str     0x00003765      0x213 ..\obj\stm32f10x_dma.o
+ .debug_str     0x00003740      0x213 ..\obj\stm32f10x_dma.o
                                 0x352 (size before relaxing)
- .debug_str     0x00003978      0x1ba ..\obj\misc.o
+ .debug_str     0x00003953      0x1ba ..\obj\misc.o
                                 0x354 (size before relaxing)
- .debug_str     0x00003b32       0xd3 ..\obj\stm32f10x_wwdg.o
+ .debug_str     0x00003b0d       0xd3 ..\obj\stm32f10x_wwdg.o
                                 0x1f9 (size before relaxing)
- .debug_str     0x00003c05      0x360 ..\obj\stm32f10x_spi.o
+ .debug_str     0x00003be0      0x360 ..\obj\stm32f10x_spi.o
                                 0x58e (size before relaxing)
- .debug_str     0x00003f65      0x3b1 ..\obj\stm32f10x_i2c.o
+ .debug_str     0x00003f40      0x3b1 ..\obj\stm32f10x_i2c.o
                                 0x5f7 (size before relaxing)
- .debug_str     0x00004316      0x321 ..\obj\stm32f10x_bkp.o
+ .debug_str     0x000042f1      0x321 ..\obj\stm32f10x_bkp.o
                                 0x546 (size before relaxing)
- .debug_str     0x00004637       0xd7 ..\obj\stm32f10x_iwdg.o
+ .debug_str     0x00004612       0xd7 ..\obj\stm32f10x_iwdg.o
                                 0x1ed (size before relaxing)
 
 .comment        0x00000000       0x70
@@ -1537,7 +1533,7 @@ OUTPUT(software.elf elf32-littlearm)
  .ARM.attributes
                 0x000005e8       0x33 ..\obj\stm32f10x_iwdg.o
 
-.debug_frame    0x00000000     0x34f4
+.debug_frame    0x00000000     0x34c0
  .debug_frame   0x00000000      0x194 ..\obj\stm32f10x_rtc.o
  .debug_frame   0x00000194       0x70 ..\obj\semihosting.o
  .debug_frame   0x00000204      0xa20 ..\obj\stm32f10x_tim.o
@@ -1551,18 +1547,18 @@ OUTPUT(software.elf elf32-littlearm)
  .debug_frame   0x00001440      0x210 ..\obj\stm32f10x_gpio.o
  .debug_frame   0x00001650       0x2c ..\obj\main.o
  .debug_frame   0x0000167c       0xac ..\obj\stm32f10x_crc.o
- .debug_frame   0x00001728       0x7c ..\obj\rcPwm.o
- .debug_frame   0x000017a4      0x244 ..\obj\printf.o
- .debug_frame   0x000019e8      0x388 ..\obj\stm32f10x_rcc.o
- .debug_frame   0x00001d70       0xec ..\obj\stm32f10x_exti.o
- .debug_frame   0x00001e5c      0x400 ..\obj\stm32f10x_adc.o
- .debug_frame   0x0000225c      0x344 ..\obj\stm32f10x_usart.o
- .debug_frame   0x000025a0      0x108 ..\obj\syscalls.o
- .debug_frame   0x000026a8      0x338 ..\obj\stm32f10x_flash.o
- .debug_frame   0x000029e0      0x144 ..\obj\stm32f10x_dma.o
- .debug_frame   0x00002b24       0x9c ..\obj\misc.o
- .debug_frame   0x00002bc0       0xe4 ..\obj\stm32f10x_wwdg.o
- .debug_frame   0x00002ca4      0x29c ..\obj\stm32f10x_spi.o
- .debug_frame   0x00002f40      0x3b4 ..\obj\stm32f10x_i2c.o
- .debug_frame   0x000032f4      0x150 ..\obj\stm32f10x_bkp.o
- .debug_frame   0x00003444       0xb0 ..\obj\stm32f10x_iwdg.o
+ .debug_frame   0x00001728       0x48 ..\obj\rcPwm.o
+ .debug_frame   0x00001770      0x244 ..\obj\printf.o
+ .debug_frame   0x000019b4      0x388 ..\obj\stm32f10x_rcc.o
+ .debug_frame   0x00001d3c       0xec ..\obj\stm32f10x_exti.o
+ .debug_frame   0x00001e28      0x400 ..\obj\stm32f10x_adc.o
+ .debug_frame   0x00002228      0x344 ..\obj\stm32f10x_usart.o
+ .debug_frame   0x0000256c      0x108 ..\obj\syscalls.o
+ .debug_frame   0x00002674      0x338 ..\obj\stm32f10x_flash.o
+ .debug_frame   0x000029ac      0x144 ..\obj\stm32f10x_dma.o
+ .debug_frame   0x00002af0       0x9c ..\obj\misc.o
+ .debug_frame   0x00002b8c       0xe4 ..\obj\stm32f10x_wwdg.o
+ .debug_frame   0x00002c70      0x29c ..\obj\stm32f10x_spi.o
+ .debug_frame   0x00002f0c      0x3b4 ..\obj\stm32f10x_i2c.o
+ .debug_frame   0x000032c0      0x150 ..\obj\stm32f10x_bkp.o
+ .debug_frame   0x00003410       0xb0 ..\obj\stm32f10x_iwdg.o

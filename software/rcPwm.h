@@ -31,13 +31,11 @@ typedef struct rcpwm
   uint16_t longestPulseTime;	// Corresponds to 100% speed demand
   uint16_t shortestPulseTime;	// Corresponds to 0% speed demand
 
-  uint16_t demandQ15;			// This is the Q15 (S16) speed demand
+  uint32_t demandQ15;				// This is the Q15 (S16) speed demand
 } rcpwm;
 
 extern struct rcpwm rcPwm;
 
 void initRcPwm(void);
-uint16_t getRisingEdgeTime(void);
-uint16_t getFallingEdgeTime(void);
 
 #endif

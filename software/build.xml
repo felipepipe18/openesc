@@ -72,7 +72,7 @@
       <linkerarg value="-mthumb"/>
       <linkerarg value="-L${linkdir}"/>
       <linkerarg value="--gc-sections"/>
-      <linkerarg value="-TC:\gitRepo\openEsc\software\arm-gcc-link.ld"/>
+      <linkerarg value="-TC:\gitRepo\OpenESC\software\link.ld"/>
       
     </cc>
   </target>

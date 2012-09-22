@@ -58,23 +58,12 @@ initRcPwm(void)
 	//	to reasonable starting values (maybe 1.25ms and 1.75ms?)
 }
 
-uint16_t
-getRisingEdgeTime(void)
-{
-	return TIM3->CCR3;
-}
-
-uint16_t
-getFallingEdgeTime(void)
-{
-	return TIM3->CCR4;
-}
-
 void
 TIM3_CC_IRQHandler (void)
 {
-	// Find the current pulse time
-	uint16_t pulseWidth = getRisingEdgeTime() - getFallingEdgeTime();
+	// Find the current pulse time.
+	//	pulseWidth = risingEdgeTime - fallingEdgeTime
+	uint16_t pulseWidth = TIM3->CCR4 - TIM3->CCR3;
 
 	// Determine if the current pulse is the longest or the shortest
 	//	measured thus far (for calibration purposes)
@@ -83,11 +72,14 @@ TIM3_CC_IRQHandler (void)
 	else if(pulseWidth < rcPwm.shortestPulseTime)
 		rcPwm.shortestPulseTime = pulseWidth;
 
+	// Calculate the pulse range and the pulse width
 	uint16_t range = rcPwm.longestPulseTime - rcPwm.shortestPulseTime;
 	uint16_t pulse = pulseWidth - rcPwm.shortestPulseTime;
 
 	// Determine the speed demand as a percentage of the range
-	// rcPwm.demandQ15 = pulse/range       TODO: implement in Q15 format (fixed point)
+	//	TODO: Verify this works as intended.  ARM Cortex-M3 has
+	//	a 32bit unsigned divide instruction with a 32-bit result
+	rcPwm.demandQ15 = (uint32_t)(pulse << 16)/(uint32_t)range;
 
 	// Reset the flag
 	TIM3->SR = 0;
