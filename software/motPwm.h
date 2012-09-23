@@ -23,7 +23,18 @@
 #ifndef MOTPWM_H
 #define MOTPWM_H
 
+#include "stm32f10x_tim.h"
 
+#define PH_A	0
+#define PH_B	1
+#define PH_C	2
 
+typedef struct{
+	uint8_t phaseState;
+}phase;
+
+void setupMotorPwm(void);
+void setMotorPwmFreq(uint32_t pwmFrequency);
+void setMotorDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle);
 
 #endif
