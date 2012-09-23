@@ -29,8 +29,12 @@
 #define PH_B	1
 #define PH_C	2
 
+#define DORMANT		0
+#define HI_STATE	1
+#define LO_STATE	2
+
 typedef struct{
-	uint8_t phaseState;
+	uint8_t phaseStateA, phaseStateB, phaseStateC;
 }phase;
 
 void setupMotorPwm(void);

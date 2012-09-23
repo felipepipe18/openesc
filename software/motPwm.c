@@ -79,5 +79,16 @@ setMotorPwmFreq(uint32_t pwmFrequency)
 void
 setMotorDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 {
+	// The duty cycle is in unsigned 16-bit fractional number that
+	//	needs to be translated into the 16-bit CCRx registers using
+	//	fixed-point math
+	uint16_t dutyCycleRegValue = ((uint32_t) dutyCycle * (uint32_t)TIM1->CCR1) >> 16;
 
+	uint16_t *phasePtr;
+
+	if(phase == PH_A)		phasePtr = &TIM1->CCR1;
+	else if(phase == PH_B)	phasePtr = &TIM1->CCR2;
+	else if(phase == PH_C)	phasePtr = &TIM1->CCR3;
+
+	*phasePtr = dutyCycleRegValue;
 }
