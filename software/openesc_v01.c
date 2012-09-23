@@ -46,10 +46,11 @@ setupOpenESC(void)
 {
 	initClock();
 	initDio();
+
 	initRcPwm();
+	// initMotor();
 	// initUsart();
 	// initUsb();
-	// initMcPwm();
 }
 
 void

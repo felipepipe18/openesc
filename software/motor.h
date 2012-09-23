@@ -25,5 +25,8 @@
 
 #include "motPwm.h"
 
+void initMotor(void);
+void startMotor(void);
+void stopMotor(void);
 
 #endif

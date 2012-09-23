@@ -27,16 +27,16 @@
 struct phase;
 
 void
-setupMotorPwm(void){
+initMotorPwm(void){
 	// Clock division: tDTS = 1 * tCK_INT
 	TIM1->CR1 |= (uint16_t)(0b00 << 8);
 
 	setMotorPwmFreq(20000);
 
 	// Place each phase in the DORMANT state
-	setMotorDutyCycle(PH_A, DORMANT, 0);
-	setMotorDutyCycle(PH_B, DORMANT, 0);
-	setMotorDutyCycle(PH_C, DORMANT, 0);
+	setPhaseDutyCycle(PH_A, DORMANT, 0);
+	setPhaseDutyCycle(PH_B, DORMANT, 0);
+	setPhaseDutyCycle(PH_C, DORMANT, 0);
 
 	// Dead-time generation 1us dead-time
 	// TODO: verify dead time on scope
@@ -63,7 +63,7 @@ setMotorPwmFreq(uint32_t pwmFrequency)
 }
 
 void
-setMotorDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
+setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 {
 	// The duty cycle is in unsigned 16-bit fractional number that
 	//	needs to be translated into the 16-bit CCRx registers using
@@ -133,7 +133,4 @@ setMotorDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 			TIM1->CCER &= 0xf0ff;
 		}
 	}
-
-
-
 }

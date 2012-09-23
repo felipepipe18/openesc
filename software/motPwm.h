@@ -37,8 +37,8 @@ typedef struct{
 	uint8_t phaseStateA, phaseStateB, phaseStateC;
 }phase;
 
-void setupMotorPwm(void);
+void initMotorPwm(void);
 void setMotorPwmFreq(uint32_t pwmFrequency);
-void setMotorDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle);
+void setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle);
 
 #endif

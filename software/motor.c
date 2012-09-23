@@ -31,3 +31,17 @@
 
 #include "motor.h"
 
+void
+initMotor(void){
+	initMotorPwm();
+}
+
+void
+startMotor(void){
+
+}
+
+void
+stopMotor(void){
+
+}
