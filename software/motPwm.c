@@ -31,26 +31,12 @@ setupMotorPwm(void){
 	// Clock division: tDTS = 1 * tCK_INT
 	TIM1->CR1 |= (uint16_t)(0b00 << 8);
 
-	// OC1M, OC2M, OC3M output compare mode PWM mode 1
-	TIM1->CCMR1 |= ((uint16_t)(0b110 << 12)		// set OC2M
-					+ (uint16_t)(0b110 << 4));	// set OC1M
-	TIM1->CCMR2 |= (uint16_t)(0b110 << 4);		// set OC3M
-
 	setMotorPwmFreq(20000);
 
-	// TIM1 CH1 and CH1N on, active high
-	TIM1->CCER |= (uint16_t)(0b0101 << 0);
-
-	// TIM1 CH2 and CH2N on, active high
-	TIM1->CCER |= (uint16_t)(0b0101 << 4);
-
-	// TIM1 CH3 and CH3N on, active high
-	TIM1->CCER |= (uint16_t)(0b0101 << 8);
-
-	// Load CCRx registers with 0 (this turns off pwm)
-	TIM1->CCR1 |= (uint16_t)(0);
-	TIM1->CCR2 |= (uint16_t)(0);
-	TIM1->CCR3 |= (uint16_t)(0);
+	// Place each phase in the DORMANT state
+	setMotorDutyCycle(PH_A, DORMANT, 0);
+	setMotorDutyCycle(PH_B, DORMANT, 0);
+	setMotorDutyCycle(PH_C, DORMANT, 0);
 
 	// Dead-time generation 1us dead-time
 	// TODO: verify dead time on scope
@@ -81,14 +67,73 @@ setMotorDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 {
 	// The duty cycle is in unsigned 16-bit fractional number that
 	//	needs to be translated into the 16-bit CCRx registers using
-	//	fixed-point math
+	//	fixed-point math.
 	uint16_t dutyCycleRegValue = ((uint32_t) dutyCycle * (uint32_t)TIM1->CCR1) >> 16;
 
-	uint16_t *phasePtr;
+	if(phase == PH_A){
+		// If the required state is HI_STATE, then the duty cycle should
+		//	be applied with reference to the high-side switches (75% dc means
+		//	75%dc on high-side)
+		if(state == HI_STATE){
+			TIM1->CCER |= (uint16_t)(0b0101 << 0);// TIM1 CH1 and CH1N on, active high
 
-	if(phase == PH_A)		phasePtr = &TIM1->CCR1;
-	else if(phase == PH_B)	phasePtr = &TIM1->CCR2;
-	else if(phase == PH_C)	phasePtr = &TIM1->CCR3;
+			TIM1->CCMR1 &= 0xff00;	// clear CC1 bits to default
+			TIM1->CCMR1 |= (uint16_t)(0b01100000 << 0);	// pwm mode 1
 
-	*phasePtr = dutyCycleRegValue;
+			TIM1->CCR1 = dutyCycleRegValue;
+		// If the required state is LO_STATE, then the duty cycle should
+		//	be applied with reference to the high-side switches (75% dc means
+		//	75%dc on low-side)
+		}else if(state == LO_STATE){
+			TIM1->CCER |= (uint16_t)(0b0101 << 0);	// TIM1 CH1 and CH1N on, active high
+
+			TIM1->CCMR1 &= 0xff00;	// clear CC1 bits to default
+			TIM1->CCMR1 |= (uint16_t)(0b01110000 << 0);	// pwm mode 2
+
+			TIM1->CCR1 = dutyCycleRegValue;	// Load the duty cycle register
+		// If the required state is DORMANT, then turn both high phase
+		//	and low phase off
+		}else{
+			TIM1->CCER &= 0xfff0;	// turn off pwm output, high-side and low-side
+		}
+	}else if(phase == PH_B){
+		if(state == HI_STATE){
+			TIM1->CCER |= (uint16_t)(0b0101 << 4);
+
+			TIM1->CCMR1 &= 0x00ff;
+			TIM1->CCMR1 |= (uint16_t)(0b01100000 << 8);
+
+			TIM1->CCR2 = dutyCycleRegValue;
+		}else if(state == LO_STATE){
+			TIM1->CCER |= (uint16_t)(0b0101 << 4);
+
+			TIM1->CCMR1 &= 0x00ff;
+			TIM1->CCMR1 |= (uint16_t)(0b01110000 << 8);
+
+			TIM1->CCR1 = dutyCycleRegValue;
+		}else{
+			TIM1->CCER &= 0xff0f;
+		}
+	}else if(phase == PH_C){
+		if(state == HI_STATE){
+			TIM1->CCER |= (uint16_t)(0b0101 << 8);
+
+			TIM1->CCMR2 &= 0xff00;
+			TIM1->CCMR2 |= (uint16_t)(0b01100000 << 0);
+
+			TIM1->CCR3 = dutyCycleRegValue;
+		}else if(state == LO_STATE){
+			TIM1->CCER |= (uint16_t)(0b0101 << 8);
+
+			TIM1->CCMR2 &= 0xff00;
+			TIM1->CCMR2 |= (uint16_t)(0b01110000 << 0);
+
+			TIM1->CCR3 = dutyCycleRegValue;
+		}else{
+			TIM1->CCER &= 0xf0ff;
+		}
+	}
+
+
+
 }
