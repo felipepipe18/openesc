@@ -31,9 +31,14 @@
 
 #include "motor.h"
 
+_motor motor;
+
 void
 initMotor(void){
 	initMotorPwm();
+	setMotorPwmFreq(16000);
+
+	motor.state = MOTOR_STOPPED;
 }
 
 void

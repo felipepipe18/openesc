@@ -25,6 +25,19 @@
 
 #include "motPwm.h"
 
+#define DEFAULT_PWM_FREQ		16000
+#define MIN_DUTY_CYCLE			10000
+
+#define MOTOR_RUNNING	0
+#define MOTOR_STOPPED	1
+#define MOTOR_LOCKED	2
+
+typedef struct{
+	uint8_t state;
+} _motor;
+
+extern _motor motor;
+
 void initMotor(void);
 void startMotor(void);
 void stopMotor(void);

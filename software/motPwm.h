@@ -34,8 +34,10 @@
 #define LO_STATE	2
 
 typedef struct{
-	uint8_t phaseStateA, phaseStateB, phaseStateC;
-}phase;
+	uint8_t stateA, stateB, stateC;
+} phase;
+
+extern phase motorPhase;
 
 void initMotorPwm(void);
 void setMotorPwmFreq(uint32_t pwmFrequency);
