@@ -27,35 +27,45 @@ struct rcpwm rcPwm;
 void
 initRcPwm(void)
 {
-	/* TIM3 clock enable */
+	/* TIM3 clock enable @36MHz */
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 
-	// TODO: write interrupt routine
-	// Interrupt on Capture/Compare 4
-	TIM3->DIER |= 0x0010;
+	// Interrupt enable on Capture/Compare 4
+	TIM3->DIER |= (uint16_t)(0b1 << 4);
 
 	// Capture current value of counter
 	//	on and set appropriate interrupt
 	//	flags on capture (CC3 and 4)
-	TIM3->EGR |= 0x0018;
+	TIM3->EGR |= (uint16_t)((0b1 << 4)	// chan 4
+						+ (0b1 << 3));	// chan 3
 
 	// CC4 is an input, IC4 is mapped on TI4
-	TIM3->CCMR2 |= 0x0100;
-
 	// CC3 is an input, IC3 is mapped on TI4
-	TIM3->CCMR2 |= 0x0002;
+	TIM3->CCMR2 |= (uint16_t)((0b01 << 8)	// chan 4
+						+ (0b10 << 0));		// chan 3
 
 	// CC3 capture occurs on rising edge, CC3 is enabled
-	TIM3->CCER |= 0x0100;
-
 	// CC4 capture occurs on falling edge, CC4 is enabled
-	TIM3->CCER |= 0x3000;
+	TIM3->CCER |= (uint16_t)((0b01 << 12)	// chan 4
+						+ (0b11 << 8));		// chan 3
+
+	// Reset the flag
+	TIM3->SR = 0;
+
+	// Prescaler loaded so that input clock is
+	//	divided by two, thus, the clock is at
+	//	18MHz, meaning that any pulse can be
+	//	measured up to a maximum pulse width
+	//	of 3.64ms with a resolution of +/-27ns
+	TIM3->PSC = 1;
 
 	// Enable the counter
 	TIM3->CR1 |= 0x0001;
 
-	// TODO: initialize rcPwm.longestPulseTime and rcPwm.shortestPulseTime
+	// Initialize rcPwm.longestPulseTime and rcPwm.shortestPulseTime
 	//	to reasonable starting values (maybe 1.25ms and 1.75ms?)
+	rcPwm.longestPulseTime = 31500;
+	rcPwm.shortestPulseTime = 22500;
 }
 
 void
@@ -65,21 +75,26 @@ TIM3_CC_IRQHandler (void)
 	//	pulseWidth = risingEdgeTime - fallingEdgeTime
 	uint16_t pulseWidth = TIM3->CCR4 - TIM3->CCR3;
 
-	// Determine if the current pulse is the longest or the shortest
-	//	measured thus far (for calibration purposes)
-	if(pulseWidth > rcPwm.longestPulseTime)
-		rcPwm.longestPulseTime = pulseWidth;
-	else if(pulseWidth < rcPwm.shortestPulseTime)
-		rcPwm.shortestPulseTime = pulseWidth;
+	// Verify that the pulse is long enough that it isn't
+	//	a glitch.  This isn't bulletproof, but it should
+	//	help when connecting and disconnecting equipment
+	if(pulseWidth > MIN_RC_PULSE_WIDTH){
+		// Determine if the current pulse is the longest or the shortest
+		//	measured thus far (for calibration purposes)
+		if(pulseWidth > rcPwm.longestPulseTime)
+			rcPwm.longestPulseTime = pulseWidth;
+		else if(pulseWidth < rcPwm.shortestPulseTime)
+			rcPwm.shortestPulseTime = pulseWidth;
 
-	// Calculate the pulse range and the pulse width
-	uint16_t range = rcPwm.longestPulseTime - rcPwm.shortestPulseTime;
-	uint16_t pulse = pulseWidth - rcPwm.shortestPulseTime;
+		// Calculate the pulse range and the pulse width
+		uint16_t range = rcPwm.longestPulseTime - rcPwm.shortestPulseTime;
+		uint16_t pulse = pulseWidth - rcPwm.shortestPulseTime;
 
-	// Determine the speed demand as a percentage of the range
-	//	TODO: Verify this works as intended.  ARM Cortex-M3 has
-	//	a 32bit unsigned divide instruction with a 32-bit result
-	rcPwm.demandQ15 = (uint32_t)(pulse << 16)/(uint32_t)range;
+		// Determine the speed demand as a percentage of the range
+		//	TODO: Verify this works as intended.  ARM Cortex-M3 has
+		//	a 32bit unsigned divide instruction with a 32-bit result
+		rcPwm.demandQ15 = (uint32_t)(pulse << 16)/(uint32_t)range;
+	}
 
 	// Reset the flag
 	TIM3->SR = 0;

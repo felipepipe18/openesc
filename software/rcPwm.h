@@ -26,6 +26,8 @@
 
 #include "stm32f10x_tim.h"
 
+#define MIN_RC_PULSE_WIDTH	18000
+
 typedef struct rcpwm
 {
   uint16_t longestPulseTime;	// Corresponds to 100% speed demand

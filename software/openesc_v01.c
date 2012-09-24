@@ -96,12 +96,12 @@ initClock(void)
 	}
 
 	// Set system clock as PLL
-	RCC->CFGR |= (0b10);
+	RCC->CFGR |= (0b10 << 0);
 
 	// Wait for system clock to complete switch
-	while(((RCC->CFGR >> 2) & 0x11) != 0b10);
+	while(((RCC->CFGR >> 2) & 0xfffc) != 0b10);
 
-	// APB1 = 36MHz
+	// APB1 = 36MHz, APB2 = 72MHz
 	RCC->CFGR |= (0b100 << 8);
 
 	// ADCPRE = PCLK2/6 = 72MHz/6 = 12MHz (14MHz max)
