@@ -20,20 +20,19 @@
  *	General Public License along with OpenESC. If
  *	not, see http://www.gnu.org/licenses/.
 *************************************************/
-#include "openesc.h"
 
-int main(void)
-{
-	// Setup all of the pins and peripherals
-	//	of the openESC board
-	setupOpenESC();
+#ifndef MILLISECTIMER_H
+#define MILLISECTIMER_H
 
-	// Implement the simplest form of open-loop motor control
-	//	using just the input RC signal and the motor interface
-    while(1)
-    {
-    	// Get requested duty cycle from rcPwm
+#include "stm32f10x_tim.h"
 
-    	// Pass requested duty cycle to the motor
-    }
-}
+typedef struct{
+	uint32_t milliSeconds;
+} _timer;
+
+extern _timer timer;
+
+void initMilliSecTimer(void);
+uint32_t getMilliSeconds(void);
+
+#endif
