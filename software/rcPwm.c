@@ -69,7 +69,7 @@ initRcPwm(void)
 }
 
 void
-TIM3_CC_IRQHandler (void)
+TIM3_IRQHandler(void)
 {
 	// Find the current pulse time.
 	//	pulseWidth = risingEdgeTime - fallingEdgeTime

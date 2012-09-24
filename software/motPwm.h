@@ -35,9 +35,9 @@
 
 typedef struct{
 	uint8_t stateA, stateB, stateC;
-} phase;
+} _phase;
 
-extern phase motorPhase;
+extern _phase motorPhase;
 
 void initMotorPwm(void);
 void setMotorPwmFreq(uint32_t pwmFrequency);

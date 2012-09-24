@@ -23,7 +23,7 @@
 
 #include "motPwm.h"
 
-phase motorPhase;
+_phase motorPhase;
 
 void
 initMotorPwm(void){
@@ -48,7 +48,7 @@ initMotorPwm(void){
 void
 setMotorPwmFreq(uint32_t pwmFrequency)
 {
-	// Limit PWM frequency to upper and lower values
+	// Limit PWM frequency to upper and lower values (in Hz)
 	if(pwmFrequency < 1200)
 		pwmFrequency = 1200;
 

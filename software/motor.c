@@ -30,6 +30,7 @@
 *************************************************/
 
 #include "motor.h"
+#include "milliSecTimer.h"
 
 _motor motor;
 
@@ -38,15 +39,30 @@ initMotor(void){
 	initMotorPwm();
 	setMotorPwmFreq(16000);
 
-	motor.state = MOTOR_STOPPED;
+	initMilliSecTimer();
+
+	stopMotor();
 }
 
 void
 startMotor(void){
-
+	motor.sector = 0;
+	motor.state = MOTOR_RUNNING;
 }
 
 void
 stopMotor(void){
+	// Place each phase in the DORMANT state
+	setPhaseDutyCycle(PH_A, DORMANT, 0);
+	setPhaseDutyCycle(PH_B, DORMANT, 0);
+	setPhaseDutyCycle(PH_C, DORMANT, 0);
 
+	// Place the motor in the STOPPED state
+	motor.state = MOTOR_STOPPED;
+	motor.sector = 0;
+}
+
+uint8_t
+getMotorState(void){
+	return motor.state;
 }

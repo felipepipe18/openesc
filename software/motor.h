@@ -24,6 +24,7 @@
 #define MOTOR_H
 
 #include "motPwm.h"
+#include "milliSecTimer.h"
 
 #define DEFAULT_PWM_FREQ		16000
 #define MIN_DUTY_CYCLE			10000
@@ -34,12 +35,16 @@
 
 typedef struct{
 	uint8_t state;
+	uint8_t sector;
 } _motor;
 
 extern _motor motor;
 
+// These are the motor interface functions,
+//	or the "public" functions
 void initMotor(void);
 void startMotor(void);
 void stopMotor(void);
+uint8_t getMotorState(void);
 
 #endif
