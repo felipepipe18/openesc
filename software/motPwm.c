@@ -41,22 +41,39 @@ initMotorPwm(void){
 	// TODO: verify dead time on scope
 	TIM1->BDTR |= 72;
 
+	// Set up channel 4 as a timer only
+	//	capture/compare.  Load the CCR4 register
+	//	every time the duty cycle is updated.
+	//	Use the capture/compare event as the
+	//	ADC trigger. *** commented out b/c these
+	//	are the values at reset anyway ***
+	//TIM1->CCMR2 |= (uint16_t)((0b0 << 15)	// OC4CE
+	//						+ (0b000 << 12)	// OC4M
+	//						+ (0b0 << 11)	// OC4PE
+	//						+ (0b0 << 10)	// OC4FE
+	//						+ (0b00 << 8)); // CC4S
+
+	// Turn on event generation for the ADC
+	//	TODO: Check to ensure that this doesn't
+	//	need to be continually reset!  Datasheet
+	//	says it is cleared by hardware.
+	TIM1->EGR |= (uint16_t)(1 << 4);
+
 	// Counter enabled
 	TIM1->CR1 |= (uint16_t)(0b1 << 0);
 }
 
 void
-setMotorPwmFreq(uint32_t pwmFrequency)
+setMotorPwmFreq(uint16_t pwmFrequency)
 {
-	// Limit PWM frequency to upper and lower values (in Hz)
+	// Limit PWM frequency to lower values (in Hz).
+	//	An upper limit is not necessary since the
+	//	value is intrinsically limited by the width
 	if(pwmFrequency < 1200)
 		pwmFrequency = 1200;
 
-	if(pwmFrequency > 65535)
-		pwmFrequency = 65535;
-
 	uint32_t timerOneFreq = 72000000;
-	uint16_t arrValue = (uint16_t)(timerOneFreq/pwmFrequency);
+	uint16_t arrValue = (uint16_t)(timerOneFreq/(uint32_t)pwmFrequency);
 
 	TIM1->ARR = arrValue;
 }
@@ -87,14 +104,20 @@ setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 {
 	// The duty cycle is in unsigned 16-bit fractional number that
 	//	needs to be translated into the 16-bit CCRx registers using
-	//	fixed-point math.
-	uint16_t dutyCycleRegValue = ((uint32_t) dutyCycle * (uint32_t)TIM1->CCR1) >> 16;
+	//	fixed-point math.  Also, calculate the adc sample time as a
+	//	percentage of the duty cycle.  The CCR4 will be used to
+	//	specify the ADC sample time within the waveform.
+	uint16_t dutyCycleRegValue = ((uint32_t)dutyCycle * (uint32_t)TIM1->CCR1) >> 16;
+	uint16_t adcSampleTime = ((uint32_t)dutyCycle * 30000) >> 16;
 
 	if(phase == PH_A){
 		// If the required state is HI_STATE, then the duty cycle should
 		//	be applied with reference to the high-side switches (75% dc means
 		//	75%dc on high-side)
 		if(state == HI_STATE){
+			// A check to ensure that the phase is not already in a high state
+			//	will keep the software from re-clearing and re-loading registers
+			//	that won't actually change
 			if(motorPhase.stateA != HI_STATE){
 				TIM1->CCER |= (uint16_t)(0b0101 << 0);// TIM1 CH1 and CH1N on, active high
 
@@ -103,12 +126,16 @@ setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 				motorPhase.stateA = HI_STATE;
 			}
 
-			TIM1->CCR1 = dutyCycleRegValue;
+			TIM1->CCR1 = dutyCycleRegValue;	// Load the duty cycle register
+			TIM1->CCR4 = adcSampleTime;		// Load the adc trigger register
 
 		// If the required state is LO_STATE, then the duty cycle should
 		//	be applied with reference to the high-side switches (75% dc means
 		//	75%dc on low-side)
 		}else if(state == LO_STATE){
+			// A check to ensure that the phase is not already in a low state
+			//	will keep the software from re-clearing and re-loading registers
+			//	that won't actually change
 			if(motorPhase.stateA != LO_STATE){
 				TIM1->CCER |= (uint16_t)(0b0101 << 0);	// TIM1 CH1 and CH1N on, active high
 
@@ -119,6 +146,7 @@ setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 			}
 
 			TIM1->CCR1 = dutyCycleRegValue;	// Load the duty cycle register
+			TIM1->CCR4 = adcSampleTime;		// Load the adc trigger register
 
 		// If the required state is DORMANT, then turn both high phase
 		//	and low phase off
@@ -126,6 +154,9 @@ setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 			TIM1->CCER &= 0xfff0;	// turn off pwm output, high-side and low-side
 			motorPhase.stateA = DORMANT;
 		}
+
+	// Loads PH_C variables and registers.
+	//	Same idea as PH_A logic above, just without comments
 	}else if(phase == PH_B){
 		if(state != HI_STATE){
 			if(motorPhase.stateB == HI_STATE){
@@ -137,6 +168,7 @@ setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 			}
 
 			TIM1->CCR2 = dutyCycleRegValue;
+			TIM1->CCR4 = adcSampleTime;
 		}else if(state == LO_STATE){
 			if(motorPhase.stateB != LO_STATE){
 				TIM1->CCER |= (uint16_t)(0b0101 << 4);
@@ -148,10 +180,14 @@ setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 			}
 
 			TIM1->CCR1 = dutyCycleRegValue;
+			TIM1->CCR4 = adcSampleTime;
 		}else{
 			TIM1->CCER &= 0xff0f;
 			motorPhase.stateB = DORMANT;
 		}
+
+	// Loads PH_C variables and registers.
+	//	Same idea as PH_A logic above, just without comments
 	}else if(phase == PH_C){
 		if(state == HI_STATE){
 			if(motorPhase.stateC != HI_STATE){
@@ -164,6 +200,7 @@ setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 			}
 
 			TIM1->CCR3 = dutyCycleRegValue;
+			TIM1->CCR4 = adcSampleTime;
 		}else if(state == LO_STATE){
 			if(motorPhase.stateC != LO_STATE){
 				TIM1->CCER |= (uint16_t)(0b0101 << 8);
@@ -175,6 +212,7 @@ setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 			}
 
 			TIM1->CCR3 = dutyCycleRegValue;
+			TIM1->CCR4 = adcSampleTime;
 		}else{
 			TIM1->CCER &= 0xf0ff;
 			motorPhase.stateC = DORMANT;

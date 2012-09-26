@@ -40,7 +40,7 @@ typedef struct{
 extern _phase motorPhase;
 
 void initMotorPwm(void);
-void setMotorPwmFreq(uint32_t pwmFrequency);
+void setMotorPwmFreq(uint16_t pwmFrequency);
 void setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle);
 
 #endif
