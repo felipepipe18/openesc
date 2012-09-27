@@ -47,8 +47,14 @@ setupOpenESC(void)
 	initClock();
 	initDio();
 
+	initMilliSecTimer();
+
+	// Wait 10ms for external circuit
+	//	 elements to stabilize after power-up
+	while(getMilliSeconds() < 10);
+
 	initRcPwm();
-	// initMotor();
+	initMotor();
 	// initUsart();
 	// initUsb();
 }

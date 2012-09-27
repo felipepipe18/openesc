@@ -25,6 +25,7 @@
 
 #include "motPwm.h"
 #include "milliSecTimer.h"
+#include "stm32f10x_adc.h"
 
 #define DEFAULT_PWM_FREQ		16000
 #define MIN_DUTY_CYCLE			10000
@@ -46,5 +47,8 @@ void initMotor(void);
 void startMotor(void);
 void stopMotor(void);
 uint8_t getMotorState(void);
+
+// Used internally to motor.c, "private"
+void initAdc(void);
 
 #endif
