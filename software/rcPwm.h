@@ -25,6 +25,7 @@
 #define RCPWM_H
 
 #include "stm32f10x_tim.h"
+#include "misc.h"
 
 #define MIN_RC_PULSE_WIDTH	18000
 

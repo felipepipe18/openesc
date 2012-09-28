@@ -59,7 +59,13 @@ initRcPwm(void)
 	//	of 3.64ms with a resolution of +/-27ns
 	TIM3->PSC = 1;
 
-	// Enable the counter
+	// Initialize interrupts on TIM3
+	NVIC_InitTypeDef nvicInitStruct;
+	nvicInitStruct.NVIC_IRQChannel = TIM3_IRQn;
+	nvicInitStruct.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&nvicInitStruct);
+
+	// Initialize interrupt vector location for ADC1 and ADC2
 	TIM3->CR1 |= 0x0001;
 
 	// Initialize rcPwm.longestPulseTime and rcPwm.shortestPulseTime

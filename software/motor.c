@@ -48,9 +48,11 @@ initMotor(void)
 void
 startMotor(void)
 {
-	if(getMilliSeconds() > 100){
+	// Only allow this routine to execute if
+	//	the motor is in the STOPPED state
+	if(motor.state == MOTOR_STOPPED){
 		motor.sector = 0;
-		motor.state = MOTOR_RUNNING;
+		motor.state = MOTOR_STARTING;
 	}
 }
 
@@ -72,24 +74,48 @@ getMotorState(void){
 	return motor.state;
 }
 
+/*
+ * TODO: Flesh out the interrupt so that it commutates the
+ * 			motor when the phase voltage reaches the correct
+ * 			threshold.
+ */
 void
 ADC1_2_IRQHandler(void)
 {
+	// Check to see which flag is set
+	bool adc1Flag = ADC1->SR & ~(0b1 << 2);
 
-	ADC1->SR &= !((uint32_t)(0b1 << 2));
-	ADC2->SR &= !((uint32_t)(0b1 << 2));
+	// Execute everything in this if statement when
+	//	the adc1Flag is set.  An ADC1 flag means that
+	//	one of the phases was just measured along with
+	//	the bus voltage.
+	if(adc1Flag){
+
+
+
+		ADC1->SR &= ~((uint32_t)(0b1 << 2));	// Clear the interrupt flag
+
+	// Otherwise, the adc2Flag must be set, so everything
+	//	in the else statement should be executed.  An ADC2
+	//	flag means that two current measurements were taken.
+	}else{
+
+
+		ADC2->SR &= ~((uint32_t)(0b1 << 2));	// Clear the interrupt flag
+	}
+
+
 }
 
 /************************************************
- * TODO: write interrupt routine
  * TODO: check for proper operation on hardware
  ************************************************/
 void
 initAdc(void)
 {
 	// Clear the injected scan interrupt flag
-	ADC1->SR &= !((uint32_t)(0b1 << 2));
-	ADC2->SR &= !((uint32_t)(0b1 << 2));
+	ADC1->SR &= ~((uint32_t)(0b1 << 2));
+	ADC2->SR &= ~((uint32_t)(0b1 << 2));
 
 	ADC1->CR1 |= (uint32_t)((0b001 << 13)	// discontinuous mode, 2 channels
 						+ (0b1 << 12)		// discontinuous mode on injected channels enabled
@@ -124,6 +150,12 @@ initAdc(void)
 						+ (8 << 5)			// 2nd channel in sequence
 						+ (8 << 0));		// 1st channel in sequence
 
+
+	// Initialize interrupt vector location for ADC1 and ADC2
+	NVIC_InitTypeDef nvicInitStruct;
+	nvicInitStruct.NVIC_IRQChannel = ADC1_2_IRQn;
+	nvicInitStruct.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&nvicInitStruct);
 
 	ADC1->CR2 |= (uint32_t)(0b1 << 0);		// turn on A/D peripheral
 	ADC2->CR2 |= (uint32_t)(0b1 << 0);		// turn on A/D peripheral

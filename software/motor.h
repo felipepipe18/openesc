@@ -26,13 +26,19 @@
 #include "motPwm.h"
 #include "milliSecTimer.h"
 #include "stm32f10x_adc.h"
+#include "stdbool.h"
+#include "misc.h"
 
 #define DEFAULT_PWM_FREQ		16000
 #define MIN_DUTY_CYCLE			10000
 
-#define MOTOR_RUNNING	0
+// Use these to keep track of the
+//	current state of the motor
+//	(this is a state machine)
+#define MOTOR_LOCKED	0
 #define MOTOR_STOPPED	1
-#define MOTOR_LOCKED	2
+#define MOTOR_STARTING	2
+#define MOTOR_RUNNING	3
 
 typedef struct{
 	uint8_t state;
