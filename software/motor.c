@@ -34,17 +34,9 @@
 
 _motor motor;
 
-void
-initMotor(void)
-{
-	initMotorPwm();
-	setMotorPwmFreq(16000);
-
-	initAdc();
-
-	stopMotor();
-}
-
+/*
+ * Call this function to start the motor
+ */
 void
 startMotor(void)
 {
@@ -56,6 +48,10 @@ startMotor(void)
 	}
 }
 
+
+/*
+ * Call this function to stop the motor
+ */
 void
 stopMotor(void)
 {
@@ -67,6 +63,36 @@ stopMotor(void)
 	// Place the motor in the STOPPED state
 	motor.state = MOTOR_STOPPED;
 	motor.sector = 0;
+}
+
+/*
+ * Call this function to commutate the motor by one step
+ */
+void
+commutate(void)
+{
+	// Move to the next step in the 6-step scheme
+	if(++motor.sector > 5)
+		motor.sector = 0;
+
+	// Use lookup tables to determine which phase should be high,
+	//	low, and dormant based on the current sector.
+	//
+	//		sector	hiPhase	loPhase	dormantPhase
+	//		0		PH_A	PH_B	PH_C
+	//		1		PH_A	PH_C	PH_B
+	//		2		PH_B	PH_C	PH_A
+	//		3		PH_B	PH_A	PH_C
+	//		4		PH_C	PH_A	PH_B
+	//		5		PH_C	PH_B	PH_A
+	const uint8_t hiPhaseTable[] = {PH_A, PH_A, PH_B, PH_B, PH_C, PH_C};
+	const uint8_t loPhaseTable[] = {PH_B, PH_C, PH_C, PH_A, PH_A, PH_B};
+	const uint8_t dormantPhaseTable[] = {PH_C, PH_B, PH_A, PH_C, PH_B, PH_A};
+
+	// Load each phase with the appropriate duty cycle based on the sector
+	setPhaseDutyCycle(hiPhaseTable[motor.sector], HI_STATE, motor.dutyCycle);
+	setPhaseDutyCycle(loPhaseTable[motor.sector], LO_STATE, motor.dutyCycle);
+	setPhaseDutyCycle(dormantPhaseTable[motor.sector], DORMANT, motor.dutyCycle);
 }
 
 uint8_t
@@ -105,6 +131,20 @@ ADC1_2_IRQHandler(void)
 	}
 
 
+}
+
+/*
+ * Use this function to initialize the motor required modules and variables
+ */
+void
+initMotor(void)
+{
+	initMotorPwm();
+	setMotorPwmFreq(16000);
+
+	initAdc();
+
+	stopMotor();
 }
 
 /************************************************

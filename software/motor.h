@@ -43,6 +43,7 @@
 typedef struct{
 	uint8_t state;
 	uint8_t sector;
+	uint16_t dutyCycle;
 } _motor;
 
 extern _motor motor;
