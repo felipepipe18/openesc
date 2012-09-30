@@ -35,7 +35,16 @@
 _motor motor;
 
 /*
- * Call this function to start the motor
+ * Function:	void startMotor(void)
+ *
+ * Purpose:		This function is called by higher-level software
+ * 					when motor rotation should begin
+ *
+ * Parameters:	none
+ *
+ * Returns:		none
+ *
+ * Globals affected:	motor.sector, motor.state
  */
 void
 startMotor(void)
@@ -50,7 +59,16 @@ startMotor(void)
 
 
 /*
- * Call this function to stop the motor
+ * Function:	void stopMotor(void)
+ *
+ * Purpose:		This function is called by higher-level software
+ * 					when motor rotation should cease
+ *
+ * Parameters:	none
+ *
+ * Returns:		none
+ *
+ * Globals affected:	motor.sector, motor.state
  */
 void
 stopMotor(void)
@@ -66,7 +84,17 @@ stopMotor(void)
 }
 
 /*
- * Call this function to commutate the motor by one step
+ * Function:	void commutate(void)
+ *
+ * Purpose:		This function is called when the motor phase state
+ * 					should be stepped to the next phase state based
+ * 					on the current rotor location (sector)
+ *
+ * Parameters:	none
+ *
+ * Returns:		none
+ *
+ * Globals affected:	motor.sector
  */
 void
 commutate(void)
@@ -95,19 +123,46 @@ commutate(void)
 	setPhaseDutyCycle(dormantPhaseTable[motor.sector], DORMANT, motor.dutyCycle);
 }
 
+/*
+ * Function:	uint8_t getMotorState(void)
+ *
+ * Purpose:		This function is called by higher-level software
+ * 					to retrieve the current motor state.
+ *
+ * Parameters:	none
+ *
+ * Returns:		uint8_t motor.state
+ *
+ * Globals affected:	none
+ */
 uint8_t
 getMotorState(void){
 	return motor.state;
 }
 
 /*
- * TODO: Flesh out the interrupt so that it commutates the
- * 			motor when the phase voltage reaches the correct
- * 			threshold.
+ * Function:	void ADC1_2_IRQHandler(void)
+ *
+ * Purpose:		This function is called when an ADC conversion sequence
+ * 					has been completed and action is required.  The primary
+ * 					duty of the function is to look at the current phase
+ * 					voltages and decide when to commutate the motor.
+ *
+ * Parameters:	none
+ *
+ * Returns:		none
+ *
+ * Globals affected:	ADC1->SR, ADC2->SR
  */
 void
 ADC1_2_IRQHandler(void)
 {
+	/*
+	 * TODO: Flesh out the interrupt so that it commutates the
+	 * 			motor when the phase voltage reaches the correct
+	 * 			threshold.
+	 */
+
 	// Check to see which flag is set
 	bool adc1Flag = ADC1->SR & ~(0b1 << 2);
 
@@ -134,7 +189,16 @@ ADC1_2_IRQHandler(void)
 }
 
 /*
- * Use this function to initialize the motor required modules and variables
+ * Function:	void initMotor(void)
+ *
+ * Purpose:		This function is called by higher-level software in order
+ * 					to initialize the motor in preparation for operation.
+ *
+ * Parameters:	none
+ *
+ * Returns:		none
+ *
+ * Globals affected:	none
  */
 void
 initMotor(void)
@@ -147,12 +211,26 @@ initMotor(void)
 	stopMotor();
 }
 
-/************************************************
- * TODO: check for proper operation on hardware
- ************************************************/
+
+
+/*
+ * Function:	void initAdc(void)
+ *
+ * Purpose:		This function is called to initialize the ADC for operation
+ *
+ * Parameters:	none
+ *
+ * Returns:		none
+ *
+ * Globals affected:	All ADC1, ADC2 registers, NVIC interrupt vector
+ */
 void
 initAdc(void)
 {
+	/************************************************
+	 * TODO: check for proper operation on hardware
+	 ************************************************/
+
 	// Clear the injected scan interrupt flag
 	ADC1->SR &= ~((uint32_t)(0b1 << 2));
 	ADC2->SR &= ~((uint32_t)(0b1 << 2));
