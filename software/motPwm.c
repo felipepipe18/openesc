@@ -23,8 +23,6 @@
 
 #include "motPwm.h"
 
-_phase motorPhase;
-
 void
 initMotorPwm(void){
 	// Clock division: tDTS = 1 * tCK_INT
@@ -72,7 +70,7 @@ setMotorPwmFreq(uint16_t pwmFrequency)
 	if(pwmFrequency < 1200)
 		pwmFrequency = 1200;
 
-	uint32_t timerOneFreq = 72000000;
+	uint32_t timerOneFreq = openEsc.clockFreq;
 	uint16_t arrValue = (uint16_t)(timerOneFreq/(uint32_t)pwmFrequency);
 
 	TIM1->ARR = arrValue;

@@ -24,6 +24,7 @@
 #define MOTPWM_H
 
 #include "stm32f10x_tim.h"
+#include "openesc_v01.h"
 
 #define PH_A	0
 #define PH_B	1
@@ -37,7 +38,7 @@ typedef struct{
 	uint8_t stateA, stateB, stateC;
 } _phase;
 
-extern _phase motorPhase;
+_phase motorPhase;
 
 void initMotorPwm(void);
 void setMotorPwmFreq(uint16_t pwmFrequency);

@@ -35,16 +35,11 @@
 
 #include "openesc_v01.h"
 
-// Declare any global variables here
-GPIO_InitTypeDef GPIO_InitStructure;
-RCC_ClocksTypeDef RCC_ClockFreq;
-ErrorStatus HSEStartUpStatus;
-
 // Function implementations here
 void
 setupOpenESC(void)
 {
-	initClock();
+	initHseClock();
 	initDio();
 
 	initMilliSecTimer();
@@ -60,7 +55,7 @@ setupOpenESC(void)
 }
 
 void
-initClock(void)
+initHseClock(void)
 {
 	/* SYSCLK, HCLK, PCLK2 and PCLK1 configuration -----------------------------*/
 	/* RCC system reset(for debug purpose) */
@@ -113,8 +108,6 @@ initClock(void)
 	// ADCPRE = PCLK2/6 = 72MHz/6 = 12MHz (14MHz max)
 	RCC->CFGR |= (0b10 << 14);
 
-
-
 	// Enable peripheral clocks
 	RCC->APB2ENR |= ((1 << 11)		// TIM1
 					+ (1 << 10)		// ADC2
@@ -126,6 +119,63 @@ initClock(void)
 	RCC->APB1ENR |= ((1 << 23)		// USB
 					+ (1 << 17)		// USART2
 					+ (1 << 1));	// TIM3
+
+	openEsc.clockFreq = 72000000;
+}
+
+void
+initHsiClock(void)
+{
+	/* SYSCLK, HCLK, PCLK2 and PCLK1 configuration -----------------------------*/
+	/* RCC system reset(for debug purpose) */
+	RCC_DeInit();
+
+	/* Enable Prefetch Buffer */
+	FLASH_PrefetchBufferCmd(FLASH_PrefetchBuffer_Enable);
+
+	/* Flash 2 wait state */
+	FLASH_SetLatency(FLASH_Latency_2);
+
+	// pllInput = hseInput/2 = 16MHz/2 = 8MHz
+	RCC->CFGR |= (0b1 << 17);
+
+	// pllOutput = pllInput x 16 = 8MHz/2 x 9 = 64MHz
+	RCC->CFGR |= (0b1111 << 18);
+
+	// PLL ON
+	RCC->CFGR |= (0b1 << 24);
+
+	// Wait for PLL to lock
+	bool pllRdy = 0;
+
+	while(!pllRdy){
+		pllRdy = (bool)(0b1 & (RCC->CR >> 25));
+	}
+
+	// Set system clock as PLL
+	RCC->CFGR |= (0b10 << 0);
+
+	// Wait for system clock to complete switch
+	while(((RCC->CFGR >> 2) & 0xfffc) != 0b10);
+
+	// APB1 = 32MHz, APB2 = 64MHz
+	RCC->CFGR |= (0b100 << 8);
+
+	// ADCPRE = PCLK2/6 = 72MHz/6 = 10.67MHz (14MHz max)
+	RCC->CFGR |= (0b10 << 14);
+
+	// Enable peripheral clocks
+	RCC->APB2ENR |= ((1 << 11)		// TIM1
+					+ (1 << 10)		// ADC2
+					+ (1 << 9)		// ADC1
+					+ (1 << 4)		// IO port C
+					+ (1 << 3)		// IO port B
+					+ (1 << 2));	// IO port A
+
+	RCC->APB1ENR |= ((1 << 17)		// USART2
+					+ (1 << 1));	// TIM3
+
+	openEsc.clockFreq = 64000000;
 }
 
 void

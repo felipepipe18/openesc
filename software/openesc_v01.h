@@ -88,12 +88,17 @@
 #define ERROR_LED_PIN	GPIO_Pin_4
 #define STATUS_LED_PIN	GPIO_Pin_5
 
+typedef struct{
+	uint32_t clockFreq;
+} _openEsc;
 
+_openEsc openEsc;
 
 // Declare any functions that are implemented
 //	in "openesc_v01.c"
 void setupOpenESC(void);
-void initClock(void);
+void initHseClock(void);
+void initHsiClock(void);
 void initDio(void);
 
 #endif
