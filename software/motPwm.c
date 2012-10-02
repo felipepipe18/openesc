@@ -156,8 +156,8 @@ setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 	// Loads PH_C variables and registers.
 	//	Same idea as PH_A logic above, just without comments
 	}else if(phase == PH_B){
-		if(state != HI_STATE){
-			if(motorPhase.stateB == HI_STATE){
+		if(state == HI_STATE){
+			if(motorPhase.stateB != HI_STATE){
 				TIM1->CCER |= (uint16_t)(0b0101 << 4);
 
 				TIM1->CCMR1 &= 0x00ff;

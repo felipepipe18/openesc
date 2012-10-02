@@ -87,7 +87,7 @@ initHseClock(void)
 	RCC->CFGR |= (0b1 << 16);
 
 	// PLL ON
-	RCC->CFGR |= (0b1 << 24);
+	RCC->CR |= (0b1 << 24);
 
 	// Wait for PLL to lock
 	bool pllRdy = 0;
@@ -100,7 +100,7 @@ initHseClock(void)
 	RCC->CFGR |= (0b10 << 0);
 
 	// Wait for system clock to complete switch
-	while(((RCC->CFGR >> 2) & 0xfffc) != 0b10);
+	while(((RCC->CFGR >> 2) & 0x3) != 0b10);
 
 	// APB1 = 36MHz, APB2 = 72MHz
 	RCC->CFGR |= (0b100 << 8);
@@ -143,7 +143,7 @@ initHsiClock(void)
 	RCC->CFGR |= (0b1111 << 18);
 
 	// PLL ON
-	RCC->CFGR |= (0b1 << 24);
+	RCC->CR |= (0b1 << 24);
 
 	// Wait for PLL to lock
 	bool pllRdy = 0;
@@ -156,7 +156,7 @@ initHsiClock(void)
 	RCC->CFGR |= (0b10 << 0);
 
 	// Wait for system clock to complete switch
-	while(((RCC->CFGR >> 2) & 0xfffc) != 0b10);
+	while(((RCC->CFGR >> 2) & 0x3) != 0b10);
 
 	// APB1 = 32MHz, APB2 = 64MHz
 	RCC->CFGR |= (0b100 << 8);
