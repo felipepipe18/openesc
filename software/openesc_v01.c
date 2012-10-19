@@ -37,13 +37,6 @@
 
 // Function implementations here
 void
-setupOpenESC(void)
-{
-
-
-}
-
-void
 initHseClock(void)
 {
 	/* SYSCLK, HCLK, PCLK2 and PCLK1 configuration -----------------------------*/
@@ -168,41 +161,4 @@ initHsiClock(void)
 	openEsc.clockFreq = 64000000;
 }
 
-void
-initDio(void)
-{
-	GPIOB->CRL = 0;
-	GPIOB->CRH = 0;
-	GPIOA->CRL = 0;
-	GPIOA->CRH = 0;
 
-	// Setup LED pins
-	// LED pins are not remapped
-	GPIOB->CRL += (uint32_t)((PORT_CNF_OUTPUT_PP + PORT_MODE_OUTPUT) << (4 * 4));	// Error LED
-	GPIOB->CRL += (uint32_t)((PORT_CNF_OUTPUT_PP + PORT_MODE_OUTPUT) << (5 * 4));	// Status LED
-
-	// Setup analog input pins
-	// Analog input pins are not remapped
-	GPIOA->CRL += (uint32_t)((PORT_CNF_INPUT_ANALOG + PORT_MODE_INPUT) << (0 * 4));	// PA0 - PHA FBK
-	GPIOA->CRL += (uint32_t)((PORT_CNF_INPUT_ANALOG + PORT_MODE_INPUT) << (1 * 4));	// PA1 - PHB FBK
-	GPIOA->CRL += (uint32_t)((PORT_CNF_INPUT_ANALOG + PORT_MODE_INPUT) << (2 * 4));	// PA2 - PHC FBK
-	GPIOA->CRL += (uint32_t)((PORT_CNF_INPUT_ANALOG + PORT_MODE_INPUT) << (3 * 4));	// PA3 - Bus Voltage
-	GPIOB->CRL += (uint32_t)((PORT_CNF_INPUT_ANALOG + PORT_MODE_INPUT) << (0 * 4));
-
-	// Setup current fault as a pull-up to eliminate external pull-ups
-	// Overcurrent sensing pin is not remapped
-	GPIOA->CRL += (uint32_t)((PORT_CNF_INPUT_PU_OR_PD + PORT_MODE_INPUT) << (7 * 4));	// PA7 - Overcurrent
-
-	// Setup RC PWM input pin
-	// RC PWM input pin is not remapped
-	GPIOB->CRL += (uint32_t)((PORT_CNF_FLOATING_INPUT + PORT_MODE_INPUT) << (1 * 4));	// PB1 - RC PWM Input
-
-    // Setup TIM1 outputs
-	// TIM1 pins are not remapped
-	GPIOB->CRH += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((13 - 8) * 4));	// PB13 - TIM1_CH1N
-	GPIOB->CRH += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((14 - 8) * 4));	// PB14 - TIM1_CH2N
-	GPIOB->CRH += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((15 - 8) * 4));	// PB15 - TIM1_CH3N
-	GPIOA->CRH += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((8 - 8) * 4));		// PA8 - TIM1_CH1
-	GPIOA->CRH += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((9 - 8) * 4));		// PA9 - TIM1_CH2
-	GPIOA->CRH += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((10 - 8) * 4));	// PA10 - TIM1_CH3
-}

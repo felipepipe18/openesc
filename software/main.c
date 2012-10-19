@@ -21,12 +21,28 @@
  *	not, see http://www.gnu.org/licenses/.
 *************************************************/
 #include "openesc.h"
+#include "gpio.h"
+
+void initDio(void);
 
 int main(void)
 {
-	// Setup all of the pins and peripherals
-	//	of the openESC board
-	setupOpenESC();
+	// Initialize oscillator
+	initHseClock();			// Initialize 16MHz in to 72MHz clock freq
+	//initHsiClock();		// Initialize 8MHz internal Osc to 64MHz clock freq
+
+	// Initialize GPIO
+
+	// Initialize ADC
+
+	// Initialize RC PWM module
+
+	// Initialize bldc motor
+
+	// Initialize CLI
+
+	// Initialize bootloader
+
 
 	// Implement the simplest form of open-loop motor control
 	//	using just the input RC signal and the motor interface
@@ -36,4 +52,37 @@ int main(void)
 
     	// Pass requested duty cycle to the motor
     }
+}
+
+void
+initDio(void)
+{
+	// Setup LED pins
+	GPIO_pinSetup(GPIO_PORT_B, 4, GPIO_OUTPUT_PP);	// Error LED
+	GPIO_pinSetup(GPIO_PORT_B, 5, GPIO_OUTPUT_PP);	// Status LED
+
+	// Setup analog input pins
+	// Analog input pins are not remapped
+	GPIO_pinSetup(GPIO_PORT_A, 0, GPIO_INPUT_ANALOG);	// PHA FBK
+	GPIO_pinSetup(GPIO_PORT_A, 1, GPIO_INPUT_ANALOG);	// PHB FBK
+	GPIO_pinSetup(GPIO_PORT_A, 2, GPIO_INPUT_ANALOG);	// PHC FBK
+	GPIO_pinSetup(GPIO_PORT_A, 3, GPIO_INPUT_ANALOG);	// Bus Voltage
+	GPIO_pinSetup(GPIO_PORT_B, 0, GPIO_INPUT_ANALOG);
+
+	// Setup current fault as a pull-up to eliminate external pull-ups
+	// Overcurrent sensing pin is not remapped
+	GPIO_pinSetup(GPIO_PORT_A, 7, GPIO_INPUT_PU_OR_PD);	// Overcurrent
+
+	// Setup RC PWM input pin
+	// RC PWM input pin is not remapped
+	GPIO_pinSetup(GPIO_PORT_B, 1, GPIO_FLOATING_INPUT);
+
+    // Setup TIM1 outputs
+	// TIM1 pins are not remapped
+	GPIO_pinSetup(GPIO_PORT_B, 13, GPIO_OUTPUT_ALT_PP);
+	GPIO_pinSetup(GPIO_PORT_B, 14, GPIO_OUTPUT_ALT_PP);
+	GPIO_pinSetup(GPIO_PORT_B, 15, GPIO_OUTPUT_ALT_PP);
+	GPIO_pinSetup(GPIO_PORT_A, 8, GPIO_OUTPUT_ALT_PP);
+	GPIO_pinSetup(GPIO_PORT_A, 9, GPIO_OUTPUT_ALT_PP);
+	GPIO_pinSetup(GPIO_PORT_A, 10, GPIO_OUTPUT_ALT_PP);
 }
