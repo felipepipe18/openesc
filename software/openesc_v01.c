@@ -39,19 +39,8 @@
 void
 setupOpenESC(void)
 {
-	initHseClock();
-	initDio();
 
-	initMilliSecTimer();
 
-	// Wait 10ms for external circuit
-	//	 elements to stabilize after power-up
-	while(getMilliSeconds() < 10);
-
-	initRcPwm();
-	initMotor();
-	// initUsart();
-	// initUsb();
 }
 
 void
@@ -87,7 +76,7 @@ initHseClock(void)
 	RCC->CFGR |= (0b1 << 16);
 
 	// PLL ON
-	RCC->CR |= (0b1 << 24);
+	RCC->CFGR |= (0b1 << 24);
 
 	// Wait for PLL to lock
 	bool pllRdy = 0;
@@ -100,7 +89,7 @@ initHseClock(void)
 	RCC->CFGR |= (0b10 << 0);
 
 	// Wait for system clock to complete switch
-	while(((RCC->CFGR >> 2) & 0x3) != 0b10);
+	while(((RCC->CFGR >> 2) & 0xfffc) != 0b10);
 
 	// APB1 = 36MHz, APB2 = 72MHz
 	RCC->CFGR |= (0b100 << 8);
@@ -136,43 +125,44 @@ initHsiClock(void)
 	/* Flash 2 wait state */
 	FLASH_SetLatency(FLASH_Latency_2);
 
-	// pllInput = hseInput/2 = 16MHz/2 = 8MHz
-	RCC->CFGR |= (0b1 << 17);
-
 	// pllOutput = pllInput x 16 = 8MHz/2 x 9 = 64MHz
-	RCC->CFGR |= (0b1111 << 18);
+	RCC->CFGR |= (uint32_t)(0b1111 << 18);
 
 	// PLL ON
-	RCC->CR |= (0b1 << 24);
+	RCC->CR |= (uint32_t)(0b1 << 24);
 
 	// Wait for PLL to lock
-	bool pllRdy = 0;
+	bool pllRdy = false;
 
-	while(!pllRdy){
+	while(pllRdy == false){
 		pllRdy = (bool)(0b1 & (RCC->CR >> 25));
 	}
 
 	// Set system clock as PLL
-	RCC->CFGR |= (0b10 << 0);
+	RCC->CFGR |= (uint32_t)(0b10 << 0);
 
 	// Wait for system clock to complete switch
-	while(((RCC->CFGR >> 2) & 0x3) != 0b10);
+	uint32_t clock = 0;
+
+	while(clock != 0b10){
+		clock = (uint32_t)((RCC->CFGR >> 2) & 0x00000003);
+	}
 
 	// APB1 = 32MHz, APB2 = 64MHz
-	RCC->CFGR |= (0b100 << 8);
+	RCC->CFGR |= (uint32_t)(0b100 << 8);
 
 	// ADCPRE = PCLK2/6 = 72MHz/6 = 10.67MHz (14MHz max)
-	RCC->CFGR |= (0b10 << 14);
+	RCC->CFGR |= (uint32_t)(0b10 << 14);
 
 	// Enable peripheral clocks
-	RCC->APB2ENR |= ((1 << 11)		// TIM1
+	RCC->APB2ENR |= (uint32_t)((1 << 11)		// TIM1
 					+ (1 << 10)		// ADC2
 					+ (1 << 9)		// ADC1
 					+ (1 << 4)		// IO port C
 					+ (1 << 3)		// IO port B
 					+ (1 << 2));	// IO port A
 
-	RCC->APB1ENR |= ((1 << 17)		// USART2
+	RCC->APB1ENR |= (uint32_t)((1 << 17)		// USART2
 					+ (1 << 1));	// TIM3
 
 	openEsc.clockFreq = 64000000;
@@ -181,6 +171,11 @@ initHsiClock(void)
 void
 initDio(void)
 {
+	GPIOB->CRL = 0;
+	GPIOB->CRH = 0;
+	GPIOA->CRL = 0;
+	GPIOA->CRH = 0;
+
 	// Setup LED pins
 	// LED pins are not remapped
 	GPIOB->CRL += (uint32_t)((PORT_CNF_OUTPUT_PP + PORT_MODE_OUTPUT) << (4 * 4));	// Error LED
@@ -204,10 +199,10 @@ initDio(void)
 
     // Setup TIM1 outputs
 	// TIM1 pins are not remapped
-	GPIOB->CRL += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((13 - 8) * 4));	// PB13 - TIM1_CH1N
-	GPIOB->CRL += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((14 - 8) * 4));	// PB14 - TIM1_CH2N
-	GPIOB->CRL += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((15 - 8) * 4));	// PB15 - TIM1_CH3N
-	GPIOA->CRL += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((8 - 8) * 4));		// PA8 - TIM1_CH1
-	GPIOA->CRL += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((9 - 8) * 4));		// PA9 - TIM1_CH2
-	GPIOA->CRL += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((10 - 8) * 4));	// PA10 - TIM1_CH3
+	GPIOB->CRH += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((13 - 8) * 4));	// PB13 - TIM1_CH1N
+	GPIOB->CRH += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((14 - 8) * 4));	// PB14 - TIM1_CH2N
+	GPIOB->CRH += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((15 - 8) * 4));	// PB15 - TIM1_CH3N
+	GPIOA->CRH += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((8 - 8) * 4));		// PA8 - TIM1_CH1
+	GPIOA->CRH += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((9 - 8) * 4));		// PA9 - TIM1_CH2
+	GPIOA->CRH += (uint32_t)((PORT_CNF_OUTPUT_ALT_PP + PORT_MODE_OUTPUT) << ((10 - 8) * 4));	// PA10 - TIM1_CH3
 }

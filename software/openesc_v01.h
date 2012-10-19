@@ -39,9 +39,6 @@
 
 #include <stdbool.h>
 
-#include "rcPwm.h"
-#include "motor.h"
-
 #define PORT_CNF_INPUT_ANALOG			0b0000
 #define PORT_CNF_FLOATING_INPUT			0b0100
 #define PORT_CNF_INPUT_PU_OR_PD			0b1000

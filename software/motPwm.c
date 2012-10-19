@@ -37,7 +37,10 @@ initMotorPwm(void){
 
 	// Dead-time generation 1us dead-time
 	// TODO: verify dead time on scope
-	TIM1->BDTR |= 72;
+	TIM1->BDTR |= (uint16_t)72;
+
+	// Master Output Enable on
+	TIM1->BDTR |= (uint16_t)(1 << 15);
 
 	// Set up channel 4 as a timer only
 	//	capture/compare.  Load the CCR4 register
@@ -105,7 +108,7 @@ setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 	//	fixed-point math.  Also, calculate the adc sample time as a
 	//	percentage of the duty cycle.  The CCR4 will be used to
 	//	specify the ADC sample time within the waveform.
-	uint16_t dutyCycleRegValue = ((uint32_t)dutyCycle * (uint32_t)TIM1->CCR1) >> 16;
+	uint16_t dutyCycleRegValue = ((uint32_t)dutyCycle * (uint32_t)TIM1->ARR) >> 16;
 	uint16_t adcSampleTime = ((uint32_t)dutyCycle * 30000) >> 16;
 
 	if(phase == PH_A){
@@ -177,7 +180,7 @@ setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle)
 				motorPhase.stateB = LO_STATE;
 			}
 
-			TIM1->CCR1 = dutyCycleRegValue;
+			TIM1->CCR2 = dutyCycleRegValue;
 			TIM1->CCR4 = adcSampleTime;
 		}else{
 			TIM1->CCER &= 0xff0f;
