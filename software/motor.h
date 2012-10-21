@@ -23,11 +23,14 @@
 #ifndef MOTOR_H
 #define MOTOR_H
 
+/* Standard or provided libs */
+#include "stm32f10x_adc.h"
+#include "misc.h"
+#include <stdbool.h>
+
+/* User-generated libs */
 #include "motPwm.h"
 #include "milliSecTimer.h"
-#include "stm32f10x_adc.h"
-#include "stdbool.h"
-#include "misc.h"
 
 #define DEFAULT_PWM_FREQ		16000
 #define MIN_DUTY_CYCLE			10000
@@ -40,22 +43,30 @@
 #define MOTOR_STARTING	2
 #define MOTOR_RUNNING	3
 
+#define BLDC_NEG	0
+#define BLDC_POS	1
+
 typedef struct{
 	uint8_t state;
 	uint8_t sector;
 	uint16_t dutyCycle;
+	bool direction;
 } _motor;
 
-extern _motor motor;
+extern _motor BLDC_motor;
 
 // These are the motor interface functions,
 //	or the "public" functions
-void initMotor(void);
-void startMotor(void);
-void stopMotor(void);
-uint8_t getMotorState(void);
+void BLDC_initMotor(void);
+void BLDC_startMotor(void);
+void BLDC_stopMotor(void);
+void BLDC_commandDutyCycle(uint16_t dutyCycle);
+void BLDC_commandDirection(bool direction);
+
+uint8_t BLDC_getMotorState(void);
 
 // Used internally to motor.c, "private"
-void initAdc(void);
+void BLDC_commutate(void);
+void BLDC_initAdc(void);
 
 #endif

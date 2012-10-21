@@ -23,25 +23,28 @@
 #ifndef MOTPWM_H
 #define MOTPWM_H
 
+/* Standard or provided libs */
 #include "stm32f10x_tim.h"
+
+/* User-generated libs */
 #include "openesc_v01.h"
 
-#define PH_A	0
-#define PH_B	1
-#define PH_C	2
+#define MPWM_PH_A	0
+#define MPWM_PH_B	1
+#define MPWM_PH_C	2
 
-#define DORMANT		0
-#define HI_STATE	1
-#define LO_STATE	2
+#define MPWM_DORMANT	0
+#define MPWM_HI_STATE	1
+#define MPWM_LO_STATE	2
 
 typedef struct{
 	uint8_t stateA, stateB, stateC;
 } _phase;
 
-_phase motorPhase;
+_phase MPWM_motorPhase;
 
-void initMotorPwm(void);
-void setMotorPwmFreq(uint16_t pwmFrequency);
-void setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle);
+void MPWM_initMotorPwm(void);
+void MPWM_setMotorPwmFreq(uint16_t pwmFrequency);
+void MPWM_setPhaseDutyCycle(uint8_t phase, uint8_t state, uint16_t dutyCycle);
 
 #endif

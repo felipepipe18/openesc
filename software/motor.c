@@ -30,9 +30,33 @@
 *************************************************/
 
 #include "motor.h"
-#include "milliSecTimer.h"
 
-_motor motor;
+_motor BLDC_motor;
+
+/*
+ * Function:	void initMotor(void)
+ *
+ * Purpose:		This function is called by higher-level software in order
+ * 					to initialize the motor in preparation for operation.
+ *
+ * Parameters:	none
+ *
+ * Returns:		none
+ *
+ * Globals affected:	none
+ */
+void
+BLDC_initMotor(void)
+{
+	MPWM_initMotorPwm();
+	MPWM_setMotorPwmFreq(16000);
+
+	BLDC_initAdc();
+
+	BLDC_stopMotor();
+
+	BLDC_commandDirection(BLDC_POS);
+}
 
 /*
  * Function:	void startMotor(void)
@@ -44,19 +68,18 @@ _motor motor;
  *
  * Returns:		none
  *
- * Globals affected:	motor.sector, motor.state
+ * Globals affected:	BLDC_motor.sector, BLDC_motor.state
  */
 void
-startMotor(void)
+BLDC_startMotor(void)
 {
 	// Only allow this routine to execute if
 	//	the motor is in the STOPPED state
-	if(motor.state == MOTOR_STOPPED){
-		motor.sector = 0;
-		motor.state = MOTOR_STARTING;
+	if(BLDC_motor.state == MOTOR_STOPPED){
+		BLDC_motor.sector = 0;
+		BLDC_motor.state = MOTOR_STARTING;
 	}
 }
-
 
 /*
  * Function:	void stopMotor(void)
@@ -68,19 +91,58 @@ startMotor(void)
  *
  * Returns:		none
  *
- * Globals affected:	motor.sector, motor.state
+ * Globals affected:	BLDC_motor.sector, BLDC_motor.state
  */
 void
-stopMotor(void)
+BLDC_stopMotor(void)
 {
 	// Place each phase in the DORMANT state
-	setPhaseDutyCycle(PH_A, DORMANT, 0);
-	setPhaseDutyCycle(PH_B, DORMANT, 0);
-	setPhaseDutyCycle(PH_C, DORMANT, 0);
+	MPWM_setPhaseDutyCycle(MPWM_PH_A, MPWM_DORMANT, 0);
+	MPWM_setPhaseDutyCycle(MPWM_PH_B, MPWM_DORMANT, 0);
+	MPWM_setPhaseDutyCycle(MPWM_PH_C, MPWM_DORMANT, 0);
 
 	// Place the motor in the STOPPED state
-	motor.state = MOTOR_STOPPED;
-	motor.sector = 0;
+	BLDC_motor.state = MOTOR_STOPPED;
+	BLDC_motor.sector = 0;
+}
+
+/*
+ * Function:	void BLDC_commandDutyCycle(unsigned int dutyCycle);
+ *
+ * Purpose:		This function is called by higher-level software
+ * 					to modify the duty cycle.
+ *
+ * Parameters:	uint16_t dutyCycle		This is the fixed-point representation
+ * 										of the motor duty cycle.  0%-100% is scaled
+ * 										to 0-65535
+ *
+ * Returns:		none
+ *
+ * Globals affected:	BLDC_motor.dutyCycle
+ */
+void
+BLDC_commandDutyCycle(uint16_t dutyCycle)
+{
+	BLDC_motor.dutyCycle = dutyCycle;
+}
+
+/*
+ * Function:	void BLDC_commandDirection(uint8_t direction);
+ *
+ * Purpose:		This function is called by higher-level software
+ * 					to modify the motor direction.
+ *
+ * Parameters:	bool direction	This determines the direction of the motor.  Valid
+ * 								values are BLDC_POS and BLDC_NEG.
+ *
+ * Returns:		none
+ *
+ * Globals affected:	BLDC_motor.direction
+ */
+void
+BLDC_commandDirection(bool direction)
+{
+	BLDC_motor.direction = direction;
 }
 
 /*
@@ -94,17 +156,18 @@ stopMotor(void)
  *
  * Returns:		none
  *
- * Globals affected:	motor.sector
+ * Globals affected:	BLDC_motor.sector
  */
 void
-commutate(void)
+BLDC_commutate(void)
 {
 	// Move to the next step in the 6-step scheme
-	if(++motor.sector > 5)
-		motor.sector = 0;
+	if(++BLDC_motor.sector > 5)
+		BLDC_motor.sector = 0;
 
 	// Use lookup tables to determine which phase should be high,
-	//	low, and dormant based on the current sector.
+	//	low, and dormant based on the current sector (as defined by
+	//	the positive direction).
 	//
 	//		sector	hiPhase	loPhase	dormantPhase
 	//		0		PH_A	PH_B	PH_C
@@ -113,14 +176,20 @@ commutate(void)
 	//		3		PH_B	PH_A	PH_C
 	//		4		PH_C	PH_A	PH_B
 	//		5		PH_C	PH_B	PH_A
-	const uint8_t hiPhaseTable[] = {PH_A, PH_A, PH_B, PH_B, PH_C, PH_C};
-	const uint8_t loPhaseTable[] = {PH_B, PH_C, PH_C, PH_A, PH_A, PH_B};
-	const uint8_t dormantPhaseTable[] = {PH_C, PH_B, PH_A, PH_C, PH_B, PH_A};
+	const uint8_t hiPhaseTable[] = {MPWM_PH_A, MPWM_PH_A, MPWM_PH_B, MPWM_PH_B, MPWM_PH_C, MPWM_PH_C};
+	const uint8_t loPhaseTable[] = {MPWM_PH_B, MPWM_PH_C, MPWM_PH_C, MPWM_PH_A, MPWM_PH_A, MPWM_PH_B};
+	const uint8_t dormantPhaseTable[] = {MPWM_PH_C, MPWM_PH_B, MPWM_PH_A, MPWM_PH_C, MPWM_PH_B, MPWM_PH_A};
 
-	// Load each phase with the appropriate duty cycle based on the sector
-	setPhaseDutyCycle(hiPhaseTable[motor.sector], HI_STATE, motor.dutyCycle);
-	setPhaseDutyCycle(loPhaseTable[motor.sector], LO_STATE, motor.dutyCycle);
-	setPhaseDutyCycle(dormantPhaseTable[motor.sector], DORMANT, motor.dutyCycle);
+	// Load each phase with the appropriate duty cycle based on the sector and direction of the motor
+	if(BLDC_motor.direction){
+		MPWM_setPhaseDutyCycle(hiPhaseTable[BLDC_motor.sector], MPWM_HI_STATE, BLDC_motor.dutyCycle);
+		MPWM_setPhaseDutyCycle(loPhaseTable[BLDC_motor.sector], MPWM_LO_STATE, BLDC_motor.dutyCycle);
+		MPWM_setPhaseDutyCycle(dormantPhaseTable[BLDC_motor.sector], MPWM_DORMANT, BLDC_motor.dutyCycle);
+	}else{
+		MPWM_setPhaseDutyCycle(hiPhaseTable[BLDC_motor.sector], MPWM_LO_STATE, BLDC_motor.dutyCycle);
+		MPWM_setPhaseDutyCycle(loPhaseTable[BLDC_motor.sector], MPWM_HI_STATE, BLDC_motor.dutyCycle);
+		MPWM_setPhaseDutyCycle(dormantPhaseTable[BLDC_motor.sector], MPWM_DORMANT, BLDC_motor.dutyCycle);
+	}
 }
 
 /*
@@ -131,13 +200,13 @@ commutate(void)
  *
  * Parameters:	none
  *
- * Returns:		uint8_t motor.state
+ * Returns:		uint8_t BLDC_motor.state
  *
  * Globals affected:	none
  */
 uint8_t
-getMotorState(void){
-	return motor.state;
+BLDC_getMotorState(void){
+	return BLDC_motor.state;
 }
 
 /*
@@ -189,31 +258,6 @@ ADC1_2_IRQHandler(void)
 }
 
 /*
- * Function:	void initMotor(void)
- *
- * Purpose:		This function is called by higher-level software in order
- * 					to initialize the motor in preparation for operation.
- *
- * Parameters:	none
- *
- * Returns:		none
- *
- * Globals affected:	none
- */
-void
-initMotor(void)
-{
-	initMotorPwm();
-	setMotorPwmFreq(16000);
-
-	initAdc();
-
-	stopMotor();
-}
-
-
-
-/*
  * Function:	void initAdc(void)
  *
  * Purpose:		This function is called to initialize the ADC for operation
@@ -225,7 +269,7 @@ initMotor(void)
  * Globals affected:	All ADC1, ADC2 registers, NVIC interrupt vector
  */
 void
-initAdc(void)
+BLDC_initAdc(void)
 {
 	/************************************************
 	 * TODO: check for proper operation on hardware

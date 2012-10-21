@@ -23,11 +23,14 @@
 
 #include "milliSecTimer.h"
 
-_timer timer;
+_timer MSTMR_timer;
 
 void
-initMilliSecTimer(void)
+MSTMR_initMilliSecTimer(void)
 {
+	uint32_t timerTwoFreq;
+	uint16_t arrValue;
+
 	/* TIM3 clock enable @36MHz */
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
 
@@ -37,33 +40,32 @@ initMilliSecTimer(void)
 	// Reset the flag
 	TIM2->SR = 0;
 
-	// Prescaler loaded so that input clock is
-	//	divided by two, thus, the clock is at
-	//	18MHz, meaning that any pulse can be
-	//	measured up to a maximum pulse width
-	//	of 3.64ms with a resolution of +/-27ns
+	// Prescaler loaded so that input clock is divided by two.
 	TIM2->PSC = 1;
 
-	// Load the ARR register with a value
-	//	that gives an overflow at 1ms
-	TIM2->ARR = 18000;
+	// Calculate the timer 2 input clock frequency based on the prescalers
+	timerTwoFreq = openEsc.clockFreq >> 2;
+
+	// Calculate the ARR value for timer 2 in order to create an overflow at 1ms
+	arrValue = (uint16_t)(timerTwoFreq/1000);
+	TIM2->ARR = arrValue;
 
 	// Enable the counter
 	TIM2->CR1 |= 0x0001;
 
 	// Reset the milliSeconds timer
-	timer.milliSeconds = 0;
+	MSTMR_timer.milliSeconds = 0;
 }
 
 void
 TIM2_IRQHandler (void)
 {
-	timer.milliSeconds++;
+	MSTMR_timer.milliSeconds++;
 	TIM2->SR = 0;
 }
 
 uint32_t
-getMilliSeconds(void)
+MSTMR_getMilliSeconds(void)
 {
-	return timer.milliSeconds;
+	return MSTMR_timer.milliSeconds;
 }

@@ -24,15 +24,19 @@
 #ifndef MILLISECTIMER_H
 #define MILLISECTIMER_H
 
+/* Standard or provided libs */
 #include "stm32f10x_tim.h"
+
+/* User-generated libs */
+#include "openesc_v01.h"
 
 typedef struct{
 	uint32_t milliSeconds;
 } _timer;
 
-extern _timer timer;
+extern _timer MSTMR_timer;
 
-void initMilliSecTimer(void);
-uint32_t getMilliSeconds(void);
+void MSTMR_initMilliSecTimer(void);
+uint32_t MSTMR_getMilliSeconds(void);
 
 #endif
