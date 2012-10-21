@@ -79,3 +79,72 @@ GPIO_pinSetup(uint16_t port, uint16_t pin, uint8_t pinState)
 	}
 }
 
+void
+GPIO_setOutputPin(unsigned int port, unsigned int pin)
+{
+	switch(port)
+	{
+		case GPIO_PORT_A:
+		{
+			//GPIOA->BSSR |= (uint32_t)(0b1 << pin);
+			GPIOA->ODR |= (uint32_t)(0b1 << pin);
+
+			break;
+		}
+
+		case GPIO_PORT_B:
+		{
+			//GPIOB->BSSR |= (uint32_t)(0b1 << pin);
+			GPIOB->ODR |= (uint32_t)(0b1 << pin);
+
+			break;
+		}
+	}
+}
+
+void
+GPIO_clearOutputPin(unsigned int port, unsigned int pin)
+{
+	switch(port)
+	{
+		case GPIO_PORT_A:
+		{
+			//GPIOA->BSSR |= (uint32_t)(0b1 << (pin + 16));
+			GPIOA->ODR &= (uint32_t)~(0b1 << pin);
+
+			break;
+		}
+
+		case GPIO_PORT_B:
+		{
+			//GPIOB->BSSR |= (uint32_t)(0b1 << (pin + 16));
+			GPIOB->ODR &= (uint32_t)~(0b1 << pin);
+
+			break;
+		}
+	}
+}
+
+bool
+GPIO_readInput(unsigned int port, unsigned int pin)
+{
+	bool pinState = 0;
+
+	switch(port)
+	{
+		case GPIO_PORT_A:
+		{
+			pinState = (bool)((GPIOA->IDR & (uint32_t)(0b1 << pin)) >> pin);
+			break;
+		}
+
+		case GPIO_PORT_B:
+		{
+			pinState = (bool)((GPIOB->IDR & (uint32_t)(0b1 << pin)) >> pin);
+
+			break;
+		}
+}
+
+	return pinState;
+}

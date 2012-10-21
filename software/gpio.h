@@ -37,6 +37,12 @@
 #define GPIO_PORT_A	0
 #define GPIO_PORT_B 1
 
+#define GPIO_LO	0
+#define GPIO_HI	1
+
 void GPIO_pinSetup(uint16_t port, uint16_t pin, uint8_t pinState);
+void GPIO_setOutputPin(unsigned int port, unsigned int pin);
+void GPIO_clearOutputPin(unsigned int port, unsigned int pin);
+bool GPIO_readInput(unsigned int port, unsigned int pin);
 
 #endif
