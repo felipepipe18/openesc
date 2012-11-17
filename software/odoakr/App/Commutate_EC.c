@@ -137,7 +137,7 @@ void Init_Control_EC(TIM_TypeDef* TIMx, uint16_t Period, uint16_t CCR_Val, uint1
 	// TIM1 enable counter 
 	TIM_Cmd(TIMx, ENABLE);
 	
-	// разрешаем генерацию PWM
+	// enable output PWM
 	TIM_CtrlPWMOutputs(TIMx, ENABLE);
 	
 	TIM_ITConfig(TIMx, TIM_IT_Update, ENABLE);
