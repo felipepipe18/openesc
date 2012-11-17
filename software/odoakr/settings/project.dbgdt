@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log>
+        
+        
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Build</Factory></Window><Window><Factory>TerminalIO</Factory></Window></Windows></PreferedWindows><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1222</ColumnWidth1></Debug-Log>
+      <Build>
+        
+        
+        
+        
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>TerminalIO</Factory></Window></Windows></PreferedWindows><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>916</ColumnWidth1><ColumnWidth2>244</ColumnWidth2><ColumnWidth3>61</ColumnWidth3></Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>179</Column0><Column1>14</Column1><Column2>2</Column2><Column3>1241820</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        
+        
+        
+      <PreferedWindows><Position>0</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><MixedMode>1</MixedMode><CodeCovShow>0</CodeCovShow><InstrProfShow>0</InstrProfShow></Disassembly>
+    <TerminalIO><InputSource>1</InputSource><InputMode>10</InputMode><Filename>$PROJ_DIR$\TermIOInput.txt</Filename><InputEcho>1</InputEcho><ShowReset>0</ShowReset></TerminalIO><Watch><Format><struct_types/><watch_formats><Fmt><Key>{W}Watch-0:check</Key><Value>4</Value></Fmt><Fmt><Key>{W}Watch-1:Address</Key><Value>4</Value></Fmt><Fmt><Key>{W}Watch-1:pwm_RS</Key><Value>4</Value></Fmt><Fmt><Key>{W}Watch-1:rxQueue_</Key><Value>4</Value></Fmt></watch_formats></Format><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><Column0>106</Column0><Column1>67</Column1><Column2>88</Column2><Column3>194</Column3></Watch><QuickWatch><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><Column0>100</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></QuickWatch><Memory><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><FindDirection>1</FindDirection><FindAsHex>0</FindAsHex></Memory><STACK2><PreferedWindows><Position>1</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></STACK2><SYMLIST><PreferedWindows><Position>1</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></SYMLIST><SymbolicMemory><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><Location>88</Location><Data>88</Data><Variable>120</Variable><Value>60</Value><Type>75</Type></SymbolicMemory><Locals><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><Column0>100</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></Locals><PROFILING2><PreferedWindows><Position>0</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><Column0>220</Column0><Column1>80</Column1><Column2>80</Column2><Column3>100</Column3><Column4>80</Column4><Column5>100</Column5></PROFILING2><Register><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></Register><Find-in-Files><ColumnWidth0>440</ColumnWidth0><ColumnWidth1>62</ColumnWidth1><ColumnWidth2>754</ColumnWidth2></Find-in-Files></Static>
+    <Windows>
+      
+      
+      
+    <Wnd3>
+        <Tabs>
+          
+          
+        <Tab><Identity>TabID-30938-17020</Identity><TabName>Terminal I/O</TabName><Factory>TerminalIO</Factory><Session/></Tab><Tab><Identity>TabID-1942-12591</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-22806-12644</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>1</SelectedTab></Wnd3><Wnd4>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-11865-10623</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>project</ExpandedNode><ExpandedNode>project/App</ExpandedNode><ExpandedNode>project/Output</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd4><Wnd5><Tabs><Tab><Identity>TabID-23314-2869</Identity><TabName>Watch</TabName><Factory>Watch</Factory><Session><Expressions><Expression><Expression>slave_addr</Expression></Expression></Expressions><TabId>1</TabId><Column0>106</Column0><Column1>67</Column1><Column2>88</Column2><Column3>194</Column3></Session></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd5></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>D:\work\AUTOPILOT\SOFT\drive_arm\MinimalProjectSTM32\App\params.c</Filename><XPos>0</XPos><YPos>228</YPos><SelStart>7316</SelStart><SelEnd>7316</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\work\AUTOPILOT\SOFT\drive_arm\MinimalProjectSTM32\App\Control_EC.c</Filename><XPos>0</XPos><YPos>593</YPos><SelStart>14658</SelStart><SelEnd>14658</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\work\AUTOPILOT\SOFT\drive_arm\MinimalProjectSTM32\App\Detect_zero_cross.c</Filename><XPos>0</XPos><YPos>63</YPos><SelStart>2200</SelStart><SelEnd>2222</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\work\AUTOPILOT\SOFT\drive_arm\MinimalProjectSTM32\App\Gen_event_comm.c</Filename><XPos>0</XPos><YPos>194</YPos><SelStart>5951</SelStart><SelEnd>5951</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\work\AUTOPILOT\SOFT\drive_arm\MinimalProjectSTM32\App\Commutate_EC.c</Filename><XPos>0</XPos><YPos>492</YPos><SelStart>13953</SelStart><SelEnd>13953</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\work\AUTOPILOT\SOFT\drive_arm\MinimalProjectSTM32\App\comm.c</Filename><XPos>0</XPos><YPos>51</YPos><SelStart>1652</SelStart><SelEnd>1652</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\work\AUTOPILOT\SOFT\drive_arm\MinimalProjectSTM32\App\rs485.c</Filename><XPos>0</XPos><YPos>3</YPos><SelStart>639</SelStart><SelEnd>639</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\work\AUTOPILOT\SOFT\drive_arm\MinimalProjectSTM32\App\Current_protection.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>294</SelStart><SelEnd>294</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\work\AUTOPILOT\SOFT\drive_arm\MinimalProjectSTM32\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c</Filename><XPos>0</XPos><YPos>562</YPos><SelStart>20846</SelStart><SelEnd>20846</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\work\AUTOPILOT\SOFT\drive_arm\MinimalProjectSTM32\App\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>264</SelStart><SelEnd>264</SelEnd></Tab><ActiveTab>9</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>D:\work\AUTOPILOT\SOFT\drive_arm\MinimalProjectSTM32\Libraries\CMSIS\Core\CM3\system_stm32f10x.c</Filename><XPos>0</XPos><YPos>129</YPos><SelStart>6717</SelStart><SelEnd>6726</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>D:\work\AUTOPILOT\SOFT\drive_arm\MinimalProjectSTM32\Libraries\CMSIS\Core\CM3\stm32f10x.h</Filename><XPos>0</XPos><YPos>67</YPos><SelStart>3412</SelStart><SelEnd>3412</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00ad9980><key>iaridepm.enu1</key></Toolbar-00ad9980><Toolbar-03f5b1c0><key>debuggergui.enu1</key></Toolbar-03f5b1c0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd4><Rect><Top>-2</Top><Left>-2</Left><Bottom>720</Bottom><Right>231</Right><x>-2</x><y>-2</y><xscreen>269</xscreen><yscreen>282</yscreen><sizeHorzCX>210156</sizeHorzCX><sizeHorzCY>286004</sizeHorzCY><sizeVertCX>182031</sizeVertCX><sizeVertCY>732252</sizeVertCY></Rect></Wnd4></Sizes></Row0></Left><Right><Row0><Sizes><Wnd5><Rect><Top>-2</Top><Left>-2</Left><Bottom>720</Bottom><Right>233</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>156250</sizeHorzCX><sizeHorzCY>202840</sizeHorzCY><sizeVertCX>183594</sizeVertCX><sizeVertCY>732252</sizeVertCY></Rect></Wnd5></Sizes></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>222</Bottom><Right>1282</Right><x>-2</x><y>-2</y><xscreen>1284</xscreen><yscreen>224</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>227181</sizeHorzCY><sizeVertCX>210156</sizeVertCX><sizeVertCY>286004</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+
