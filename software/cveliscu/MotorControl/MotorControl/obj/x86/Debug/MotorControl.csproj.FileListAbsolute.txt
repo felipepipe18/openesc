@@ -1,0 +1,9 @@
+E:\Projects\MotorControl\MotorControl\bin\Debug\MotorControl.exe
+E:\Projects\MotorControl\MotorControl\bin\Debug\MotorControl.pdb
+E:\Projects\MotorControl\MotorControl\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Projects\MotorControl\MotorControl\obj\x86\Debug\MotorControl.Main.resources
+E:\Projects\MotorControl\MotorControl\obj\x86\Debug\MotorControl.Properties.Resources.resources
+E:\Projects\MotorControl\MotorControl\obj\x86\Debug\ResGen.read.1.tlog
+E:\Projects\MotorControl\MotorControl\obj\x86\Debug\ResGen.write.1.tlog
+E:\Projects\MotorControl\MotorControl\obj\x86\Debug\MotorControl.exe
+E:\Projects\MotorControl\MotorControl\obj\x86\Debug\MotorControl.pdb
