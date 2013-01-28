@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G">
+  <Target name="STM32CDC_Flash" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="344" chipName="STM32F407VG" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value="-std=gnu99"/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="STM32F407VG"/>
+          <Define name="STM32F4XX"/>
+          <Define name="USE_STDPERIPH_DRIVER"/>
+          <Define name="__ASSEMBLY__"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UseCLib" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="UserEditLinker" value=""/>
+        <LinkedLibraries>
+          <Libset dir="" libs="m"/>
+        </LinkedLibraries>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00100000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00020000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="0x00010000" startValue="0x10000000"/>
+        </MemoryAreas>
+        <LocateLinkFile path="C:\CooCox\CoIDE\workspace\STM32CDC_Flash\arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="E:/Projects/STM32CDC"/>
+        <Option name="Name" value="STM32CDC_Flash"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+        <Option name="ComponentFileStoragePath" value=""/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="c:/coocox/coide/flash/stm32f4xx_1024.elf"/>
+    </DebugOption>
+    <ExcludeFile>
+      <File name="usbh_core.h" path="lib/USB_Host/Core/inc/usbh_core.h" type="1"/>
+      <File name="usbh_def.h" path="lib/USB_Host/Core/inc/usbh_def.h" type="1"/>
+      <File name="usbh_hcs.h" path="lib/USB_Host/Core/inc/usbh_hcs.h" type="1"/>
+      <File name="usbh_ioreq.h" path="lib/USB_Host/Core/inc/usbh_ioreq.h" type="1"/>
+      <File name="usbh_stdreq.h" path="lib/USB_Host/Core/inc/usbh_stdreq.h" type="1"/>
+      <File name="usbh_core.c" path="lib/USB_Host/Core/src/usbh_core.c" type="1"/>
+      <File name="usbh_hcs.c" path="lib/USB_Host/Core/src/usbh_hcs.c" type="1"/>
+      <File name="usbh_ioreq.c" path="lib/USB_Host/Core/src/usbh_ioreq.c" type="1"/>
+      <File name="usbh_stdreq.c" path="lib/USB_Host/Core/src/usbh_stdreq.c" type="1"/>
+      <File name="misc.h" path="lib/StdPeriph/inc/misc.h" type="1"/>
+      <File name="stm32f4xx_adc.h" path="lib/StdPeriph/inc/stm32f4xx_adc.h" type="1"/>
+      <File name="stm32f4xx_can.h" path="lib/StdPeriph/inc/stm32f4xx_can.h" type="1"/>
+      <File name="stm32f4xx_crc.h" path="lib/StdPeriph/inc/stm32f4xx_crc.h" type="1"/>
+      <File name="stm32f4xx_cryp.h" path="lib/StdPeriph/inc/stm32f4xx_cryp.h" type="1"/>
+      <File name="stm32f4xx_dac.h" path="lib/StdPeriph/inc/stm32f4xx_dac.h" type="1"/>
+      <File name="stm32f4xx_dbgmcu.h" path="lib/StdPeriph/inc/stm32f4xx_dbgmcu.h" type="1"/>
+      <File name="stm32f4xx_dcmi.h" path="lib/StdPeriph/inc/stm32f4xx_dcmi.h" type="1"/>
+      <File name="stm32f4xx_dma.h" path="lib/StdPeriph/inc/stm32f4xx_dma.h" type="1"/>
+      <File name="stm32f4xx_exti.h" path="lib/StdPeriph/inc/stm32f4xx_exti.h" type="1"/>
+      <File name="stm32f4xx_flash.h" path="lib/StdPeriph/inc/stm32f4xx_flash.h" type="1"/>
+      <File name="stm32f4xx_fsmc.h" path="lib/StdPeriph/inc/stm32f4xx_fsmc.h" type="1"/>
+      <File name="stm32f4xx_gpio.h" path="lib/StdPeriph/inc/stm32f4xx_gpio.h" type="1"/>
+      <File name="stm32f4xx_hash.h" path="lib/StdPeriph/inc/stm32f4xx_hash.h" type="1"/>
+      <File name="stm32f4xx_i2c.h" path="lib/StdPeriph/inc/stm32f4xx_i2c.h" type="1"/>
+      <File name="stm32f4xx_iwdg.h" path="lib/StdPeriph/inc/stm32f4xx_iwdg.h" type="1"/>
+      <File name="stm32f4xx_pwr.h" path="lib/StdPeriph/inc/stm32f4xx_pwr.h" type="1"/>
+      <File name="stm32f4xx_rcc.h" path="lib/StdPeriph/inc/stm32f4xx_rcc.h" type="1"/>
+      <File name="stm32f4xx_rng.h" path="lib/StdPeriph/inc/stm32f4xx_rng.h" type="1"/>
+      <File name="stm32f4xx_rtc.h" path="lib/StdPeriph/inc/stm32f4xx_rtc.h" type="1"/>
+      <File name="stm32f4xx_sdio.h" path="lib/StdPeriph/inc/stm32f4xx_sdio.h" type="1"/>
+      <File name="stm32f4xx_spi.h" path="lib/StdPeriph/inc/stm32f4xx_spi.h" type="1"/>
+      <File name="stm32f4xx_syscfg.h" path="lib/StdPeriph/inc/stm32f4xx_syscfg.h" type="1"/>
+      <File name="stm32f4xx_tim.h" path="lib/StdPeriph/inc/stm32f4xx_tim.h" type="1"/>
+      <File name="stm32f4xx_usart.h" path="lib/StdPeriph/inc/stm32f4xx_usart.h" type="1"/>
+      <File name="stm32f4xx_wwdg.h" path="lib/StdPeriph/inc/stm32f4xx_wwdg.h" type="1"/>
+      <File name="misc.c" path="lib/StdPeriph/src/misc.c" type="1"/>
+      <File name="stm32f4xx_adc.c" path="lib/StdPeriph/src/stm32f4xx_adc.c" type="1"/>
+      <File name="stm32f4xx_can.c" path="lib/StdPeriph/src/stm32f4xx_can.c" type="1"/>
+      <File name="stm32f4xx_crc.c" path="lib/StdPeriph/src/stm32f4xx_crc.c" type="1"/>
+      <File name="stm32f4xx_cryp.c" path="lib/StdPeriph/src/stm32f4xx_cryp.c" type="1"/>
+      <File name="stm32f4xx_cryp_aes.c" path="lib/StdPeriph/src/stm32f4xx_cryp_aes.c" type="1"/>
+      <File name="stm32f4xx_cryp_des.c" path="lib/StdPeriph/src/stm32f4xx_cryp_des.c" type="1"/>
+      <File name="stm32f4xx_cryp_tdes.c" path="lib/StdPeriph/src/stm32f4xx_cryp_tdes.c" type="1"/>
+      <File name="stm32f4xx_dac.c" path="lib/StdPeriph/src/stm32f4xx_dac.c" type="1"/>
+      <File name="stm32f4xx_dbgmcu.c" path="lib/StdPeriph/src/stm32f4xx_dbgmcu.c" type="1"/>
+      <File name="stm32f4xx_dcmi.c" path="lib/StdPeriph/src/stm32f4xx_dcmi.c" type="1"/>
+      <File name="stm32f4xx_dma.c" path="lib/StdPeriph/src/stm32f4xx_dma.c" type="1"/>
+      <File name="stm32f4xx_exti.c" path="lib/StdPeriph/src/stm32f4xx_exti.c" type="1"/>
+      <File name="stm32f4xx_flash.c" path="lib/StdPeriph/src/stm32f4xx_flash.c" type="1"/>
+      <File name="stm32f4xx_fsmc.c" path="lib/StdPeriph/src/stm32f4xx_fsmc.c" type="1"/>
+      <File name="stm32f4xx_gpio.c" path="lib/StdPeriph/src/stm32f4xx_gpio.c" type="1"/>
+      <File name="stm32f4xx_hash.c" path="lib/StdPeriph/src/stm32f4xx_hash.c" type="1"/>
+      <File name="stm32f4xx_hash_md5.c" path="lib/StdPeriph/src/stm32f4xx_hash_md5.c" type="1"/>
+      <File name="stm32f4xx_hash_sha1.c" path="lib/StdPeriph/src/stm32f4xx_hash_sha1.c" type="1"/>
+      <File name="stm32f4xx_i2c.c" path="lib/StdPeriph/src/stm32f4xx_i2c.c" type="1"/>
+      <File name="stm32f4xx_iwdg.c" path="lib/StdPeriph/src/stm32f4xx_iwdg.c" type="1"/>
+      <File name="stm32f4xx_pwr.c" path="lib/StdPeriph/src/stm32f4xx_pwr.c" type="1"/>
+      <File name="stm32f4xx_rcc.c" path="lib/StdPeriph/src/stm32f4xx_rcc.c" type="1"/>
+      <File name="stm32f4xx_rng.c" path="lib/StdPeriph/src/stm32f4xx_rng.c" type="1"/>
+      <File name="stm32f4xx_rtc.c" path="lib/StdPeriph/src/stm32f4xx_rtc.c" type="1"/>
+      <File name="stm32f4xx_sdio.c" path="lib/StdPeriph/src/stm32f4xx_sdio.c" type="1"/>
+      <File name="stm32f4xx_spi.c" path="lib/StdPeriph/src/stm32f4xx_spi.c" type="1"/>
+      <File name="stm32f4xx_syscfg.c" path="lib/StdPeriph/src/stm32f4xx_syscfg.c" type="1"/>
+      <File name="stm32f4xx_tim.c" path="lib/StdPeriph/src/stm32f4xx_tim.c" type="1"/>
+      <File name="stm32f4xx_usart.c" path="lib/StdPeriph/src/stm32f4xx_usart.c" type="1"/>
+      <File name="stm32f4xx_wwdg.c" path="lib/StdPeriph/src/stm32f4xx_wwdg.c" type="1"/>
+      <File name="startup_stm32f4xx.s" path="lib/startup_stm32f4xx.s" type="1"/>
+      <File name="system_stm32f4xx.c" path="src/system_stm32f4xx.c" type="1"/>
+      <File name="stm32f4xx_conf.h" path="inc/stm32f4xx_conf.h" type="1"/>
+      <File name="main.h" path="inc/main.h" type="1"/>
+      <File name="usb_conf.h" path="lib/Conf/usb_conf.h" type="1"/>
+      <File name="ffconf.h" path="lib/Conf/ffconf.h" type="1"/>
+      <File name="ffconf.h" path="lib/Conf/ffconf.h" type="1"/>
+      <File name="usb_conf.h" path="lib/Conf/usb_conf.h" type="1"/>
+      <File name="usbd_conf.h" path="lib/Conf/usbd_conf.h" type="1"/>
+      <File name="usbd_desc.h" path="lib/Conf/usbd_desc.h" type="1"/>
+      <File name="usbh_conf.h" path="lib/Conf/usbh_conf.h" type="1"/>
+      <File name="arm_common_tables.h" path="lib/Core/cmsis/arm_common_tables.h" type="1"/>
+      <File name="arm_math.h" path="lib/Core/cmsis/arm_math.h" type="1"/>
+      <File name="core_cm0.h" path="lib/Core/cmsis/core_cm0.h" type="1"/>
+      <File name="core_cm3.h" path="lib/Core/cmsis/core_cm3.h" type="1"/>
+      <File name="core_cm4.h" path="lib/Core/cmsis/core_cm4.h" type="1"/>
+      <File name="core_cm4_simd.h" path="lib/Core/cmsis/core_cm4_simd.h" type="1"/>
+      <File name="core_cmFunc.h" path="lib/Core/cmsis/core_cmFunc.h" type="1"/>
+      <File name="core_cmInstr.h" path="lib/Core/cmsis/core_cmInstr.h" type="1"/>
+      <File name="stm32f4xx.h" path="lib/Core/stm32/stm32f4xx.h" type="1"/>
+      <File name="stm32f4xx_conf_template.h" path="lib/Core/stm32/stm32f4xx_conf_template.h" type="1"/>
+      <File name="system_stm32f4xx.h" path="lib/Core/stm32/system_stm32f4xx.h" type="1"/>
+      <File name="syscalls.c" path="src/syscalls.c" type="1"/>
+    </ExcludeFile>
+  </Target>
+  <Target name="STM32CDC_RAM" isCurrent="0">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="344" chipName="STM32F407VG" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="STM32F407VG"/>
+          <Define name="STM32F4XX"/>
+          <Define name="USE_STDPERIPH_DRIVER"/>
+          <Define name="__ASSEMBLY__"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UseCLib" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="0">
+          <Memory name="IROM1" type="ReadOnly" size="0x00100000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00020000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="0x00010000" startValue="0x10000000"/>
+        </MemoryAreas>
+        <LocateLinkFile path="link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="E:/Projects/STM32CDC"/>
+        <Option name="Name" value="STM32CDC_RAM"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="c:/coocox/coide/flash/stm32f4xx_1024.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="30" name="C Library" path="" type="2"/>
+    <Component id="54" name="M4 CMSIS Core" path="" type="2"/>
+    <Component id="500" name="CMSIS BOOT" path="" type="2"/>
+    <Component id="501" name="RCC" path="" type="2"/>
+    <Component id="504" name="GPIO" path="" type="2"/>
+    <Component id="505" name="EXTI" path="" type="2"/>
+    <Component id="517" name="USART" path="" type="2"/>
+    <Component id="524" name="MISC" path="" type="2"/>
+  </Components>
+  <Files>
+    <File name="cmsis_lib/source/stm32f4xx_gpio.c" path="cmsis_lib/source/stm32f4xx_gpio.c" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_usart.c" path="cmsis_lib/source/stm32f4xx_usart.c" type="1"/>
+    <File name="lib/USB_OTG/src/usb_core.c" path="lib/USB_OTG/src/usb_core.c" type="1"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="src" path="" type="2"/>
+    <File name="cmsis_lib/include/stm32f4xx_usart.h" path="cmsis_lib/include/stm32f4xx_usart.h" type="1"/>
+    <File name="lib/USB_Device/Core/inc/usbd_core.h" path="lib/USB_Device/Core/inc/usbd_core.h" type="1"/>
+    <File name="cmsis_boot/stm32f4xx.h" path="cmsis_boot/stm32f4xx.h" type="1"/>
+    <File name="cmsis/core_cm4_simd.h" path="cmsis/core_cm4_simd.h" type="1"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
+    <File name="lib/USB_OTG/inc/usb_hcd_int.h" path="lib/USB_OTG/inc/usb_hcd_int.h" type="1"/>
+    <File name="cmsis/core_cm4.h" path="cmsis/core_cm4.h" type="1"/>
+    <File name="lib/USB_OTG/inc/usb_regs.h" path="lib/USB_OTG/inc/usb_regs.h" type="1"/>
+    <File name="lib/USB_OTG/src/usb_hcd.c" path="lib/USB_OTG/src/usb_hcd.c" type="1"/>
+    <File name="src/usb_bsp.c" path="src/usb_bsp.c" type="1"/>
+    <File name="cmsis_lib/source/misc.c" path="cmsis_lib/source/misc.c" type="1"/>
+    <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
+    <File name="lib/USB_Device/Core/src" path="" type="2"/>
+    <File name="lib/USB_OTG/inc/usb_dcd.h" path="lib/USB_OTG/inc/usb_dcd.h" type="1"/>
+    <File name="lib/USB_Device/Core/inc/usbd_ioreq.h" path="lib/USB_Device/Core/inc/usbd_ioreq.h" type="1"/>
+    <File name="lib/USB_Device" path="" type="2"/>
+    <File name="lib/USB_Device/Core/src/usbd_core.c" path="lib/USB_Device/Core/src/usbd_core.c" type="1"/>
+    <File name="cmsis_lib/source" path="" type="2"/>
+    <File name="lib/USB_Device/Core" path="" type="2"/>
+    <File name="lib/USB_OTG/inc/usb_core.h" path="lib/USB_OTG/inc/usb_core.h" type="1"/>
+    <File name="lib/USB_OTG/src/usb_dcd_int.c" path="lib/USB_OTG/src/usb_dcd_int.c" type="1"/>
+    <File name="lib/USB_Device/Core/inc/usbd_req.h" path="lib/USB_Device/Core/inc/usbd_req.h" type="1"/>
+    <File name="lib/USB_Device/Class/cdc" path="" type="2"/>
+    <File name="inc/usbd_conf.h" path="inc/usbd_conf.h" type="1"/>
+    <File name="src/stm32f4xx_it.c" path="src/stm32f4xx_it.c" type="1"/>
+    <File name="cmsis_boot/stm32f4xx_conf.h" path="cmsis_boot/stm32f4xx_conf.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f4xx.h" path="cmsis_boot/system_stm32f4xx.h" type="1"/>
+    <File name="lib/USB_Device/Core/src/usbd_req.c" path="lib/USB_Device/Core/src/usbd_req.c" type="1"/>
+    <File name="lib/USB_OTG/inc/usb_otg.h" path="lib/USB_OTG/inc/usb_otg.h" type="1"/>
+    <File name="lib/USB_OTG/inc/usb_bsp.h" path="lib/USB_OTG/inc/usb_bsp.h" type="1"/>
+    <File name="src/main.c" path="src/main.c" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_rcc.h" path="cmsis_lib/include/stm32f4xx_rcc.h" type="1"/>
+    <File name="lib/USB_Device/Class/cdc/src" path="" type="2"/>
+    <File name="lib" path="" type="2"/>
+    <File name="cmsis_boot/startup/startup_stm32f4xx.c" path="cmsis_boot/startup/startup_stm32f4xx.c" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_rcc.c" path="cmsis_lib/source/stm32f4xx_rcc.c" type="1"/>
+    <File name="lib/USB_OTG/src/usb_dcd.c" path="lib/USB_OTG/src/usb_dcd.c" type="1"/>
+    <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
+    <File name="inc/usbd_cdc_vcp.h" path="inc/usbd_cdc_vcp.h" type="1"/>
+    <File name="lib/USB_OTG/inc/usb_defines.h" path="lib/USB_OTG/inc/usb_defines.h" type="1"/>
+    <File name="inc/usbd_desc.h" path="inc/usbd_desc.h" type="1"/>
+    <File name="inc/usb_conf.h" path="inc/usb_conf.h" type="1"/>
+    <File name="src/usbd_cdc_vcp.c" path="src/usbd_cdc_vcp.c" type="1"/>
+    <File name="lib/USB_OTG" path="" type="2"/>
+    <File name="inc" path="" type="2"/>
+    <File name="cmsis_lib/include/stm32f4xx_exti.h" path="cmsis_lib/include/stm32f4xx_exti.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_exti.c" path="cmsis_lib/source/stm32f4xx_exti.c" type="1"/>
+    <File name="lib/USB_OTG/src/usb_hcd_int.c" path="lib/USB_OTG/src/usb_hcd_int.c" type="1"/>
+    <File name="cmsis_boot/system_stm32f4xx.c" path="cmsis_boot/system_stm32f4xx.c" type="1"/>
+    <File name="lib/USB_Device/Class/cdc/inc" path="" type="2"/>
+    <File name="lib/USB_Device/Class/cdc/src/usbd_cdc_core.c" path="lib/USB_Device/Class/cdc/src/usbd_cdc_core.c" type="1"/>
+    <File name="lib/USB_Device/Core/inc" path="" type="2"/>
+    <File name="lib/USB_OTG/src" path="" type="2"/>
+    <File name="cmsis" path="" type="2"/>
+    <File name="lib/USB_OTG/src/usb_otg.c" path="lib/USB_OTG/src/usb_otg.c" type="1"/>
+    <File name="cmsis_lib" path="" type="2"/>
+    <File name="src/usbd_desc.c" path="src/usbd_desc.c" type="1"/>
+    <File name="src/usbd_usr.c" path="src/usbd_usr.c" type="1"/>
+    <File name="lib/USB_Device/Class/cdc/inc/usbd_cdc_core.h" path="lib/USB_Device/Class/cdc/inc/usbd_cdc_core.h" type="1"/>
+    <File name="lib/USB_OTG/inc/usb_dcd_int.h" path="lib/USB_OTG/inc/usb_dcd_int.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_gpio.h" path="cmsis_lib/include/stm32f4xx_gpio.h" type="1"/>
+    <File name="syscalls" path="" type="2"/>
+    <File name="cmsis_lib/include/misc.h" path="cmsis_lib/include/misc.h" type="1"/>
+    <File name="lib/USB_OTG/inc" path="" type="2"/>
+    <File name="lib/USB_Device/Core/inc/usbd_usr.h" path="lib/USB_Device/Core/inc/usbd_usr.h" type="1"/>
+    <File name="cmsis_lib/include" path="" type="2"/>
+    <File name="lib/USB_Device/Core/src/usbd_ioreq.c" path="lib/USB_Device/Core/src/usbd_ioreq.c" type="1"/>
+    <File name="lib/USB_Device/Core/inc/usbd_def.h" path="lib/USB_Device/Core/inc/usbd_def.h" type="1"/>
+    <File name="lib/USB_Device/Class" path="" type="2"/>
+    <File name="lib/USB_OTG/inc/usb_hcd.h" path="lib/USB_OTG/inc/usb_hcd.h" type="1"/>
+  </Files>
+</Project>
